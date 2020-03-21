@@ -1,0 +1,12 @@
+const a = 4;
+const b = 2;
+console.log("a: ", a);
+console.log("b: ", b);
+const c = a - b;
+console.log("a - b = ", c);
+const d = a + b;
+console.log("a + b = ", d);
+const e = a / b;
+console.log("a / b = ", e);
+const f = a * b;
+console.log("a * b = ", f);

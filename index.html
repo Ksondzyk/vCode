@@ -1,0 +1,148 @@
+<!-- <!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Класс</title>
+  <style>
+    .main {
+      font-size: 24px;
+    }
+
+    .green {
+      color: green;
+    }
+
+    .orange {
+      color: orange;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="main">
+    <p class="green">Изученные CSS свойства</p>
+    <ul class="orange">
+      <li class="orande">
+        width - ширина блока, не применяется для инлайновых элементов
+      </li>
+      <li class="orande">
+        height - высота блока, не применяется для инлайновых элементов
+      </li>
+      <li class="orande">
+        display - определяет, как элемент должен быть показан в документе
+      </li>
+      <li class="orande">color - задает цвет текста</li>
+      <li class="orande">background-color - задает цвет фона</li>
+      <li class="orande">font-size - задает размер шрифта</li>
+      <li class="orande">margin - задает наружные отступы для блока</li>
+    </ul>
+    <p class="green">
+      Каждый браузер имеет стили по умолчанию. Хорошая практика эти стили
+      обнулять или нормализовать. Это позволит добиться одиннакового
+      отображения страницы во всех браузерах
+    </p>
+  </main>
+</body>
+
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Document</title>
+  <link />
+</head>
+
+<body>
+  <div style="display: inline-block;">Div #1</div>
+  <div style="display: inline-block;">Div #2</div>
+  <div style="display: inline-block;">Div #3</div>
+  <hr />
+  <span style="display: block; width:200px; height:100px; background-color: yellow;">Snan #1</span>
+  <span style="display: block; width:200px; height:100px; background-color: yellow">Snan #2</span>
+  <span style="display: block; width:200px; height:100px ;background-color: yellow">Snan #3</span>
+</body>
+
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Базовая страничка</title>
+  </head>
+
+  <body>
+    <header style="background-color:red; height: 100px;">
+      <h1 style=" font-size:24px; color:white ">
+        Главный заголовок на странице
+      </h1>
+    </header>
+    <main style="background-color:blue; height: 300px;">
+      <p style="font-size:18px;color:white ;">
+        Семантическая верстка позволяет поисковым система лучшем понять контент
+        страницы
+      </p>
+    </main>
+    <footer
+      style="background-color:green; font-size:18px; height: 100px; color:white ;"
+    >
+      Не забываем сбрасывать стили браузера по умолчанию
+    </footer>
+  </body>
+</html> -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Basic Selectors</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU="
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-color: green;
+      }
+      li {
+        font-size: 24px;
+      }
+      .page-header {
+        background-color: orange;
+      }
+      #best {
+        border: 2px solid red;
+      }
+      p {
+        color: green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 class="page-header">Basic Selectors</h1>
+
+    <article>
+      <h2 class="page-header">Базовыми селекторами являются:</h2>
+      <ul>
+        <li>Селектор элемента</li>
+        <li id="best">Селектор класса</li>
+        <li>Селектор id</li>
+        <li>Универсальный селектор *</li>
+      </ul>
+    </article>
+
+    <article>
+      <h2 class="page-header">Селекторы</h2>
+      <p>
+        Используются для того, чтобы удобно выбирать нужные элементы страницы и
+        задавать им определенные стили
+      </p>
+    </article>
+  </body>
+</html>
