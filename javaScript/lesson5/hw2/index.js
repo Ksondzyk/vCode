@@ -1,12 +1,10 @@
 function getPrimes(n) {
-  for (let i = 2; i <= n; i++) {
-    for (let m = 2; m < i; m++) {
-      if (i % m === 0) {
-        continue;
-      }
+  nextPrime: for (let i = 2; i <= n; i++) {
+    for (let j = 2; j < i; j++) {
+      if (i % j == 0) continue nextPrime;
+
+      alert(i);
     }
-    console.log(i);
   }
 }
 getPrimes(18);
-
