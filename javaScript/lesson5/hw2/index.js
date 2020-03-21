@@ -1,13 +1,12 @@
 function getPrimes(n) {
-  let sum = 0;
-  let result = 1;
   for (let i = 2; i <= n; i++) {
-    sum = i;
-    if (sum % 2 === 1) {
-      console.log(sum);
+    for (let m = 2; m < i; m++) {
+      if (i % m === 0) {
+        continue;
+      }
     }
+    console.log(i);
   }
 }
+getPrimes(18);
 
-const result = getPrimes(18);
-console.log(result);
