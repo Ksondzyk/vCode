@@ -6,4 +6,4 @@ function increaser(a, index) {
   }
 }
 const result = increaser(12, 7);
-console.log(res
+console.log(result);
