@@ -1,9 +1,16 @@
-function increaser(a, index) {
-  if (a > index) {
-    return a + index;
-  } else if (a <= index) {
-    return a;
+
+function sum(a, b) {
+  let result = 0;
+  for (let i = a; i <= b; i++) {
+    result += i;
   }
+  return result;
 }
-const result = increaser(12, 7);
-console.log(result);
+
+function compateSums(a, b, c, d) {
+  let from = sum(a, b);
+  let to = sum(c, d);
+  return from > to ? true : false;
+}
+
+console.log(compateSums(5, 8, 9, 12));
