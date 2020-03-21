@@ -1,14 +1,11 @@
 function findDivCount(a, b, n) {
-  let sum;
+  let sum = 0;
   for (let i = a; i <= b; i++) {
-    sum = i;
-    if (sum % n === 0) {
-      console.log(sum);
-    } else if (a > 12 && b < 120) {
-      return 0;
+    if (i % n === 0) {
+      return (sum += i);
     }
   }
-  return 0;
+  return sum;
 }
 
 findDivCount(12, 120, 16);
