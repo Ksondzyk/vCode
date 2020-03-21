@@ -6,4 +6,3 @@ function getPrimes(n) {
     console.log(i);
   }
 }
-getPrimes(18);
