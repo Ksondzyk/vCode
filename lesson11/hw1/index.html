@@ -19,23 +19,27 @@
         display: inline-flex;
         flex-direction: column;
         position: relative;
-      }
-      .row {
         border-bottom: 1px dotted black;
+        cursor: pointer;
       }
-      span {
-        margin-top: 4px;
+      .box {
+        position: absolute;
+        bottom: -60px;
         background-color: grey;
         border-radius: 4px;
         padding: 8px;
         cursor: pointer;
+        display: none;
+      }
+      .container:hover .box {
+        display: block;
       }
     </style>
   </head>
   <body>
     <div title="I'm title text" class="container">
-      <div class="row">Hover over me</div>
-      <span class="">I'am a tooltip</span>
+      Hover over me
+      <span class="box">I'am a tooltip</span>
     </div>
   </body>
 </html>
