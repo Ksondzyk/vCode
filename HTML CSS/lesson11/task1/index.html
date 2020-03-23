@@ -2,29 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU="
+      crossorigin="anonymous"
+    />
     <style>
-      div {
+      div > div {
         width: 100px;
         height: 100px;
-        background-color: coral;
+        background: coral;
       }
-      div:nth-child(1) {
+      .container > div:nth-child(1) {
         display: none;
         visibility: hidden;
       }
-      div:nth-child(2) {
+      .container > div:nth-child(2) {
         visibility: hidden;
       }
-      div:nth-child(3) {
+      .container > div:nth-child(3) {
         visibility: visible;
       }
     </style>
   </head>
+
   <body>
-    <div></div>
-    <div></div>
-    <div></div>
+    <div class="container">
+      <div>Not Displayed</div>
+      <div>Hiddnen</div>
+      <div>Visible</div>
+    </div>
   </body>
 </html>
