@@ -37,13 +37,13 @@ body {
   color: white;
   line-height: 2em;
   margin: 0.5em 0;
-  width: 100%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 .nav-list-link {
-  padding-left: 0.5em;
+  max-width: 100%;
+  padding: 0.5em;
   text-decoration: none;
   color: white;
 }
