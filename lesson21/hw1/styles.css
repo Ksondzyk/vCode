@@ -40,6 +40,7 @@ body {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  padding-right: 0.5em;
 }
 .nav-list-link {
   max-width: 100%;
