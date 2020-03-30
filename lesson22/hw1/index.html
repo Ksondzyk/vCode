@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adaptive menu</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        font-family: Arial Helvetica, sans-serif;
+        font-size: 16px;
+      }
+      .header {
+        display: flex;
+        align-items: center;
+        height: 3em;
+        padding: 1em;
+        background-color: #eee;
+      }
+      .gamburger-btn {
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+      }
+      .fa-bars {
+        font-size: 2em;
+      }
+      .main {
+        display: flex;
+        width: 100%;
+      }
+      .navigation {
+        width: 20%;
+        padding: 0.5em;
+      }
+      .nav-list {
+        padding: 0;
+        list-style-type: none;
+      }
+      .nav-list-item {
+        background-color: #808080;
+        color: white;
+        line-height: 2em;
+        margin: 0.5em 0;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding-right: 0.5em;
+      }
+      .nav-list-link {
+        max-width: 100%;
+        padding: 0.5em;
+        text-decoration: none;
+        color: white;
+      }
+      .emty-box {
+        width: 80%;
+      }
+      @media screen and (min-width: 600px) {
+        .gamburger-btn {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 599px) {
+        .navigation {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="header">
+      <button class="gamburger-btn"><i class="fas fa-bars"></i></button>
+    </header>
+    <main class="main">
+      <nav class="navigation">
+        <ul class="nav-list">
+          <li class="nav-list-item">
+            <a class="nav-list-link" href="#">Responsive images</a>
+          </li>
+          <li class="nav-list-item">
+            <a class="nav-list-link" href="#">Mediaqueries</a>
+          </li>
+          <li class="nav-list-item">
+            <a class="nav-list-link" href="#">Flexbox</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="emty-box"></div>
+    </main>
+  </body>
+</html>
