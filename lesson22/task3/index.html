@@ -14,10 +14,8 @@
       main {
         display: flex;
       }
-      picture {
+      source {
         max-width: 100%;
-        height: 100%;
-
         margin: auto;
       }
     </style>
@@ -27,10 +25,12 @@
     <main>
       <picture>
         <source
+          class="picture"
           srcset="https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson22/task3/small.jpg"
           media="(max-width: 400px)"
         />
         <source
+          class="picture"
           srcset="https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson22/task3/big.jpeg"
           media="(max-width: 600px)"
         />
