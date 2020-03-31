@@ -29,38 +29,30 @@ span {
   .products {
     display: flex;
     flex-wrap: wrap;
-  }
-
-  .navigation {
-    display: flex;
-    flex: 1 1 50%;
-  }
-
-  .products-list {
-    display: flex;
-    flex: 1 1 50%;
-  }
-
-  .news {
-    display: flex;
-    flex: 1 1 100%;
+    .navigation {
+      flex: 1 1 50%;
+    }
+    .products-list {
+      flex: 1 1 50%;
+    }
+    .news {
+      display: flex;
+      flex: 1 1 100%;
+    }
   }
 }
 @include for-large-up {
   .products {
     display: flex;
     flex-wrap: nowrap;
-  }
-
-  .navigation {
-    flex: 1;
-  }
-
-  .products-list {
-    flex: 1;
-  }
-
-  .news {
-    flex: 1;
+    .navigation {
+      flex: 1;
+    }
+    .products-list {
+      flex: 1;
+    }
+    .news {
+      flex: 1;
+    }
   }
 }

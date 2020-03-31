@@ -33,18 +33,13 @@ span {
     display: flex;
     flex-wrap: wrap;
   }
-
-  .navigation {
-    display: flex;
+  .products .navigation {
     flex: 1 1 50%;
   }
-
-  .products-list {
-    display: flex;
+  .products .products-list {
     flex: 1 1 50%;
   }
-
-  .news {
+  .products .news {
     display: flex;
     flex: 1 1 100%;
   }
@@ -54,16 +49,13 @@ span {
     display: flex;
     flex-wrap: nowrap;
   }
-
-  .navigation {
+  .products .navigation {
     flex: 1;
   }
-
-  .products-list {
+  .products .products-list {
     flex: 1;
   }
-
-  .news {
+  .products .news {
     flex: 1;
   }
 }
