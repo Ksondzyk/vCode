@@ -30,7 +30,7 @@
     background-color: #8a2be2;
   }
 }
-@media screen and (min-width: 899px) and (max-width: 1199px) {
+@media screen and (min-width: 900px) and (max-width: 1199px) {
   .square {
     background-color: #a61;
   }
