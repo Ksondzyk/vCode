@@ -21,6 +21,7 @@
       }
       &__item_active {
         position: relative;
+        color: yellow;
         .submenu {
           display: none;
           position: absolute;
@@ -39,7 +40,6 @@
         }
       }
       &__item_active:hover {
-        color: yellow;
         background-color: #9acd32;
         .submenu {
           display: block;

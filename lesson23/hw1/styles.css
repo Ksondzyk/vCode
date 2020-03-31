@@ -24,6 +24,7 @@
 }
 .header .header-nav .menu__item_active {
   position: relative;
+  color: yellow;
 }
 .header .header-nav .menu__item_active .submenu {
   display: none;
@@ -42,7 +43,6 @@
   padding: 0 8px;
 }
 .header .header-nav .menu__item_active:hover {
-  color: yellow;
   background-color: #9acd32;
 }
 .header .header-nav .menu__item_active:hover .submenu {
