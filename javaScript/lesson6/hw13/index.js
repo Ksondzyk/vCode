@@ -13,5 +13,5 @@ function removeDuplicates(array) {
 
   return res.length;
 }
-const result = removeDuplicates(arr);
-console.log(result);
+// const result = removeDuplicates(arr);
+// console.log(result);
