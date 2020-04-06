@@ -1,6 +1,6 @@
 function createEmptyArray(len) {
-  let arr = len.length;
-  let result = new Array(arr);
-  console.log(result);
+  new Array(len.length);
+  return new Array(len.length);
 }
-createEmptyArray("len");
+const res = createEmptyArray("len");
+console.log(res);
