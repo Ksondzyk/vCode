@@ -7,6 +7,7 @@
 // console.log("Element last:" + numbers[numbers.length - 1]);
 
 // [11, 22, 33, 55, 66]=>[length, first elem , last elem]
+
 const numbers = [11, 22, 33, 55, 66];
 function getArrayBound(arr) {
   if (!Array.isArray(arr)) {
