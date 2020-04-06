@@ -10,7 +10,6 @@ function increaseEvenEl(arr, delta) {
       evenNumbers.push(number);
     }
   }
-  return evenNumbers;
 }
 const result = increaseEvenEl([2, 5, 6, 8, 11, 9, 4], 20);
 console.log(result);
