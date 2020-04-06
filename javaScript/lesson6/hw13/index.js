@@ -1,6 +1,6 @@
 const arr = [1, 4, 1, 8, 3, 4, 8, 8];
 
-function removeDuplicates(array) {
+function uniqueCount(array) {
   let res = [];
   if (!Array.isArray(array)) {
     return null;
@@ -13,5 +13,5 @@ function removeDuplicates(array) {
 
   return res.length;
 }
-// const result = removeDuplicates(arr);
-// console.log(result);
+const result = uniqueCount(arr);
+console.log(result);
