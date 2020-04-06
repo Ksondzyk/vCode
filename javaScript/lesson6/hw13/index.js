@@ -10,8 +10,8 @@ function removeDuplicates(array) {
       res.push(number);
     }
   }
-  const res1 = res.length;
-  return res1;
+
+  return res.length;
 }
 const result = removeDuplicates(arr);
 console.log(result);
