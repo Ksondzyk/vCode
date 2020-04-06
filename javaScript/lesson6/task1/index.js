@@ -14,5 +14,5 @@ function getArrayBound(arr) {
   }
   return [arr.length, arr[0], arr[arr.length - 1]];
 }
-const arrayBound = getArrayBound(1);
+const arrayBound = getArrayBound(numbers);
 console.log(arrayBound);
