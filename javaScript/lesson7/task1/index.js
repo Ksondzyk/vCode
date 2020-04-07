@@ -1,11 +1,5 @@
 const getSpecialNumbers = (numbers) => {
-  let specialNumbers = [];
-
-  const result = numbers.filter((num) => {
-    return num % 3 === 0 ? true : false;
-  });
-
-  return result;
+  return (result = numbers.filter((num) => num % 3 === 0));
 };
 
 const arr = [1, 2, 3, 4, 5, 6, 18];
