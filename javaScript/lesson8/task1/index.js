@@ -13,6 +13,9 @@
 // console.log(obj[`${prop}name`]);
 
 const transformToObject = (arr) => {
+  if (!Array.isArray(arr)) {
+    return {};
+  }
   const obj = {};
 
   arr.forEach((element) => {
