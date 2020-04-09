@@ -18,8 +18,8 @@ const obj = { a: "a", "17.1": 17.1, "John Doe": "John Doe" };
 // console.log(result);
 const pickProps = (arg1, arg2) => {
   Object.keys(arg1);
-  const res = Object.keys(arg1).reduce((acc, value) => {
-    if (arg2.find((value) => value === value)) {
+  const res = Object.values(arg1).reduce((acc, value) => {
+    if (arg2.includes(value)) {
       console.log(arg1[value]);
       acc[value] = arg1[value];
     }
