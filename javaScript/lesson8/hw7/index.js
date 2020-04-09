@@ -17,7 +17,10 @@ const obj4 = {
 };
 
 function compareObjects(obj1, obj4) {
-  const arr1 = Object.keys(obj1);
+  if (Object.keys(obj4).length !== Object.keys(obj1).length) {
+    return false;
+  }
+  const arr1 = Object.keys(obj4);
   for (const key of arr1) {
     if (obj1[key] !== obj4[key]) {
       return false;
@@ -30,5 +33,5 @@ const result = compareObjects(obj1, obj2);
 console.log(result);
 const result1 = compareObjects(obj2, obj3);
 console.log(result1);
-const result2 = compareObjects(obj2, obj4);
+const result2 = compareObjects(obj1, obj4);
 console.log(result2);
