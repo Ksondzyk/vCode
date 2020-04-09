@@ -15,7 +15,6 @@ const obj4 = {
   name: "Tom",
   age: 17,
 };
-
 export const compareObjects = (obj1, obj4) => {
   const arr1 = Object.keys(obj1);
   for (const key of arr1) {
