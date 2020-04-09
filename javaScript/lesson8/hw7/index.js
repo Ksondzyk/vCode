@@ -46,7 +46,7 @@ console.log(result1);
 //   }
 //   return false;
 // };
-function res(o1, o2) {
+function compareObjects3(o1, o2) {
   for (var p in o1) {
     if (o1.hasOwnProperty(p)) {
       if (o1[p] !== o2[p]) {
@@ -63,5 +63,5 @@ function res(o1, o2) {
   }
   return true;
 }
-const result4 = res(obj1, obj4);
+const result4 = compareObjects3(obj1, obj4);
 console.log(result4);
