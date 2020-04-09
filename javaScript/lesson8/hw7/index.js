@@ -15,17 +15,17 @@ const obj4 = {
   name: "Tom",
   age: 17,
 };
-// const compareObjects = (obj1, obj2) => {
-//   return obj1 === obj2;
-// };
-// const result = compareObjects(obj1, obj2);
-// console.log(result);
+const compareObjects = (obj1, obj2) => {
+  return obj1 === obj2;
+};
+const result = compareObjects(obj1, obj2);
+console.log(result);
 
-// const compareObjects1 = (obj2, obj3) => {
-//   return obj2 === obj3;
-// };
-// const result1 = compareObjects1(obj2, obj3);
-// console.log(result1);
+const compareObjects1 = (obj2, obj3) => {
+  return obj2 === obj3;
+};
+const result1 = compareObjects1(obj2, obj3);
+console.log(result1);
 // @Roman Ksondzyk попробуй по этому алгоритму
 // 1. Создать ф-цию compareObjects
 // 2. Сравнить к-во ключей в объектах
@@ -33,23 +33,19 @@ const obj4 = {
 // 4. Если к-во ключей одинаковое, то пройтись по всем ключам первого объекта и сравнить значение свойств двух объектов по каждому ключу
 // 5. Если для всех ключей значения свойств равны, то и объекты равны
 
-const compareObjects = (obj1, obj4) => {
+const compareObjects3 = (obj1, obj4) => {
   const arr1 = Object.keys(obj1);
   const arr2 = Object.keys(obj4);
-
-  console.log(arr1);
   if (Object.keys(obj1).length === Object.keys(obj4).length) {
-    for (const item1 of arr1) {
-      for (const item2 of arr2) {
-        if (item1 === item2) {
-          return true;
+    for (const key1 of arr2)
+      for (const key of arr1) {
+        if (arr2[key] !== arr1[key]) {
+          return false;
         }
       }
-    }
-  } else {
-    return false;
+    return true;
   }
-
+  return false;
 };
-const result2 = compareObjects(obj1, obj4);
+const result2 = compareObjects3(obj1, obj4);
 console.log(result2);
