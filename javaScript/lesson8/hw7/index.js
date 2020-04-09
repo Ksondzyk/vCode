@@ -28,7 +28,7 @@ const result1 = compareObjects1(obj2, obj3);
 console.log(result1);
 
 const compareObjects2 = (obj1, obj4) => {
-  if (obj1 === obj1) {
+  if (obj1 === obj4) {
     return true;
   }
   return false;
