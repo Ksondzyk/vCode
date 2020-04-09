@@ -1,8 +1,6 @@
 const pickProps = (arg1, arg2) => {
   const arr2 = Object.keys(arg1);
   const res = arg2.reduce((acc, prevValue, nextValue) => {
-    if (prevValue === arr2[nextValue]) {
-    }
     return { ...acc, [prevValue]: arr2[nextValue] };
   }, {});
   return res;
