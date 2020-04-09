@@ -21,10 +21,10 @@ const compareObjects1 = (obj1, obj2) => {
 const result = compareObjects1(obj1, obj2);
 console.log(result);
 
-const compareObjects = (obj2, obj3) => {
+const compareObjects2 = (obj2, obj3) => {
   return obj2 === obj3;
 };
-const result1 = compareObjects(obj2, obj3);
+const result1 = compareObjects2(obj2, obj3);
 console.log(result1);
 // @Roman Ksondzyk попробуй по этому алгоритму
 // 1. Создать ф-цию compareObjects
