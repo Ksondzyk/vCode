@@ -28,10 +28,19 @@ const result1 = compareObjects1(obj2, obj3);
 console.log(result1);
 
 const compareObjects2 = (obj1, obj4) => {
-  if (obj1 === obj4) {
-    return true;
+  const arr1 = Object.keys(obj1);
+  const arr2 = Object.keys(obj4);
+
+  for (const keyArr1 of arr1) {
+    for (const keyArr2 of arr2) {
+      if (keyArr1 === keyArr2) {
+        continue;
+      }
+      if (Object.is(obj1) === Object.is(obj4)) {
+        return true;
+      }
+    }
   }
-  return false;
 };
-const result2 = compareObjects2(obj4, obj4);
+const result2 = compareObjects2(obj1, obj4);
 console.log(result2);
