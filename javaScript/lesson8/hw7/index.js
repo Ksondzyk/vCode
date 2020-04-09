@@ -16,18 +16,16 @@ const obj4 = {
   age: 17,
 };
 
-function compareObjects(obj1, obj4) {
-  if (Object.keys(obj4).length !== Object.keys(obj1).length) {
+function compareObjects(obj1, obj2) {
+  const keys1 = Object.keys(obj1);
+  const keys2 = Object.keys(obj2);
+  if (keys1.length !== keys2.length) {
     return false;
   }
-  const arr1 = Object.keys(obj4);
-  for (const key of arr1) {
-    if (obj1[key] !== obj4[key]) {
-      return false;
-    }
-    return true;
-  }
-  return false;
+  const isEqual = keys1.reduce((acc, key) => {
+    return obj1[key] === obj2[key];
+  }, true);
+  return isEqual;
 }
 const result = compareObjects(obj1, obj2);
 console.log(result);
