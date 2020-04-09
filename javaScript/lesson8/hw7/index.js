@@ -30,6 +30,7 @@ console.log(result1);
 const compareObjects2 = (obj1, obj4) => {
   const arr1 = Object.keys(obj1);
   const arr2 = Object.keys(obj4);
+  let booleanRes;
 
   for (const keyArr1 of arr1) {
     for (const keyArr2 of arr2) {
@@ -37,10 +38,11 @@ const compareObjects2 = (obj1, obj4) => {
         continue;
       }
       if (Object.is(obj1) === Object.is(obj4)) {
-        return true;
+        booleanRes = true;
       }
     }
   }
+  return booleanRes;
 };
 const result2 = compareObjects2(obj1, obj4);
 console.log(result2);
