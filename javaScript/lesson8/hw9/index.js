@@ -17,9 +17,12 @@ const obj = { a: "a", "17.1": 17.1, "John Doe": "John Doe" };
 // const result = pickProps(obj, ["a", 17.1, "John Doe"]);
 // console.log(result);
 const pickProps = (arg1, arg2) => {
-  const arr2 = Object.keys(arg1);
-  const res = arg2.reduce((acc, prevValue, nextValue) => {
-    return { ...acc, [prevValue]: arr2[nextValue] };
+  Object.keys(arg1);
+  const res = Object.keys(arg1).reduce((acc, prevValue, nextValue) => {
+    if (arg2.find((value) => value === prevValue)) {
+      acc[nextValue] = arg1[prevValue];
+    }
+    return acc;
   }, {});
   return res;
 };
