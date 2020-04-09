@@ -1,7 +1,9 @@
+"use strict ";
+
 const buildObject = (keysList, valuesList) => {
   const result = keysList.reduce((acc, prevValue, nextValue) => {
     return { ...acc, [prevValue]: valuesList[nextValue] };
-  });
+  }, {});
   return result;
 };
 const result1 = buildObject(["name", "address", "age"], ["Bob", "Ukraine", 34]);
