@@ -33,19 +33,35 @@ console.log(result1);
 // 4. Если к-во ключей одинаковое, то пройтись по всем ключам первого объекта и сравнить значение свойств двух объектов по каждому ключу
 // 5. Если для всех ключей значения свойств равны, то и объекты равны
 
-const compareObjects3 = (obj1, obj4) => {
-  const arr1 = Object.keys(obj1);
-  const arr2 = Object.keys(obj4);
-  if (Object.keys(obj1).length === Object.keys(obj4).length) {
-    for (const key1 of arr2)
-      for (const key of arr1) {
-        if (arr2[key] !== arr1[key]) {
-          return false;
-        }
+// const compareObjects3 = (obj1, obj4) => {
+//   const arr1 = Object.keys(obj1);
+//   const arr2 = Object.keys(obj4);
+//   if (Object.keys(obj1).length === Object.keys(obj4).length) {
+//     for (const key of arr1) {
+//       if (obj1[key] !== obj2[key]) {
+//         return false;
+//       }
+//       return true;
+//     }
+//   }
+//   return false;
+// };
+function res(o1, o2) {
+  for (var p in o1) {
+    if (o1.hasOwnProperty(p)) {
+      if (o1[p] !== o2[p]) {
+        return false;
       }
-    return true;
+    }
   }
-  return false;
-};
-const result2 = compareObjects3(obj1, obj4);
-console.log(result2);
+  for (var p in o2) {
+    if (o2.hasOwnProperty(p)) {
+      if (o1[p] !== o2[p]) {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+const result4 = res(obj1, obj4);
+console.log(result4);
