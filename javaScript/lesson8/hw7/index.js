@@ -35,14 +35,13 @@ console.log(result1);
 
 const compareObjects3 = (obj1, obj4) => {
   const arr1 = Object.keys(obj1);
-  if (Object.keys(obj1).length === Object.keys(obj4).length) {
-    for (const key of arr1) {
-      if (obj1[key] !== obj2[key]) {
-        return false;
-      }
+  for (const key of arr1) {
+    if (obj1[key] !== obj4[key]) {
+      return false;
     }
+    return true;
   }
-  return true;
+  return false;
 };
 
 const result4 = compareObjects3(obj1, obj4);
