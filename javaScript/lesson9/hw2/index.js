@@ -14,12 +14,9 @@ const rooms = {
 };
 const getPeople = (obj) => {
   const values = Object.values(obj);
-  values.reduce((acc, elem) => {
-    return (acc = elem);
-  });
+  values.reduce((acc, elem) => (acc = elem));
   const arrObj = values.flat();
-  const arrListNames = arrObj.map((value) => value.name);
-  return arrListNames;
+  return arrObj.map((value) => value.name);
 };
 
 const result = getPeople(rooms);
