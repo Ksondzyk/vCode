@@ -47,4 +47,3 @@ const getCustomersList = (obj) => {
 
 const result = getCustomersList(customers);
 console.log(result);
-console.log(customers);
