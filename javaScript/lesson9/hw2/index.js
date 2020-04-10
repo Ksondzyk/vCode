@@ -13,7 +13,7 @@ const rooms = {
   ],
 };
 const getPeople = (obj) => {
-  if (obj !== undefined) {
+  if (Object.keys(obj).length === 0) {
     return [];
   }
   const values = Object.values(obj);
