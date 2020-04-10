@@ -13,8 +13,10 @@ const rooms = {
   ],
 };
 const getPeople = (obj) => {
+  if (obj !== undefined) {
+    return [];
+  }
   const values = Object.values(obj);
-  if (obj === undefined) return {};
   values.reduce((acc, elem) => (acc = elem));
   const arrObj = values.flat();
   return arrObj.map((value) => value.name);
