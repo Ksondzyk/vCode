@@ -7,5 +7,4 @@ const multiRound = (num) => {
     Math.Number(num.toFixed()),
   ];
 };
-const result = multiRound(17.3433);
-console.log(result);
+multiRound(17.3433);
