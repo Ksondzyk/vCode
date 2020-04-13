@@ -3,6 +3,6 @@ const multiRound = (num) => [
   Math.floor(num),
   Math.ceil(num),
   Math.trunc(num),
-  num.toFixed(1),
+  Math.round(num * 100) / 100,
 ];
 console.log(multiRound(17.34));
