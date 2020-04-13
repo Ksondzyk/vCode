@@ -3,8 +3,8 @@ const getRandomNumbers = (...arg) => {
     return null;
   }
 
-  arg.map((elem) => elem >= 0);
-  return arg;
+  const res = arg.map((elem) => Math.round(elem));
+  return res;
 };
 const result = getRandomNumbers(
   Math.floor(Math.random() * Math.floor(12)),
