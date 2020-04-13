@@ -14,6 +14,6 @@ const getRandomNumbers = (number, ...args) => {
 const result = getRandomNumbers(
   5,
   Math.floor(Math.random() * Math.floor(12)),
-  Math.random() * (24 - 13) + 13
+  Math.random() * (24 - 12) + 12
 );
 console.log(result);
