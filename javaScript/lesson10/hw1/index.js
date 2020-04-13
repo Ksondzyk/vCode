@@ -3,8 +3,7 @@ const getTotalPrice = (arr) => {
   const res = arr.reduce((acc, prevNumber) => {
     return acc + prevNumber;
   }, 0);
-  const result = `$${res.toFixed(3)}`;
-  return result;
+  return `$${res.toFixed(2)}`;
 };
 
 const result = getTotalPrice(arr);
