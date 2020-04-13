@@ -11,9 +11,5 @@ const getRandomNumbers = (number, ...args) => {
   }
   return newArr;
 };
-const result = getRandomNumbers(
-  5,
-  Math.floor(Math.random() * Math.floor(12)),
-  Math.random() * (24 - 12) + 12
-);
+const result = getRandomNumbers(5, 12, 24);
 console.log(result);
