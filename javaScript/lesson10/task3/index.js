@@ -1,4 +1,4 @@
-const multiRound = (...num) => {
+const multiRound = (num) => {
   return [
     Math.round(num),
     Math.floor(num),
