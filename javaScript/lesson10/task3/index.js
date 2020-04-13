@@ -9,3 +9,4 @@ function multiRound(num) {
 }
 const result = multiRound(17.3433);
 console.log(result);
+
