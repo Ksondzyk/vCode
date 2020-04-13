@@ -3,7 +3,7 @@ const getTotalPrice = (arr) => {
   const res = arr.reduce((acc, prevNumber) => {
     return acc + prevNumber;
   }, 0);
-  return `$${res.toFixed(2)}`;
+  return `$${Math.floor(res * 100) / 100}`;
 };
 
 const result = getTotalPrice(arr);
