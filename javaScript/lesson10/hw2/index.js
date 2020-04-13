@@ -1,6 +1,7 @@
-const getRandomNumbers = (...args) => {
-  args.map((elem) => Number.parseInt(elem));
-  return args;
+const getRandomNumbers = (num1, num2, num3) => {
+  const res = [num1, num2, num3];
+  res.map((elem) => elem >= 0);
+  return res;
 };
 const result = getRandomNumbers(
   Math.floor(Math.random() * Math.floor(12)),
