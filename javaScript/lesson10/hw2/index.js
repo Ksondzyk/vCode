@@ -6,7 +6,7 @@ const getRandomNumbers = (number, ...args) => {
   for (let i = 0; i < number; i++) {
     const res = Math.random() * (args[1] - args[0]) + args[0];
     const el = Math.round(res);
-    debugger;
+
     newArr.push(el);
   }
   return newArr;
