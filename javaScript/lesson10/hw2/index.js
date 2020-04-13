@@ -1,5 +1,5 @@
 const getRandomNumbers = (number, ...args) => {
-  if (args[1] > args[2] || (args[1] < 0 && args[2] < 0)) {
+  if (args[0] > args[1] || (args[0] < 0 && args[1] < 0)) {
     return null;
   }
   const newArr = [];
