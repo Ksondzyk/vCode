@@ -1,4 +1,4 @@
-function multiRound(num) {
+const multiRound = (num) => {
   return [
     Math.round(num),
     Math.floor(num),
@@ -6,7 +6,6 @@ function multiRound(num) {
     Math.trunc(num),
     Math.Number(num.toFixed()),
   ];
-}
+};
 const result = multiRound(17.3433);
 console.log(result);
-
