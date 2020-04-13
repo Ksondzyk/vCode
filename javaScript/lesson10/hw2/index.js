@@ -1,4 +1,8 @@
 const getRandomNumbers = (...arg) => {
+  if (arg[1] > arg[2] || (arg[1] < 0 && arg[2] < 0)) {
+    return null;
+  }
+
   arg.map((elem) => elem >= 0);
   return arg;
 };
