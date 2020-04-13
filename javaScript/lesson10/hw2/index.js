@@ -11,3 +11,5 @@ const getRandomNumbers = (number, ...args) => {
   }
   return newArr;
 };
+const result = getRandomNumbers(5, -12, 24);
+console.log(result);
