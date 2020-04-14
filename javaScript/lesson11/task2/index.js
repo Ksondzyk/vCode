@@ -12,7 +12,7 @@ const sortContacts = (contacts, isAsc) => {
   }
   let result;
   result = contacts.sort((a, b) => {
-    return a.name.localeCompare(b.nane);
+    return a.name.localeCompare(b.name);
   });
   if (isAsc === true) {
     result = contacts.sort((a, b) => {
