@@ -10,17 +10,19 @@ const sortContacts = (contacts, isAsc) => {
   if (!Array.isArray(contacts)) {
     return null;
   }
-  if (isAsc === true) {
-    const result = contacts.sort((a, b) => {
+  let result;
+  if (isAsc !== true) {
+    result = contacts.sort((a, b) => {
       return a.name.localeCompare(b.nane);
     });
     return result;
   }
   if (isAsc === false) {
-    const result = contacts.sort((a, b) => {
+    result = contacts.sort((a, b) => {
       return b.name.localeCompare(a.name);
     });
     return result;
   }
+  return result;
 };
 console.log(sortContacts(contacts, false));
