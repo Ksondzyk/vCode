@@ -1,7 +1,7 @@
 const getRandomNumbers = (number, arg1, arg2) => {
-  if (arg1 > arg2 || (arg1 < 0 && arg2 < 0)) {
-    return null;
-  }
+  // if (arg1 > arg2 || (arg1 < 0 && arg2 < 0)) {
+  //   return null;
+  // }
   const newArr = [];
   for (let i = 0; i < number; i++) {
     const res = Math.random() * (arg2 - arg1) + arg1;
