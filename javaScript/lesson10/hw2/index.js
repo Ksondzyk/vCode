@@ -8,9 +8,9 @@ const getRandomNumbers = (number, arg1, arg2) => {
 
   const newArr = [];
   for (let i = 0; i < number; i++) {
-    newArr.push(Math.floor(Math.random() * (max - min + 1)) + min);
+    newArr.push(Math.trunc(Math.random() * (max - min + 1)) + min);
   }
   return newArr;
 };
-const result = getRandomNumbers(100, 12, 24);
+const result = getRandomNumbers(100, -0.1, 0.1);
 console.log(result);
