@@ -6,13 +6,21 @@ const contacts = [
   { name: "Suzy", phoneNumber: "222-22-22" },
   { name: "Adel", phoneNumber: "111-11-11" },
 ];
-const sortContacts = (contacts) => {
+const sortContacts = (contacts, isAsc) => {
   if (!Array.isArray(contacts)) {
     return null;
   }
-  const result = contacts.sort((a, b) => {
-    return a.name.localeCompare(b.nane);
-  });
-  return result;
+  if (isAsc === true) {
+    const result = contacts.sort((a, b) => {
+      return a.name.localeCompare(b.nane);
+    });
+    return result;
+  }
+  if (isAsc === false) {
+    const result = contacts.sort((a, b) => {
+      return b.name.localeCompare(a.name);
+    });
+    return result;
+  }
 };
-console.log(sortContacts(contacts));
+console.log(sortContacts(contacts, false));
