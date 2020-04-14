@@ -2,10 +2,7 @@ const splitString = (text, len) => {
   if (typeof text !== "string") {
     return null;
   }
-  const dot = ".";
-  const strArr = [];
-  let startPosition = 0;
-  let res = "";
+
   if (len === undefined) {
     const strArr = [];
     let startPosition = 0;
@@ -19,6 +16,9 @@ const splitString = (text, len) => {
     }
     return strArr;
   }
+  const dot = ".";
+  let startPosition = 0;
+  let res = "";
   while (true) {
     const chunk = text.substr(startPosition, len);
     if (chunk.length === 0) {
@@ -35,4 +35,5 @@ const splitString = (text, len) => {
   }
   return strArr;
 };
-const result = splitString("abcdefghasdfdsafsd", 4);
+const result = splitString("abcdefghasdfdsafsd");
+console.log(result);
