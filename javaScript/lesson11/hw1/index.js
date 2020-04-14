@@ -5,12 +5,17 @@ const splitString = (text, len) => {
   if (len === undefined) {
     const strArr = [];
     let startPosition = 0;
+    let res = "";
     while (true) {
       const chunk = text.substr(startPosition, 10);
       if (chunk.length === 0) {
         break;
       }
-      strArr.push(chunk[0].toUpperCase() + chunk.slice(1));
+      if (chunk.length < 10) {
+        const cycle = 10 - chunk.length;
+        res += ".".repeat(cycle);
+      }
+      strArr.push(chunk[0].toUpperCase() + chunk.slice(1) + res.substr());
       startPosition += 10;
     }
     return strArr;
@@ -35,4 +40,4 @@ const splitString = (text, len) => {
   }
   return strArr;
 };
-console.log(splitString("abcdefghasdfdsafsd", 4));
+console.log(splitString("abcdefghasdfdsafsdfad"));
