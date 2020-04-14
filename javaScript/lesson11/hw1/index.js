@@ -2,7 +2,6 @@ const splitString = (text, len) => {
   if (typeof text !== "string") {
     return null;
   }
-
   if (len === undefined) {
     const strArr = [];
     let startPosition = 0;
@@ -35,5 +34,4 @@ const splitString = (text, len) => {
   }
   return strArr;
 };
-const result = splitString("abcdefghasdfdsafsd", 4);
-// console.log(result);
+splitString("abcdefghasdfdsafsd", 4);
