@@ -1,10 +1,10 @@
-const multiRound = (num, num2) => {
+const multiRound = (num) => {
   return [
-    Math.round(num * 1000) / 1000,
-    Math.floor(num * 1000) / 1000,
-    Math.ceil(num * 1000) / 1000,
-    Math.trunc(num * 1000) / 1000,
-    Number(num.toFixed(3)),
+    Math.floor(num),
+    Math.round(num),
+    Math.ceil(num),
+    Math.trunc(num),
+    Number(num.toFixed(2)),
   ];
 };
-console.log(multiRound(17.3433, -17.3433));
+console.log(multiRound(17.3433));
