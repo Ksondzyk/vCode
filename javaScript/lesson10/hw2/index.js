@@ -14,15 +14,26 @@
 // };
 // getRandomNumbers(100, -0.1, 0.1);
 
-const getRandomNumbers = (number, to, from) => {
-  if (to > from || (to < 0 && from < 0)) {
+// const getRandomNumbers = (number, to, from) => {
+//   if (to > from || (to < 0 && from < 0)) {
+//     return null;
+//   }
+//   return Array(number)
+//     .fill()
+//     .map(() => from + (to - from) * Math.random())
+//     .map((num) => (num < 0 ? Math.ceil(num) : Math.floor(num)));
+// };
+// const result = getRandomNumbers(100, -0.1, 0.1);
+// console.log(result);
+const getRandomNumbers = (length, from, to) => {
+  const isWrongRange = to < from;
+  const noNumbersBetween = to - from < 1 && Math.ceil(to) === Math.ceil(from);
+  if (isWrongRange || noNumbersBetween) {
     return null;
   }
-  return Array(number)
+  return new Array(length)
     .fill()
     .map(() => from + (to - from) * Math.random())
     .map((num) => (num < 0 ? Math.ceil(num) : Math.floor(num)));
 };
 const result = getRandomNumbers(100, -0.1, 0.1);
-console.log(result);
-
