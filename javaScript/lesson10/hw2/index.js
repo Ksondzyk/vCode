@@ -4,7 +4,7 @@ const getRandomNumbers = (number, arg1, arg2) => {
   }
 
   const min = Math.ceil(arg1);
-  const max = Math.floor(arg2);
+  const max = Math.round(arg2);
 
   const newArr = [];
   for (let i = 0; i < number; i++) {
