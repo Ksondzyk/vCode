@@ -14,18 +14,18 @@ const sortContacts = (contacts, isAsc) => {
   result = contacts.sort((a, b) => {
     return a.name.localeCompare(b.nane);
   });
-  if (isAsc === true) {
-    result = contacts.sort((a, b) => {
-      return b.name.localeCompare(a.name);
-    });
-    return result;
-  }
-  if (isAsc === false) {
-    result = contacts.sort((a, b) => {
-      return b.name.localeCompare(a.name);
-    });
-    return result;
-  }
+//   if (isAsc === true) {
+//     result = contacts.sort((a, b) => {
+//       return a.name.localeCompare(b.name);
+//     });
+//     return result;
+//   }
+//   if (isAsc === false) {
+//     result = contacts.sort((a, b) => {
+//       return b.name.localeCompare(a.name);
+//     });
+//     return result;
+//   }
   return result;
 };
 console.log(sortContacts(contacts, true));
