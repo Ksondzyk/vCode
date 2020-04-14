@@ -15,9 +15,9 @@
 // getRandomNumbers(100, -0.1, 0.1);
 
 const getRandomNumbers = (number, to, from) => {
-  if (to > from || (to < 0 && from < 0)) {
-    return null;
-  }
+  // if (to > from || (to < 0 && from < 0)) {
+  //   return null;
+  // }
   return Array(number)
     .fill()
     .map(() => from + (to - from) * Math.random())
