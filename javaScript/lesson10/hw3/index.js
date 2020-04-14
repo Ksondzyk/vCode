@@ -1,9 +1,10 @@
 const superRound = (arg1, arg2) => {
+  const res = (3 * 1000) / 3;
   return [
-    +Math.floor(arg1).toFixed(arg2),
-    +Math.round(arg1).toFixed(arg2),
-    +Math.ceil(arg1).toFixed(arg2),
-    +Math.trunc(arg1).toFixed(arg2),
+    Math.floor(arg1 * res) / res,
+    +Math.round(arg1 * res) / res,
+    +Math.ceil(arg1 * res) / res,
+    +Math.trunc(arg1 * res) / res,
     Number(arg1.toFixed(arg2)),
   ];
 };
