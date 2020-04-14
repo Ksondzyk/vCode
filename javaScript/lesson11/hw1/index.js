@@ -1,4 +1,4 @@
-const splitText = (text, len) => {
+const splitString = (text, len) => {
   if (typeof text !== "string") {
     return null;
   }
@@ -27,5 +27,5 @@ const splitText = (text, len) => {
   }
   return strArr;
 };
-const result = splitText("abcdefghasdfdsafsdf", 4);
+const result = splitString("abcdefghasdfdsafsdf", 4);
 console.log(result);
