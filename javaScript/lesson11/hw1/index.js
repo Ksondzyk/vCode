@@ -13,10 +13,8 @@ const splitString = (text, len) => {
     }
     if (chunk.length < len) {
       const cycle = len - chunk.length;
-      //   res = chunk.substr(chunk);
       for (let i = 0; i < cycle; i++) {
         res += dot;
-        console.log(res);
       }
     }
     strArr.push(chunk[0].toUpperCase() + chunk.slice(1) + res.substr());
@@ -25,4 +23,4 @@ const splitString = (text, len) => {
   return strArr;
 };
 const result = splitString("abcdefghasdfdsafsd", 4);
-console.log(result);
+
