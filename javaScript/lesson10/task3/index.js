@@ -4,7 +4,7 @@ const multiRound = (num) => {
     Math.floor(num),
     Math.ceil(num),
     Math.trunc(num),
-    Math.Number(num.toFixed()),
+    Number(num.toFixed()),
   ];
 };
-multiRound(17.3433);
+console.log(multiRound(17.3433));
