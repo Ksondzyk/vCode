@@ -1,9 +1,9 @@
 const multiRound = (num, num2) => {
   return [
-    Math.round(num, num2),
-    Math.floor(num, num2),
-    Math.ceil(num, num2),
-    Math.trunc(num, num2),
+    Math.round(num * 100) / 100,
+    Math.floor(num * 100) / 100,
+    Math.ceil(num * 100) / 100,
+    Math.trunc(num * 100) / 100,
     Number(num.toFixed(2)),
   ];
 };
