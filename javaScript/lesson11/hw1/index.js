@@ -15,7 +15,7 @@ const splitString = (text, len) => {
         const cycle = 10 - chunk.length;
         res += ".".repeat(cycle);
       }
-      strArr.push(chunk + chunk.slice(1) + res.substr());
+      strArr.push(chunk + res.substr());
       startPosition += 10;
     }
     return strArr;
@@ -32,9 +32,9 @@ const splitString = (text, len) => {
       const cycle = len - chunk.length;
       res += ".".repeat(cycle);
     }
-    strArr.push(chunk + chunk.slice(1) + res.substr());
+    strArr.push(chunk + res.substr());
     startPosition += len;
   }
   return strArr;
 };
-console.log(splitString("abcd efgh", 4));
+console.log(splitString("abcdefgh", 4));
