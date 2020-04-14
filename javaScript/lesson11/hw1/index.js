@@ -16,7 +16,6 @@ const splitString = (text, len) => {
     return strArr;
   }
   const strArr = [];
-  const dot = ".";
   let startPosition = 0;
   let res = "";
   while (true) {
@@ -26,9 +25,10 @@ const splitString = (text, len) => {
     }
     if (chunk.length < len) {
       const cycle = len - chunk.length;
-      for (let i = 0; i < cycle; i++) {
-        res += dot;
-      }
+      res += ".".repeat(cycle);
+      //   for (let i = 0; i < cycle; i++) {
+      //     res += dot;
+      //   }
     }
     strArr.push(chunk[0].toUpperCase() + chunk.slice(1) + res.substr());
     startPosition += len;
