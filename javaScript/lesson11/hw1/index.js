@@ -36,4 +36,4 @@ const splitString = (text, len) => {
   return strArr;
 };
 const result = splitString("abcdefghasdfdsafsd", 4);
-console.log(result);
+// console.log(result);
