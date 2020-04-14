@@ -2,12 +2,13 @@ const getRandomNumbers = (number, arg1, arg2) => {
   if (arg1 > arg2 || (arg1 < 0 && arg2 < 0)) {
     return null;
   }
+
+  const min = Math.ceil(arg1);
+  const max = Math.floor(arg2);
+
   const newArr = [];
   for (let i = 0; i < number; i++) {
-    const res = Math.random() * (arg2 - arg1) + arg1;
-    const el = Math.round(res);
-
-    newArr.push(el);
+    newArr.push(Math.floor(Math.random() * (max - min + 1)) + min);
   }
   return newArr;
 };
