@@ -1,9 +1,15 @@
 const superRound = (arg1, arg2) => {
+  let value = "1";
+  const zero = "0";
+  for (let i = 0; i < arg2; i++) {
+    value += zero;
+  }
+  const numberArg = Number(value);
   return [
-    Math.floor(arg1 * 10000) / 10000,
-    Math.round(arg1 * 10000) / 10000,
-    Math.ceil(arg1 * 10000) / 10000,
-    Math.trunc(arg1 * 10000) / 10000,
+    Math.floor(arg1 * numberArg) / numberArg,
+    Math.round(arg1 * numberArg) / numberArg,
+    Math.ceil(arg1 * numberArg) / numberArg,
+    Math.trunc(arg1 * numberArg) / numberArg,
     Number(arg1.toFixed(arg2)),
   ];
 };
