@@ -40,4 +40,4 @@ const splitString = (text, len) => {
   }
   return strArr;
 };
-console.log(splitString("abcdefghasdfdsafsdfad"));
+console.log(splitString("abcdefghasdfdsafsdfad", 4));
