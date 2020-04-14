@@ -23,4 +23,4 @@ const sortContacts = (contacts, isAsc) => {
 
   return result;
 };
-console.log(sortContacts(contacts, false));
+console.log(sortContacts(contacts, true));
