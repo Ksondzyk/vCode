@@ -13,4 +13,3 @@ const getRandomNumbers = (number, arg1, arg2) => {
   return newArr;
 };
 const result = getRandomNumbers(100, -0.1, 0.1);
-console.log(result);
