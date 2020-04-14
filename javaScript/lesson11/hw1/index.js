@@ -15,6 +15,7 @@ const splitString = (text, len) => {
     }
     return strArr;
   }
+  const strArr = [];
   const dot = ".";
   let startPosition = 0;
   let res = "";
