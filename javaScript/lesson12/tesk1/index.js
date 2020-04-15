@@ -17,4 +17,4 @@ const calc = (expression) => {
   }
   return `${expression} = ${result}`;
 };
-console.log(calc("1 + 2"));
+calc("1 + 2");
