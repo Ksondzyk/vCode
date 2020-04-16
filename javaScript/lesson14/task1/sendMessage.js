@@ -1,7 +1,6 @@
-import { message } from "./index";
+function setMessage(text) {
+  message = text;
+}
 
-export const sendMessage = (name) => {
-  const sender = "Gromcode";
-  console.log(`${name}, ${message} Your ${sender}`);
-};
+setMessage("Good job!");
 sendMessage("Ann");
