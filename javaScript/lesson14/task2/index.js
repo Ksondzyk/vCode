@@ -13,9 +13,9 @@ const createMessenger = () => {
   }
 
   return {
-    sendMessage,
-    setMessage,
-    setSender,
+    sendMessage: sendMessage,
+    setMessage: setMessage,
+    setSender: setSender,
   };
 };
 
