@@ -19,7 +19,7 @@ const createMessenger = () => {
   };
   return obj;
 };
-
+export { createMessenger };
 const massager1 = createMessenger();
 
 massager1.sendMessage("Bob");
