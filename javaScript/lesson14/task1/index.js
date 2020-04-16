@@ -1,15 +1,12 @@
-// import { sendMessage } from "./sendMessage";
+import { sendMessage } from "./sendMessage";
 
-let message = "Just learn it!";
-const sendMessage = (name) => {
-  const sender = "Gromcode";
-  console.log(`${name}, ${message} Your ${sender}`);
-};
+export let message = "Just learn it!";
+
+sendMessage("Ann");
 
 function setMessage(text) {
   message = text;
 }
-sendMessage("Ann");
+
 setMessage("Good job!");
 sendMessage("Ann");
-
