@@ -6,10 +6,10 @@ const createMessenger = () => {
   }
 
   function setMessage(text) {
-    message = text;
+    message = text.bold();
   }
   function setSender(text) {
-    sender = text;
+    sender = text.bold();
   }
 
   var obj = {
@@ -32,4 +32,3 @@ const massager3 = createMessenger();
 massager3.setSender("Gromcode");
 massager3.setMessage("Good job!");
 massager3.sendMessage("Bob");
-export { createMessenger };
