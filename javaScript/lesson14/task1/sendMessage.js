@@ -1,4 +1,4 @@
-import { sendMessage, message } from "./index.js";
+import { sendMessage } from "./index.js";
 export function setMessage(text) {
   message = text;
 }
