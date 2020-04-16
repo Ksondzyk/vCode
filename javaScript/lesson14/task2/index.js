@@ -12,11 +12,12 @@ const createMessenger = () => {
     sender = text;
   }
 
-  return {
+  var obj = {
     sendMessage: sendMessage,
     setMessage: setMessage,
     setSender: setSender,
   };
+  return obj;
 };
 
 const massager1 = createMessenger();
