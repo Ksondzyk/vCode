@@ -1,7 +1,6 @@
-import { sendMessage } from "./index";
-function setMessage(text) {
+import { sendMessage, message } from "./index.js";
+export function setMessage(text) {
   message = text;
 }
-
-setMessage("Good job!");
 sendMessage("Ann");
+setMessage("Good job!");
