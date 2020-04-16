@@ -1,6 +1,3 @@
-function setMessage(text) {
-  message = text;
-}
+import { setMessage } from "./index";
 
 setMessage("Good job!");
-sendMessage("Ann");

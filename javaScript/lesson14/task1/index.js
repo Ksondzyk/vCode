@@ -7,9 +7,9 @@ export const sendMessage = (name) => {
 
 sendMessage("Ann");
 
-// function setMessage(text) {
-//   message = text;
-// }
+export function setMessage(text) {
+  message = text;
+}
 
-// setMessage("Good job!");
-// sendMessage("Ann");
+setMessage("Good job!");
+sendMessage("Ann");
