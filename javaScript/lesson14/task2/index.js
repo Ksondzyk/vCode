@@ -1,9 +1,9 @@
 let message = "Just learn it";
 let sender = "Gromcode";
 export default function createMessenger() {
-  let sender = "Gromcode";
+  // let sender = "Gromcode";
   function sendMessage(name) {
-    // let sender = "Gromcode";
+    let sender = "Gromcode";
     console.log(`${name}, ${message}! Your ${sender}`);
   }
   function setMessage(text) {
