@@ -1,18 +1,16 @@
 let message = "Just learn it";
-let sender = "Gromcode";
+// let sender = "Gromcode";
 export default function createMessenger() {
-  // let sender = "Gromcode";
+  let sender = "Gromcode";
   function sendMessage(name) {
     console.log(`${name}, ${message}! Your ${sender}`);
   }
 
   function setMessage(text) {
-    message = text.bold();
-    sendMessage("Bob");
+    message = text;
   }
   function setSender(text) {
-    sender = text.bold();
-    sendMessage("Bob");
+    sender = text;
   }
 
   return {
@@ -29,4 +27,5 @@ export default function createMessenger() {
 // massager2.setMessage("Good job");
 
 // const massager3 = createMessenger();
+
 // massager3.setSender("Gromcode");
