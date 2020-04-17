@@ -1,6 +1,6 @@
 let message = "Just learn it!";
 let sender = "Gromcode";
-const createMessenger = () => {
+export default function createMessenger() {
   function sendMessage(name) {
     console.log(`${name}, ${message} Your ${sender}`);
   }
@@ -19,16 +19,16 @@ const createMessenger = () => {
     setSender: setSender,
   };
   return obj;
-};
+}
 
-const massager1 = createMessenger();
+// const massager1 = createMessenger();
 
-massager1.sendMessage("Bob");
+// massager1.sendMessage("Bob");
 
-const massager2 = createMessenger();
-massager2.setMessage("Good job!");
+// const massager2 = createMessenger();
+// massager2.setMessage("Good job!");
 
-const massager3 = createMessenger();
-massager3.setSender("Gromcode");
-massager3.setMessage("Good job!");
-massager3.sendMessage("Bob");
+// const massager3 = createMessenger();
+// massager3.setSender("Gromcode");
+// massager3.setMessage("Good job!");
+// massager3.sendMessage("Bob");
