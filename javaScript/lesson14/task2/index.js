@@ -28,9 +28,7 @@ export default function createMessenger() {
 // massager2.sendMessage("Bob");
 
 // const massager3 = createMessenger();
-// massager3.setSender("Gromcode");
 // massager3.sendMessage("Bob");
-
-// const massager3 = createMessenger();
-
 // massager3.setSender("Gromcode");
+
+
