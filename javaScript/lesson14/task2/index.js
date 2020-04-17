@@ -7,6 +7,7 @@ const createMessenger = () => {
 
   function setMessage(text) {
     message = text.bold();
+    sendMessage("Bob");
   }
   function setSender(text) {
     sender = text.bold();
@@ -26,7 +27,6 @@ massager1.sendMessage("Bob");
 
 const massager2 = createMessenger();
 massager2.setMessage("Good job!");
-massager2.sendMessage("Bob");
 
 const massager3 = createMessenger();
 massager3.setSender("Gromcode");
