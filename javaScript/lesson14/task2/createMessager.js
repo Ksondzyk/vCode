@@ -3,7 +3,7 @@ const massager1 = createMessenger();
 massager1.sendMessage("Bob");
 
 const massager2 = createMessenger();
-massager2.setMessage("Good job");
+massager2.setMessage("Good job!");
 massager2.sendMessage("Bob");
 
 const massager3 = createMessenger();
