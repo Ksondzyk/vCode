@@ -1,7 +1,7 @@
 let message = "Just learn it";
-
-export default function createMessenger() {
   let sender = "Gromcode";
+export default function createMessenger() {
+  // let sender = "Gromcode";
   function sendMessage(name) {
     console.log(`${name}, ${message}! Your ${sender}`);
   }
@@ -26,6 +26,9 @@ export default function createMessenger() {
 
 // const massager2 = createMessenger();
 // massager2.setMessage("Good job");
+
+// const massager3 = createMessenger();
+// massager3.sendMessage("Bob");
 
 
 
