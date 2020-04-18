@@ -24,14 +24,14 @@ export function createLogger() {
     if (string === "warn" || string === "error" || string === "log") {
       arr.filter((el) => el === string);
     } else if (string === undefined) {
-      let arrSort = arr.sort((a, b) => {
-        if (a.dateTime > b.dateTime) {
-          return 1;
-        }
-        if (a.dateTime < b.dateTime) {
-          return -1;
-        }
-      });
+    //   let arrSort = arr.sort((a, b) => {
+    //     if (a.dateTime > b.dateTime) {
+    //       return 1;
+    //     }
+    //     if (a.dateTime < b.dateTime) {
+    //       return -1;
+    //     }
+    //   });
       console.log(arrSort);
       return arrSort;
     } else if (typeof string == "string") {
