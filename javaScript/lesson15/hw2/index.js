@@ -15,11 +15,13 @@ export function createLogger() {
     memory.dateTime = new Date();
     memory.type = "log";
   }
-  return {
-    warn,
-    error,
-    log,
-  };
+  return [
+    {
+      warn,
+      error,
+      log,
+    },
+  ];
 }
 
 // const logger1 = createLogger();
