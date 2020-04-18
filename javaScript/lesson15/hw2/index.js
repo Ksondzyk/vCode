@@ -4,19 +4,19 @@ export function createLogger() {
   let memory = {};
   function warn(str) {
     memory.message = str;
-    memory.dateTime = new Date(2012, 10, 22, 23, 0, 1);
+    memory.dateTime = new Date();
     memory.type = "warn";
     arr.push(memory);
   }
   function error(str) {
     memory.message = str;
-    memory.dateTime = new Date(2012, 10, 22, 23, 0, 3);
+    memory.dateTime = new Date();
     memory.type = "error";
     arr.push(memory);
   }
   function log(str) {
     memory.message = str;
-    memory.dateTime = new Date(2012, 10, 22, 23, 0, 4);
+    memory.dateTime = new Date();
     memory.type = "log";
     arr.push(memory);
   }
