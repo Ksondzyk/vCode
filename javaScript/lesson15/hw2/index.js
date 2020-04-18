@@ -1,6 +1,7 @@
-let arr = [];
+// let arr = [];
 
 export function createLogger() {
+  let arr = [];
   var today = new Date();
   today.setHours(today.getHours() + 4);
   let memory = {};
