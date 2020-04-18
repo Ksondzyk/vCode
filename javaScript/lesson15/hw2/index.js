@@ -73,7 +73,7 @@ logger3.log("Logg");
 // logger4.getRecords("warn");
 
 const logger5 = createLogger();
-logger5.getRecords("warn");
+logger5.getRecords("sfdfsdf");
 
 // const logger6 = createLogger();
 // logger6.getRecords("1213");
