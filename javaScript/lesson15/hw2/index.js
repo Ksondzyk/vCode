@@ -25,6 +25,7 @@ export function createLogger() {
     } else if (typeof arr.type === "string") {
       return [];
     }
+    return arr;
   }
 
   return {
