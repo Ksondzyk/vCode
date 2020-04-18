@@ -23,7 +23,7 @@ export function createLogger() {
   }
   function getRecords(string) {
     if (memory.type === string) {
-      return memory.type;
+      return [memory.type];
     } else if (string === "undefined") {
       return memory.sort((a, b) => a.dateTime - b.dateTime);
     } else if (typeof memory.type === "string") {
