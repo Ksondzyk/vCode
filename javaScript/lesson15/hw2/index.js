@@ -4,19 +4,19 @@ export function createLogger() {
   let memory = {};
   function warn(str) {
     memory.message = str;
-    memory.dateTime = "17:19";
+    memory.dateTime = new Date();
     memory.type = "warn";
     arr.push(memory);
   }
   function error(str) {
     memory.message = str;
-    memory.dateTime = "17:20";
+    memory.dateTime = new Date();
     memory.type = "error";
     arr.push(memory);
   }
   function log(str) {
     memory.message = str;
-    memory.dateTime = "17:18";
+    memory.dateTime = new Date();
     memory.type = "log";
     arr.push(memory);
   }
@@ -24,14 +24,14 @@ export function createLogger() {
     if (string === "warn" || string === "error" || string === "log") {
       arr.filter((el) => el === string);
     } else if (string === undefined) {
-    //   let arrSort = arr.sort((a, b) => {
-    //     if (a.dateTime > b.dateTime) {
-    //       return 1;
-    //     }
-    //     if (a.dateTime < b.dateTime) {
-    //       return -1;
-    //     }
-    //   });
+      let arrSort = arr.sort((a, b) => {
+        if (a.dateTime > b.dateTime) {
+          return 1;
+        }
+        if (a.dateTime < b.dateTime) {
+          return -1;
+        }
+      });
       console.log(arrSort);
       return arrSort;
     } else if (typeof string == "string") {
