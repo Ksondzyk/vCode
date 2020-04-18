@@ -25,17 +25,8 @@ export function createLogger() {
       return [];
     }
     if (string === "warn" || string === "error" || string === "log") {
-      let arrSort = arr.sort((a, b) => {
-        if (a.dateTime > b.dateTime) {
-          return 1;
-        }
-        if (a.dateTime < b.dateTime) {
-          return -1;
-        }
-      });
-      //   console.log(arrSort);
-      return arrSort;
-    } else if (string === undefined) {
+      let arrFilter = [];
+      arrFilter = arr;
       //   let arrSort = arr.sort((a, b) => {
       //     if (a.dateTime > b.dateTime) {
       //       return 1;
@@ -46,18 +37,19 @@ export function createLogger() {
       //   });
       //   //   console.log(arrSort);
       //   return arrSort;
-      let arrFilter = [];
-      return (arrFilter = arr
-        .filter((el) => el.type === string)
-        .sort((a, b) => {
-          if (a.dateTime > b.dateTime) {
-            return -1;
-          }
-          if (a.dateTime < b.dateTime) {
-            return 1;
-          }
-        })
-        .map((el) => el.message));
+      return arrFilter;
+    } else if (string === undefined) {
+      let arrSort = arr.sort((a, b) => {
+        if (a.dateTime > b.dateTime) {
+          return 1;
+        }
+        if (a.dateTime < b.dateTime) {
+          return -1;
+        }
+      });
+      //   console.log(arrSort);
+      return arrSort;
+
     }
   }
 
