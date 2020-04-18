@@ -23,7 +23,7 @@ export function createLogger() {
   function getRecords(string) {
     if (string === "warn" || string === "error" || string === "log") {
       let arrFilter = [];
-      arrFilter = arr.sort((a, b) => a < b).map((el) => el.message);
+      arrFilter = arr.sort((a, b) => a > b).map((el) => el.message);
       console.log(arrFilter);
       return arrFilter;
     } else if (string === undefined) {
