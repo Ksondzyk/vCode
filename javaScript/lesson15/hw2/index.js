@@ -1,4 +1,4 @@
-function createLogger() {
+export function createLogger() {
   let memory = { message: "", dateTime: "17:44", type: "" };
   function warn(str) {
     memory.message = str;
@@ -19,11 +19,11 @@ function createLogger() {
   };
 }
 
-const logger1 = createLogger();
-logger1.warn("hello Warn");
+// const logger1 = createLogger();
+// logger1.warn("hello Warn");
 
-const logger2 = createLogger();
-logger2.error("hello Error");
+// const logger2 = createLogger();
+// logger2.error("hello Error");
 
-const logger3 = createLogger();
-logger3.log("hello Log");
+// const logger3 = createLogger();
+// logger3.log("hello Log");
