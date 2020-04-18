@@ -31,14 +31,12 @@ export function createLogger() {
     }
   }
 
-  return [
-    {
-      warn,
-      error,
-      log,
-      getRecords,
-    },
-  ];
+  return {
+    warn,
+    error,
+    log,
+    getRecords,
+  };
 }
 
 // const logger1 = createLogger();
