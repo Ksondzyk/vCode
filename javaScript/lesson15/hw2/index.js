@@ -27,10 +27,10 @@ export function createLogger() {
         .filter((el) => el.type === string)
         .sort((a, b) => {
           if (a.dateTime > b.dateTime) {
-            return 1;
+            return -1;
           }
           if (a.dateTime < b.dateTime) {
-            return -1;
+            return 1;
           }
         })
         .map((el) => el.message);
