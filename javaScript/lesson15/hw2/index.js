@@ -47,7 +47,7 @@ export function createLogger() {
       });
       //   console.log(arrSort);
       return arrSort;
-    } else if (typeof string === "string") {
+    } else if (typeof string === "string" || arr.length === 0) {
       return [];
     }
   }
