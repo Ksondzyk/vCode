@@ -9,11 +9,11 @@ logger2.error("hello Error");
 const logger3 = createLogger();
 logger3.log("hello Log");
 
-// const logger4 = createLogger();
-// logger4.getRecords("warn");
+const logger4 = createLogger();
+logger4.getRecords("warn");
 
-// const logger5 = createLogger();
-// logger5.getRecords();
+const logger5 = createLogger();
+logger5.getRecords();
 
 const logger6 = createLogger();
 logger6.getRecords("red");
