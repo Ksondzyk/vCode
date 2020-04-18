@@ -8,3 +8,6 @@ logger2.error("hello Error");
 
 const logger3 = createLogger();
 logger3.log("hello Log");
+
+const logger4 = createLogger();
+logger4.getRecords("warn");

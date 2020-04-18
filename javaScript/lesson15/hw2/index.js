@@ -1,5 +1,6 @@
+let memory = {};
 export function createLogger() {
-  let memory = [{ message: "", dateTime: "", type: "" }];
+  //   let memory = {};
   function warn(str) {
     memory.message = str;
     memory.dateTime = new Date();
@@ -15,20 +16,30 @@ export function createLogger() {
     memory.dateTime = new Date();
     memory.type = "log";
   }
-  return [
-    {
-      warn,
-      error,
-      log,
-    },
-  ];
+  function getRecords(string) {
+    if (memory.type === string) {
+      return memory.type;
+    } else if (string === "undefined") {
+      return memory;
+    }
+  }
+
+  return {
+    warn,
+    error,
+    log,
+    getRecords,
+  };
 }
 
 // const logger1 = createLogger();
 // logger1.warn("hello Warn");
 
-// const logger2 = createLogger();
-// logger2.error("hello Error");
+// // const logger2 = createLogger();
+// // logger2.error("hello Error");
 
-// const logger3 = createLogger();
-// logger3.log("hello Log");
+// // const logger3 = createLogger();
+// // logger3.log("hello Log");
+
+// const logger4 = createLogger();
+// logger4.getRecords("warn");
