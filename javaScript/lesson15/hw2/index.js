@@ -26,7 +26,7 @@ export function createLogger() {
     }
     if (string === "warn" || string === "error" || string === "log") {
       let arrFilter = [];
-      arrFilter = arr.filter((el) => el.type === string);
+      arrFilter = arr.map((el) => el.message);
       // .sort((a, b) => {
       //   if (a.dateTime > b.dateTime) {
       //     return -1;
