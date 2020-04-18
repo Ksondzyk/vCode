@@ -4,7 +4,7 @@ export function createLogger() {
   function warn(str) {
     memory.message = str;
     memory.dateTime = new Date();
-    memory.type = "warning";
+    memory.type = "warn";
     arr.push(memory);
   }
   function error(str) {
@@ -47,8 +47,8 @@ export function createLogger() {
 // const logger4 = createLogger();
 // logger4.getRecords("warn");
 
-// const logger5 = createLogger();
-// logger5.getRecords();
+const logger5 = createLogger();
+logger5.getRecords("warn");
 
 // const logger6 = createLogger();
 // logger6.getRecords("red");
