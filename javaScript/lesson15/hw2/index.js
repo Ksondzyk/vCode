@@ -21,6 +21,9 @@ export function createLogger() {
     arr.push(memory);
   }
   function getRecords(string) {
+    if (arr.length === 0) {
+      return [];
+    }
     if (string === "warn" || string === "error" || string === "log") {
       // let arrFilter = [];
       // arrFilter = arr
@@ -37,9 +40,6 @@ export function createLogger() {
       // console.log(arrFilter);
       // return arrFilter;
     } else if (string === undefined) {
-      if (typeof string === "string" || arr.length === 0) {
-        return [];
-      }
       let arrSort = arr.sort((a, b) => {
         if (a.dateTime > b.dateTime) {
           return 1;
