@@ -20,7 +20,7 @@ export function createLogger() {
     arr.push(memory);
   }
   function getRecords(string) {
-    if (string === "undefined") {
+    if (string === undefined) {
       return arr.sort((a, b) => a.dateTime - b.dateTime);
     } else if (typeof arr.type === "string") {
       return [];
