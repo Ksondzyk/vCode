@@ -37,6 +37,9 @@ export function createLogger() {
       // console.log(arrFilter);
       // return arrFilter;
     } else if (string === undefined) {
+      if (typeof string === "string" || arr.length === 0) {
+        return [];
+      }
       let arrSort = arr.sort((a, b) => {
         if (a.dateTime > b.dateTime) {
           return 1;
