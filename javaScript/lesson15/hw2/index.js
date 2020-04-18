@@ -1,22 +1,22 @@
-// let arr = [];
+let arr = [];
 export function createLogger() {
-  let arr = [];
+  //   let arr = [];
   let memory = {};
   function warn(str) {
     memory.message = str;
-    memory.dateTime = new Date();
+    memory.dateTime = "18:12";
     memory.type = "warn";
     arr.push(memory);
   }
   function error(str) {
     memory.message = str;
-    memory.dateTime = new Date();
+    memory.dateTime = "18:17";
     memory.type = "error";
     arr.push(memory);
   }
   function log(str) {
     memory.message = str;
-    memory.dateTime = new Date();
+    memory.dateTime = "18:19";
     memory.type = "log";
     arr.push(memory);
   }
@@ -26,10 +26,10 @@ export function createLogger() {
     } else if (string === undefined) {
       let arrSort = arr.sort((a, b) => {
         if (a.dateTime > b.dateTime) {
-          return 1;
+          return -1;
         }
         if (a.dateTime < b.dateTime) {
-          return -1;
+          return 1;
         }
       });
       console.log(arrSort);
@@ -48,16 +48,16 @@ export function createLogger() {
   };
 }
 
-// const logger1 = createLogger();
-// logger1.warn("hello Warn");
+const logger1 = createLogger();
+logger1.warn("hello Warn");
 
-// const logger2 = createLogger();
-// logger2.error("hello Error");
-// const logger3 = createLogger();
-// logger3.log("hello Log");
+const logger2 = createLogger();
+logger2.error("hello Error");
+const logger3 = createLogger();
+logger3.log("hello Log");
 
-// const logger4 = createLogger();
-// logger4.getRecords();
+const logger4 = createLogger();
+logger4.getRecords();
 
 // // const logger5 = createLogger();
 // // logger5.getRecords("warn");
