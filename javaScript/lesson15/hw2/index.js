@@ -1,4 +1,4 @@
-// let arr = [];
+let arr = [];
 export function createLogger() {
   let arr = [];
   let memory = {};
