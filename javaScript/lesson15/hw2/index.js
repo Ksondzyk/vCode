@@ -30,7 +30,7 @@ export function createLogger() {
     } else if (typeof string == "string") {
       return [];
     }
-    return arr;
+    return arr.sort((a, b) => b.dateTime - a.dateTime);
   }
 
   return {
@@ -41,21 +41,21 @@ export function createLogger() {
   };
 }
 
-const logger1 = createLogger();
-logger1.warn("hello Warn");
+// const logger1 = createLogger();
+// logger1.warn("hello Warn");
 
-const logger2 = createLogger();
-logger2.error("hello Error");
-const logger3 = createLogger();
-logger3.log("hello Log");
-
+// const logger2 = createLogger();
+// logger2.error("hello Error");
 // const logger3 = createLogger();
 // logger3.log("hello Log");
 
-// const logger4 = createLogger();
-// logger4.getRecords("warn");
+// // const logger3 = createLogger();
+// // logger3.log("hello Log");
 
-// const logger5 = createLogger();
-// logger5.getRecords("warn");
-const logger6 = createLogger();
-logger6.getRecords("1213");
+// // const logger4 = createLogger();
+// // logger4.getRecords("warn");
+
+// // const logger5 = createLogger();
+// // logger5.getRecords("warn");
+// const logger6 = createLogger();
+// logger6.getRecords("1213");
