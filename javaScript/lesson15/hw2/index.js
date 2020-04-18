@@ -1,4 +1,3 @@
-// let arr = [];
 export function createLogger() {
   let arr = [];
   let memory = {};
@@ -51,6 +50,8 @@ export function createLogger() {
 
 const logger5 = createLogger();
 logger5.getRecords("warn");
+const logger5 = createLogger();
+logger5.getRecords();
 
 // const logger6 = createLogger();
 // logger6.getRecords("red");
