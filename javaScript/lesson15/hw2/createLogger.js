@@ -18,5 +18,5 @@ logger5.getRecords();
 const logger6 = createLogger();
 logger6.getRecords("red");
 
-const logger = createLogger();
+const logger7 = createLogger();
 logger7.getRecords();
