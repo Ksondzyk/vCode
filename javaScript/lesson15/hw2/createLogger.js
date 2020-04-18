@@ -1,13 +1,13 @@
 import { createLogger } from "./index";
 
 const logger1 = createLogger();
-logger1.warn("hello Warn");
+logger1.warn("Warn");
 
 const logger2 = createLogger();
-logger2.error("hello Error");
+logger2.error("Erro");
 
 const logger3 = createLogger();
-logger3.log("hello Log");
+logger3.log("Logg");
 
 const logger4 = createLogger();
 logger4.getRecords("warn");

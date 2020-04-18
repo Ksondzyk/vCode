@@ -1,22 +1,22 @@
-let arr = [];
+// let arr = [];
 export function createLogger() {
-  //   let arr = [];
+    let arr = [];
   let memory = {};
   function warn(str) {
     memory.message = str;
-    memory.dateTime = "18:12";
+    memory.dateTime = new Date().setHours(new Date().getHours() + 4);
     memory.type = "warn";
     arr.push(memory);
   }
   function error(str) {
     memory.message = str;
-    memory.dateTime = "18:17";
+    memory.dateTime = new Date().setHours(new Date().getHours() + 12);
     memory.type = "error";
     arr.push(memory);
   }
   function log(str) {
     memory.message = str;
-    memory.dateTime = "18:19";
+    memory.dateTime = new Date().setHours(new Date().getHours() + 8);
     memory.type = "log";
     arr.push(memory);
   }
@@ -49,12 +49,13 @@ export function createLogger() {
 }
 
 const logger1 = createLogger();
-logger1.warn("hello Warn");
+logger1.warn("Warn");
 
 const logger2 = createLogger();
-logger2.error("hello Error");
+logger2.error("Erro");
+
 const logger3 = createLogger();
-logger3.log("hello Log");
+logger3.log("Logg");
 
 const logger4 = createLogger();
 logger4.getRecords();
