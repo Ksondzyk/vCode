@@ -1,5 +1,6 @@
+let memory = {};
 export function createLogger() {
-  let memory = {};
+//   let memory = {};
   function warn(str) {
     {
       memory.message = str;
