@@ -26,16 +26,16 @@ export function createLogger() {
     }
     if (string === "warn" || string === "error" || string === "log") {
       let arrFilter = [];
-      arrFilter = arr.map((el) => el.message);
-      // .sort((a, b) => {
-      //   if (a.dateTime > b.dateTime) {
-      //     return -1;
-      //   }
-      //   if (a.dateTime < b.dateTime) {
-      //     return 1;
-      //   }
-      // })
-      // .map((el) => el.message);
+      arrFilter = arr
+        .sort((a, b) => {
+          if (a.dateTime > b.dateTime) {
+            return -1;
+          }
+          if (a.dateTime < b.dateTime) {
+            return 1;
+          }
+        })
+        .map((el) => el.message);
       console.log(arrFilter);
       return arrFilter;
     } else if (string === undefined) {
