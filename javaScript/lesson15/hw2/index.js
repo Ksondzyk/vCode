@@ -1,5 +1,5 @@
 export function createLogger() {
-  let memory = { message: "", dateTime: , type: "" };
+  let memory = [{ message: "", dateTime: "", type: "" }];
   function warn(str) {
     memory.message = str;
     memory.dateTime = new Date();
