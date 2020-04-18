@@ -4,19 +4,19 @@ export function createLogger() {
   let memory = {};
   function warn(str) {
     memory.message = str;
-    memory.dateTime = new Date().setHours(new Date().getHours() + 4);
+    memory.dateTime = new Date(2012, 10, 22, 23, 0, 1);
     memory.type = "warn";
     arr.push(memory);
   }
   function error(str) {
     memory.message = str;
-    memory.dateTime = new Date().setHours(new Date().getHours() + 12);
+    memory.dateTime = new Date(2012, 10, 22, 23, 0, 4);
     memory.type = "error";
     arr.push(memory);
   }
   function log(str) {
     memory.message = str;
-    memory.dateTime = new Date().setHours(new Date().getHours() + 8);
+    memory.dateTime = new Date(2012, 10, 22, 23, 0, 3);
     memory.type = "log";
     arr.push(memory);
   }
@@ -48,17 +48,17 @@ export function createLogger() {
   };
 }
 
-// const logger1 = createLogger();
-// logger1.warn("Warn");
+const logger1 = createLogger();
+logger1.warn("Warn");
 
-// const logger2 = createLogger();
-// logger2.error("Erro");
+const logger2 = createLogger();
+logger2.error("Erro");
 
-// const logger3 = createLogger();
-// logger3.log("Logg");
+const logger3 = createLogger();
+logger3.log("Logg");
 
-// const logger4 = createLogger();
-// logger4.getRecords();
+const logger4 = createLogger();
+logger4.getRecords();
 
 // // const logger5 = createLogger();
 // // logger5.getRecords("warn");
