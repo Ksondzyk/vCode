@@ -1,6 +1,6 @@
 // let arr = [];
 export function createLogger() {
-    let arr = [];
+  let arr = [];
   let memory = {};
   function warn(str) {
     memory.message = str;
@@ -22,35 +22,34 @@ export function createLogger() {
   }
   function getRecords(string) {
     if (string === "warn" || string === "error" || string === "log") {
-    //   let arrFilter = [];
-    //   arrFilter = arr
-    //     .filter((el) => el.type === string)
-    //     .sort((a, b) => {
-    //       if (a.dateTime > b.dateTime) {
-    //         return -1;
-    //       }
-    //       if (a.dateTime < b.dateTime) {
-    //         return 1;
-    //       }
-    //     })
-    //     .map((el) => el.message);
-    //   console.log(arrFilter);
-    //   return arrFilter;
+      //   let arrFilter = [];
+      //   arrFilter = arr
+      //     .filter((el) => el.type === string)
+      //     .sort((a, b) => {
+      //       if (a.dateTime > b.dateTime) {
+      //         return -1;
+      //       }
+      //       if (a.dateTime < b.dateTime) {
+      //         return 1;
+      //       }
+      //     })
+      //     .map((el) => el.message);
+      //   console.log(arrFilter);
+      //   return arrFilter;
     } else if (string === undefined) {
-    //   let arrSort = arr.sort((a, b) => {
-    //     if (a.dateTime > b.dateTime) {
-    //       return 1;
-    //     }
-    //     if (a.dateTime < b.dateTime) {
-    //       return -1;
-    //     }
-    //   });
-    //   //   console.log(arrSort);
-    //   return arrSort;
+      //   let arrSort = arr.sort((a, b) => {
+      //     if (a.dateTime > b.dateTime) {
+      //       return 1;
+      //     }
+      //     if (a.dateTime < b.dateTime) {
+      //       return -1;
+      //     }
+      //   });
+      //   //   console.log(arrSort);
+      //   return arrSort;
     } else if (typeof string == "string") {
       return [];
     }
-    return arr;
   }
 
   return {
