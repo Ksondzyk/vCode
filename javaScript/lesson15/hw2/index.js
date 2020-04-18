@@ -2,19 +2,25 @@ let memory = [{}];
 export function createLogger() {
   //   let memory = [{}];
   function warn(str) {
-    memory.message = str;
-    memory.dateTime = new Date();
-    memory.type = "warn";
+    {
+      memory.message = str;
+      memory.dateTime = new Date();
+      memory.type = "warn";
+    }
   }
   function error(str) {
-    memory.message = str;
-    memory.dateTime = new Date();
-    memory.type = "error";
+    {
+      memory.message = str;
+      memory.dateTime = new Date();
+      memory.type = "error";
+    }
   }
   function log(str) {
-    memory.message = str;
-    memory.dateTime = new Date();
-    memory.type = "log";
+    {
+      memory.message = str;
+      memory.dateTime = new Date();
+      memory.type = "log";
+    }
   }
   function getRecords(string) {
     if (memory.type === string) {
@@ -45,3 +51,9 @@ logger3.log("hello Log");
 
 const logger4 = createLogger();
 logger4.getRecords("warn");
+
+const logger5 = createLogger();
+logger5.getRecords();
+
+const logger6 = createLogger();
+logger6.getRecords("red");
