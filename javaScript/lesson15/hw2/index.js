@@ -1,6 +1,6 @@
 // let arr = [];
 export function createLogger() {
-    let arr = [];
+  let arr = [];
   let memory = {};
   function warn(str) {
     memory.message = str;
@@ -33,7 +33,7 @@ export function createLogger() {
         }
       });
       console.log(arrSort);
-      return arrSort;
+      return arrSort.map((el) => el.type);
     } else if (typeof string == "string") {
       return [];
     }
