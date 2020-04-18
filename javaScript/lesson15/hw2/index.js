@@ -4,7 +4,7 @@ export function createLogger() {
   function warn(str) {
     memory.message = str;
     memory.dateTime = new Date();
-    memory.type = "warn";
+    memory.type = "warning";
     arr.push(memory);
   }
   function error(str) {
@@ -35,8 +35,8 @@ export function createLogger() {
   };
 }
 
-const logger1 = createLogger();
-logger1.warn("hello Warn");
+// const logger1 = createLogger();
+// logger1.warn("hello Warn");
 
 // const logger2 = createLogger();
 // logger2.error("hello Error");
