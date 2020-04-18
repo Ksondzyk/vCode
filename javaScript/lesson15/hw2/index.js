@@ -1,6 +1,5 @@
-let memory = {};
 export function createLogger() {
-  //   let memory = [{}];
+  let memory = [{}];
   function warn(str) {
     {
       memory.message = str;
@@ -32,14 +31,12 @@ export function createLogger() {
     }
   }
 
-  return [
-    {
-      warn,
-      error,
-      log,
-      getRecords,
-    },
-  ];
+  return {
+    warn,
+    error,
+    log,
+    getRecords,
+  };
 }
 
 // const logger1 = createLogger();
