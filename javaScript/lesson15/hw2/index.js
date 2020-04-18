@@ -1,6 +1,6 @@
-// let arr = [];
+let arr = [];
 export function createLogger() {
-  let arr = [];
+  //   let arr = [];
   let memory = {};
   function warn(str) {
     memory.message = str;
@@ -10,13 +10,13 @@ export function createLogger() {
   }
   function error(str) {
     memory.message = str;
-    memory.dateTime = new Date(2012, 10, 22, 23, 0, 4);
+    memory.dateTime = new Date(2012, 10, 22, 23, 0, 3);
     memory.type = "error";
     arr.push(memory);
   }
   function log(str) {
     memory.message = str;
-    memory.dateTime = new Date(2012, 10, 22, 23, 0, 3);
+    memory.dateTime = new Date(2012, 10, 22, 23, 0, 4);
     memory.type = "log";
     arr.push(memory);
   }
