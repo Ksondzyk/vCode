@@ -3,7 +3,6 @@
 export function createLogger() {
   let arr = [];
   var today = new Date();
-  today.setHours(today.getHours() + 4);
   let memory = {};
   function warn(str) {
     memory.message = str;
