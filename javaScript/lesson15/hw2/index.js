@@ -37,16 +37,16 @@ export function createLogger() {
     //   console.log(arrFilter);
     //   return arrFilter;
     } else if (string === undefined) {
-      let arrSort = arr.sort((a, b) => {
-        if (a.dateTime > b.dateTime) {
-          return 1;
-        }
-        if (a.dateTime < b.dateTime) {
-          return -1;
-        }
-      });
-      //   console.log(arrSort);
-      return arrSort;
+    //   let arrSort = arr.sort((a, b) => {
+    //     if (a.dateTime > b.dateTime) {
+    //       return 1;
+    //     }
+    //     if (a.dateTime < b.dateTime) {
+    //       return -1;
+    //     }
+    //   });
+    //   //   console.log(arrSort);
+    //   return arrSort;
     } else if (typeof string == "string") {
       return [];
     }
