@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ["airbnb-base", "prettier"],
+  extends: ["prettier"],
   parser: "babel-eslint",
   env: {
     browser: true,
@@ -11,3 +11,4 @@ module.exports = {
     "import/prefer-default-export": 0,
   },
 };
+// "airbnb-base";
