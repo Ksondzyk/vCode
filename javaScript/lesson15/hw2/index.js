@@ -2,14 +2,17 @@ export function createLogger() {
   let memory = { message: "", dateTime: "17:44", type: "" };
   function warn(str) {
     memory.message = str;
+    memory.dateTime = new Date();
     memory.type = "warn";
   }
   function error(str) {
     memory.message = str;
+    memory.dateTime = new Date();
     memory.type = "error";
   }
   function log(str) {
     memory.message = str;
+    memory.dateTime = new Date();
     memory.type = "log";
   }
   return {
