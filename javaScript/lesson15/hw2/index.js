@@ -38,7 +38,7 @@ export function createLogger() {
           return 1;
         }
       });
-      // return arrSort;
+      return arrSort;
     } else if (type === undefined) {
       let arrSort = arr.sort((a, b) => {
         if (a.dateTime > b.dateTime) {
