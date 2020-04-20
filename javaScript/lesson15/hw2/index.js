@@ -27,17 +27,19 @@ export function createLogger() {
       return [];
     }
     if (string === "warn" || string === "error" || string === "log") {
-      let arrFilter = [];
-      arrFilter = arr
-        .sort((a, b) => {
-          if (a.dateTime > b.dateTime) {
-            return -1;
-          }
-          if (a.dateTime < b.dateTime) {
-            return 1;
-          }
-        })
-        .map((el) => el.message);
+      // let arrFilter = [];
+      let arrSort = arr.slice().sort((a, b) => {
+        return a.dateTime - b.dateTime;
+      });
+      // .sort((a, b) => {
+      //   if (a.dateTime > b.dateTime) {
+      //     return -1;
+      //   }
+      //   if (a.dateTime < b.dateTime) {
+      //     return ;
+      //   }
+      // })
+      // .map((el) => el.message);
       console.log(arrFilter);
       return arrFilter;
     } else if (string === undefined) {
