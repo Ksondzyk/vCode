@@ -27,7 +27,7 @@ export function createLogger() {
       return [];
     }
     if (type === "warn" || type === "error" || type === "log") {
-      const arrfilter = arr.filter((el) => el.type === type);
+      // const arrfilter = arr.filter((el) => el.type === type);
       let arrSort = arrfilter.slice().sort((a, b) => {
         if (a.dateTime < b.dateTime) {
           return 1;
@@ -36,8 +36,8 @@ export function createLogger() {
           return -1;
         }
       });
-      console.log(arrSort);
-      return arrfilter;
+      // console.log(arrSort);
+      return arrSort;
     } else if (type === undefined) {
       let arrSort = arr.sort((a, b) => {
         if (a.dateTime > b.dateTime) {
