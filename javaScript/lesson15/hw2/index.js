@@ -4,21 +4,21 @@ export function createLogger() {
   function warn(str) {
     let memory = {};
     memory.message = str;
-    memory.dateTime = new Date().setHours(new Date().getHours() + 4);
+    memory.dateTime = new Date();
     memory.type = "warn";
     arr.push(memory);
   }
   function error(str) {
     let memory = {};
     memory.message = str;
-    memory.dateTime = new Date().setHours(new Date().getHours() + 4);
+    memory.dateTime = new Date();
     memory.type = "error";
     arr.push(memory);
   }
   function log(str) {
     let memory = {};
     memory.message = str;
-    memory.dateTime = new Date().setHours(new Date().getHours() + 4);
+    memory.dateTime = new Date();
     memory.type = "log";
     arr.push(memory);
   }
@@ -27,7 +27,7 @@ export function createLogger() {
       return [];
     }
     if (type === "warn" || type === "error" || type === "log") {
-      // const arrfilter = arr.filter((el) => el.type === type);
+      const arrfilter = arr.filter((el) => el.type === type);
       let arrSort = arrfilter.slice().sort((a, b) => {
         if (a.dateTime < b.dateTime) {
           return 1;
