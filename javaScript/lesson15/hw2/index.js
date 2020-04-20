@@ -22,12 +22,11 @@ export function createLogger() {
     memory.type = "log";
     arr.push(memory);
   }
-  function getRecords(string) {
+  function getRecords(type) {
     if (arr.length === 0) {
       return [];
     }
-    if (string === "warn" || string === "error" || string === "log") {
-      // let arrFilter = [];
+    if (type === "warn" || type === "error" || type === "log") {
       let arrSort = arr.slice().sort((a, b) => {
         if (a.dateTime > b.dateTime) {
           return -1;
@@ -36,18 +35,8 @@ export function createLogger() {
           return 1;
         }
       });
-      // .sort((a, b) => {
-      //   if (a.dateTime > b.dateTime) {
-      //     return -1;
-      //   }
-      //   if (a.dateTime < b.dateTime) {
-      //     return ;
-      //   }
-      // })
-      // // .map((el) => el.message);
-      // console.log(arrFilter);
       return arrSort;
-    } else if (string === undefined) {
+    } else if (type === undefined) {
       let arrSort = arr.sort((a, b) => {
         if (a.dateTime > b.dateTime) {
           return -1;
