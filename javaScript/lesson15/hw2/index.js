@@ -6,21 +6,21 @@ export function createLogger() {
     memory.message = str;
     memory.dateTime = new Date();
     memory.type = "warn";
-    arr.push(memory);
+    arr.unshift(memory);
   }
   function error(str) {
     let memory = {};
     memory.message = str;
     memory.dateTime = new Date();
     memory.type = "error";
-    arr.push(memory);
+    arr.unshift(memory);
   }
   function log(str) {
     let memory = {};
     memory.message = str;
     memory.dateTime = new Date();
     memory.type = "log";
-    arr.push(memory);
+    arr.unshift(memory);
   }
   function getRecords(type) {
     if (arr.length === 0) {
