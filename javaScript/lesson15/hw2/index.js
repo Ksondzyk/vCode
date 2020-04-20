@@ -6,21 +6,21 @@ export function createLogger() {
     memory.message = str;
     memory.dateTime = new Date();
     memory.type = "warn";
-    arr.unshift(memory);
+    arr.push(memory);
   }
   function error(str) {
     let memory = {};
     memory.message = str;
     memory.dateTime = new Date();
     memory.type = "error";
-    arr.unshift(memory);
+    arr.push(memory);
   }
   function log(str) {
     let memory = {};
     memory.message = str;
     memory.dateTime = new Date();
     memory.type = "log";
-    arr.unshift(memory);
+    arr.push(memory);
   }
   function getRecords(type) {
     if (arr.length === 0) {
@@ -38,7 +38,7 @@ export function createLogger() {
           return 1;
         }
       });
-      // return arrSort;
+      return arrSort;
     } else if (type === undefined) {
       let arrSort = arr.sort((a, b) => {
         if (a.dateTime > b.dateTime) {
