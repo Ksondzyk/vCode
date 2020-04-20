@@ -62,20 +62,20 @@ export function createLogger() {
   };
 }
 
-// const logger1 = createLogger();
-// logger1.warn("Warn");
+const logger1 = createLogger();
+logger1.warn("Warn");
 
-// const logger2 = createLogger();
-// logger2.error("Erro");
+const logger2 = createLogger();
+logger2.error("Erro");
 
-// const logger3 = createLogger();
-// logger3.log("Logg");
+const logger3 = createLogger();
+logger3.log("Logg");
 
-// // const logger4 = createLogger();
-// // logger4.getRecords("warn");
+const logger4 = createLogger();
+logger4.getRecords("warn");
 
 // const logger5 = createLogger();
 // logger5.getRecords("warn");
 
-// const logger6 = createLogger();
-// logger6.getRecords("1213");
+const logger6 = createLogger();
+logger6.getRecords("1213");
