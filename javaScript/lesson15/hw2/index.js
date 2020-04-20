@@ -1,6 +1,6 @@
-// let arr = [];
+let arr = [];
 export function createLogger() {
-  let arr = [];
+  // let arr = [];
   function warn(str) {
     let memory = {};
     memory.message = str;
@@ -27,18 +27,18 @@ export function createLogger() {
       return [];
     }
     if (type === "warn" || type === "error" || type === "log") {
-      let arrSort = arr.slice().sort((a, b) => {
-        return a.dateTime - b.dateTime;
-      });
       // let arrSort = arr.slice().sort((a, b) => {
-      //   if (a.dateTime > b.dateTime) {
-      //     return -1;
-      //   }
-      //   if (a.dateTime < b.dateTime) {
-      //     return 1;
-      //   }
+      //   return a.dateTime - b.dateTime;
       // });
-      return arrSort;
+      let arrSort = arr.slice().sort((a, b) => {
+        if (a.dateTime > b.dateTime) {
+          return -1;
+        }
+        if (a.dateTime < b.dateTime) {
+          return 1;
+        }
+      });
+      // return arrSort;
     } else if (type === undefined) {
       let arrSort = arr.sort((a, b) => {
         if (a.dateTime > b.dateTime) {
