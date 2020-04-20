@@ -28,8 +28,13 @@ export function createLogger() {
     }
     if (string === "warn" || string === "error" || string === "log") {
       // let arrFilter = [];
-      let arrSort = arr.slice().sort((a, b) => {
-        return a.dateTime - b.dateTime;
+      let arrSort = arr.sort((a, b) => {
+        if (a.dateTime > b.dateTime) {
+          return -1;
+        }
+        if (a.dateTime < b.dateTime) {
+          return 1;
+        }
       });
       // .sort((a, b) => {
       //   if (a.dateTime > b.dateTime) {
