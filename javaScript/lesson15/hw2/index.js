@@ -28,15 +28,15 @@ export function createLogger() {
     }
     if (type === "warn" || type === "error" || type === "log") {
       const arrfilter = arr.filter((el) => el.type === type);
-      // let arrSort = arrfilter.slice().sort((a, b) => {
-      //   if (a.dateTime < b.dateTime) {
-      //     return 1;
-      //   }
-      //   if (a.dateTime > b.dateTime) {
-      //     return -1;
-      //   }
-      // });
-      // console.log(arrSort);
+      let arrSort = arrfilter.slice().sort((a, b) => {
+        if (a.dateTime < b.dateTime) {
+          return 1;
+        }
+        if (a.dateTime > b.dateTime) {
+          return -1;
+        }
+      });
+      console.log(arrSort);
       return arrfilter;
     } else if (type === undefined) {
       let arrSort = arr.sort((a, b) => {
