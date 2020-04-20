@@ -39,9 +39,9 @@ export function createLogger() {
       //     return ;
       //   }
       // })
-      // .map((el) => el.message);
-      console.log(arrFilter);
-      return arrFilter;
+      // // .map((el) => el.message);
+      // console.log(arrFilter);
+      return arrSort;
     } else if (string === undefined) {
       let arrSort = arr.sort((a, b) => {
         if (a.dateTime > b.dateTime) {
