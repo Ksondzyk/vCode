@@ -1,24 +1,23 @@
-// let arr = [];
+let arr = [];
 export function createLogger() {
-  let arr = [];
+  // let arr = [];
   function warn(str) {
     let memory = {};
     memory.message = str;
-    memory.dateTime = new Date();
-    memory.type = "warn";
+    memory.dateTime = new Date().setHours(new Date().getHours() + 4);
     arr.push(memory);
   }
   function error(str) {
     let memory = {};
     memory.message = str;
-    memory.dateTime = new Date();
+    memory.dateTime = new Date().setHours(new Date().getHours() + 5);
     memory.type = "error";
     arr.push(memory);
   }
   function log(str) {
     let memory = {};
     memory.message = str;
-    memory.dateTime = new Date();
+    memory.dateTime = new Date().setHours(new Date().getHours() + 6);
     memory.type = "log";
     arr.push(memory);
   }
@@ -27,17 +26,18 @@ export function createLogger() {
       return [];
     }
     if (type === "warn" || type === "error" || type === "log") {
-      let arrSort = arr.slice().sort((a, b) => {
-        return a.dateTime - b.dateTime;
-      });
       // let arrSort = arr.slice().sort((a, b) => {
-      //   if (a.dateTime > b.dateTime) {
-      //     return -1;
-      //   }
-      //   if (a.dateTime < b.dateTime) {
-      //     return 1;
-      //   }
+      //   return b.dateTime - a.dateTime;
       // });
+      let arrSort = arr.slice().sort((a, b) => {
+        if (a.dateTime < b.dateTime) {
+          return 1;
+        }
+        if (a.dateTime > b.dateTime) {
+          return -1;
+        }
+      });
+      console.log(arrSort);
       return arrSort;
     } else if (type === undefined) {
       let arrSort = arr.sort((a, b) => {
