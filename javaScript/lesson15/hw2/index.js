@@ -1,6 +1,6 @@
-let arr = [];
+// let arr = [];
 export function createLogger() {
-  // let arr = [];
+  let arr = [];
   function warn(str) {
     let memory = {};
     memory.message = str;
@@ -38,7 +38,7 @@ export function createLogger() {
           return 1;
         }
       });
-      return arrSort;
+      // return arrSort;
     } else if (type === undefined) {
       let arrSort = arr.sort((a, b) => {
         if (a.dateTime > b.dateTime) {
