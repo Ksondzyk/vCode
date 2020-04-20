@@ -1,20 +1,22 @@
 // let arr = [];
 export function createLogger() {
   let arr = [];
-  let memory = {};
   function warn(str) {
+    let memory = {};
     memory.message = str;
     memory.dateTime = new Date();
     memory.type = "warn";
     arr.push(memory);
   }
   function error(str) {
+    let memory = {};
     memory.message = str;
     memory.dateTime = new Date();
     memory.type = "error";
     arr.push(memory);
   }
   function log(str) {
+    let memory = {};
     memory.message = str;
     memory.dateTime = new Date();
     memory.type = "log";
