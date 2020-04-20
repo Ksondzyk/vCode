@@ -4,21 +4,21 @@ export function createLogger() {
   function warn(str) {
     let memory = {};
     memory.message = str;
-    memory.dateTime = new Date();
+    memory.dateTime = new Date().setHours(new Date().getHours() + 4);
     memory.type = "warn";
     arr.push(memory);
   }
   function error(str) {
     let memory = {};
     memory.message = str;
-    memory.dateTime = new Date();
+    memory.dateTime = new Date().setHours(new Date().getHours() + 4);
     memory.type = "error";
     arr.push(memory);
   }
   function log(str) {
     let memory = {};
     memory.message = str;
-    memory.dateTime = new Date();
+    memory.dateTime = new Date().setHours(new Date().getHours() + 4);
     memory.type = "log";
     arr.push(memory);
   }
