@@ -28,7 +28,7 @@ export function createLogger() {
     }
     if (type === "warn" || type === "error" || type === "log") {
       let arrSort = arr.slice().sort((a, b) => {
-        return a.dateTime - b.dateTime;
+        return b.dateTime - a.dateTime;
       });
       // let arrSort = arr.slice().sort((a, b) => {
       //   if (a.dateTime > b.dateTime) {
