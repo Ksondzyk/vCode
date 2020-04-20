@@ -1,6 +1,6 @@
-let arr = [];
+// let arr = [];
 export function createLogger() {
-  // let arr = [];
+  let arr = [];
   function warn(str) {
     let memory = {};
     memory.message = str;
