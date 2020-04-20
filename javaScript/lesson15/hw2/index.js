@@ -5,6 +5,7 @@ export function createLogger() {
     let memory = {};
     memory.message = str;
     memory.dateTime = new Date().setHours(new Date().getHours() + 4);
+    memory.type = "warn";
     arr.push(memory);
   }
   function error(str) {
