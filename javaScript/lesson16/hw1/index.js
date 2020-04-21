@@ -1,14 +1,14 @@
 //input  number
 //return arr [functions ]
-export function createArrayOfFunctions(number) {
-  //   if (typeof number !== typeof Number) {
-  //     return null;
-  //   }
-  if (number === undefined) {
+export function createArrayOfFunctions(arg) {
+  if (isNaN(arg)) {
+    return null;
+  }
+  if (arg === undefined) {
     return [];
   }
   let arr = [];
-  for (let i = 0; i < number.length; i++) {
+  for (let i = 0; i < arg.length; i++) {
     arr.push(
       (arr[i] = function () {
         return i;
