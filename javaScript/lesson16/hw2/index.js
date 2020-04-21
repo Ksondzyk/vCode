@@ -1,13 +1,12 @@
-var foo;
+let foo = 1;
 
-export default function bar() {
+export function bar() {
   if (!foo) {
-    var foo = 10;
+    foo = 10;
   }
 
   return foo;
 }
 
-var foo = bar();
-foo = 1;
-
+foo = bar();
+console.log(foo);
