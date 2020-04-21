@@ -8,7 +8,7 @@ export function createArrayOfFunctions(arg) {
     return [];
   }
   let arr = [];
-  for (let i = 0; i <= arg; i++) {
+  for (let i = 0; i < arg; i++) {
     arr.push(
       (arr[i] = function () {
         return i;
@@ -18,5 +18,5 @@ export function createArrayOfFunctions(arg) {
   return arr;
 }
 
-const result = createArrayOfFunctions(9)[4]();
+const result = createArrayOfFunctions(9);
 console.log(result);
