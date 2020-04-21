@@ -18,5 +18,5 @@ export function createArrayOfFunctions(arg) {
   return arr;
 }
 
-const result = createArrayOfFunctions(9)[6]();
+const result = createArrayOfFunctions(9)[4]();
 console.log(result);
