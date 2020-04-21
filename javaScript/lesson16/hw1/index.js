@@ -9,11 +9,9 @@ export function createArrayOfFunctions(arg) {
   }
   let arr = [];
   for (let i = 0; i < arg; i++) {
-    arr.push(
-      (arr[i] = function () {
-        return i;
-      })
-    );
+    arr.push(function () {
+      return i;
+    });
   }
   return arr;
 }
