@@ -8,7 +8,7 @@ export function createArrayOfFunctions(number) {
     return [];
   }
   let arr = [];
-  for (var i = 0; i < number; i++) {
+  for (let i = 0; i < number; i++) {
     arr.push(
       (arr[i] = function () {
         return i;
