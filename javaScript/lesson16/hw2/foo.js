@@ -1,3 +1,2 @@
 import bar from "./index";
-var foo = bar();
-foo = 1;
+foo = bar();
