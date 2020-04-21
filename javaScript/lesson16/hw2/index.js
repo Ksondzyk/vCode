@@ -8,6 +8,6 @@ export default function bar() {
   return foo;
 }
 
-// var foo = bar();
-// foo = 1;
-// console.log(foo);
+var foo = bar();
+foo = 1;
+
