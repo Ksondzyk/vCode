@@ -1,2 +1,1 @@
-import bar from "./index";
-foo = bar();
+import foo from "./index";
