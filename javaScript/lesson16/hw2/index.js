@@ -9,4 +9,5 @@ export default function bar() {
 }
 
 // foo = bar();
+
 // console.log(foo);
