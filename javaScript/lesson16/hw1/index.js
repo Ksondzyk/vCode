@@ -13,6 +13,7 @@ export function createArrayOfFunctions(number) {
       return i;
     };
   }
+  return arr;
 }
 
 const result = createArrayOfFunctions((12)[5]);
