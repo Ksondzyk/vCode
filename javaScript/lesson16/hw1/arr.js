@@ -1,3 +1,3 @@
 import { createArrayOfFunctions } from "./index";
 
-createArrayOfFunctions(12);
+const result = createArrayOfFunctions(9)[6]();
