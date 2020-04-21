@@ -1,3 +1,3 @@
-export { createArrayOfFunctions } from "./index";
+import { createArrayOfFunctions } from "./index";
 
 createArrayOfFunctions(12);
