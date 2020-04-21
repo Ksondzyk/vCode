@@ -1,7 +1,7 @@
 //input  number
 //return arr [functions ]
 export function createArrayOfFunctions(arg) {
-  if (isNaN(arg)) {
+  if (isNaN(arg) && arg !== undefined) {
     return null;
   }
   if (arg === undefined) {
@@ -18,5 +18,5 @@ export function createArrayOfFunctions(arg) {
   return arr;
 }
 
-const result = createArrayOfFunctions(12);
+const result = createArrayOfFunctions();
 console.log(result);
