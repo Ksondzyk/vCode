@@ -1,6 +1,6 @@
 //input  number
 //return arr [functions ]
-export function createArrayOfFunctions(number) {
+function createArrayOfFunctions(number) {
   if (typeof number === Number()) {
     return null;
   }
@@ -8,13 +8,15 @@ export function createArrayOfFunctions(number) {
     return [];
   }
   let arr = [];
-  for (var i = 0; i < number; i++) {
-    arr[i] = function () {
-      return i;
-    };
+  for (var i = 0; i <= number; i++) {
+    arr.push(
+      (arr[i] = function () {
+        return i;
+      })
+    );
   }
   return arr;
 }
 
-const result = createArrayOfFunctions((12)[5]);
+const result = createArrayOfFunctions(12);
 console.log(result);
