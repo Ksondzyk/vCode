@@ -1,6 +1,6 @@
 let foo = 1;
 
-export function bar() {
+export default function bar() {
   if (!foo) {
     foo = 10;
   }
@@ -8,5 +8,5 @@ export function bar() {
   return foo;
 }
 
-foo = bar();
+// foo = bar();
 // console.log(foo);
