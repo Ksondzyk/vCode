@@ -6,4 +6,4 @@ export const user = {
   },
 };
 
-setFullName("John Doe");
+// setFullName("John Doe");
