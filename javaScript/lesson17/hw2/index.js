@@ -36,7 +36,7 @@ const country = {
 };
 
 function getPopulation(population) {
-  return `Population in ${this.countryName} is ${population}`;
+  console.log(`Population in ${this.countryName} is ${population}`);
 }
 
 // вызовите ф-цию getPopulation так, чтобы она вернула
