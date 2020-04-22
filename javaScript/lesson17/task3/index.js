@@ -1,15 +1,20 @@
 export function defer(func, ms) {
   return function () {
-    setTimeout(() => func(...arguments), ms);
+    setTimeout(() => func.apply(this, arguments), ms);
   };
 }
 
-const sum = (a, b) => {
-  console.log(a + b);
+// const sum = (a, b) => {
+//   console.log(a + b);
+// };
+
+const user = {
+  name: "Tom",
+  sayHi() {
+    console.log(`Hi, I'am ${this.name}!`);
+  },
 };
 
-// const user
+// const defferedHi = defer(user.sayHi, 1000);
 
-// const defferedSayHi = defer(sum, 1000);
-
-// defferedSayHi(1, 4);
+// defferedHi.call({ name: "Bob" });
