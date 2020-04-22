@@ -7,4 +7,4 @@ export const user = {
   setFullName() {},
 };
 
-user.getFullName = user.setFullName("John Doe");
+setFullName("John Doe");
