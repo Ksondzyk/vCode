@@ -10,6 +10,6 @@ const sum = (a, b) => {
 
 // const user
 
-const defferedSayHi = defer(sum, 1000);
+// const defferedSayHi = defer(sum, 1000);
 
-defferedSayHi(1, 4);
+// defferedSayHi(1, 4);
