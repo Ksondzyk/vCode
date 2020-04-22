@@ -4,6 +4,10 @@ export const user = {
   getFullName() {
     return `${this.firstName} ${this.lastName}`;
   },
+  setFullName(fullName) {
+    fullName: fullName;
+    console.log(fullName);
+  },
 };
 
-// setFullName("John Doe");
+user.setFullName("John Doe");
