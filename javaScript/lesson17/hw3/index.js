@@ -45,9 +45,8 @@ const country = {
   countryName: "Ukraine",
   capital: "Kyiv",
 };
-
-export function getPopulation(population) {
-  console.log(`Population in ${this.countryName} is ${population}`);
+function getPopulation(population) {
+  return `Population in ${this.countryName} is ${population}`;
 }
 
 export const getUkrainePopulation = getPopulation.bind(country, 43000);
