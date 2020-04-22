@@ -3,10 +3,10 @@ const student = {
   name: "Tom",
 };
 
-export function sayName() {
+function sayName() {
   console.log(this.name);
 }
-const sayStudentName = sayName.bind(student);
+export const sayStudentName = sayName.bind(student);
 sayStudentName();
 
 /*
@@ -18,7 +18,7 @@ sayStudentName();
  * создайте ф-цию sayBruceName которая будет выводить в консоль имя 'Bruce'
  * используйте ф-цию sayName и .bind с нужным объектом
  */
-const sayBruceName = sayName.bind({ name: "Bruce" });
+export const sayBruceName = sayName.bind({ name: "Bruce" });
 sayBruceName();
 /* ===> 2 <=== */
 const company = {
@@ -31,7 +31,7 @@ export function greeting(firstName, lastName) {
   );
 }
 
-const specialGreeting = greeting.bind(company, "Bob", "Marley");
+export const specialGreeting = greeting.bind(company, "Bob", "Marley");
 specialGreeting();
 /*
  * создайте ф-цию specialGreeting которая будет выводить в консоль
@@ -50,7 +50,7 @@ export function getPopulation(population) {
   console.log(`Population in ${this.countryName} is ${population}`);
 }
 
-const getUkrainePopulation = getPopulation.bind(country, 43000);
+export const getUkrainePopulation = getPopulation.bind(country, 43000);
 getUkrainePopulation();
 /*
  * создайте ф-цию getUkrainePopulation которая будет возвращать строку
@@ -79,10 +79,10 @@ const anotherTransaction = {
   currency: "USD",
   exchange: "NASDAQ",
 };
-const printSpecialTransaction = transaction.printTransaction.bind(
+export const printSpecialTransaction = transaction.printTransaction.bind(
   anotherTransaction
 );
-printSpecialTransaction();
+// printSpecialTransaction();
 /*
  * создайте ф-цию printSpecialTransaction которая будет выводить в консоль
  * '400 USD - buy on NASDAQ`
