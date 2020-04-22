@@ -1,15 +1,15 @@
-export const defer = (func, ms) => {
+export function defer(func, ms) {
   return function () {
-    setTimeout(func, ms);
+    setTimeout(() => func(...arguments), ms);
   };
+}
+
+const sum = (a, b) => {
+  console.log(a + b);
 };
 
-const sayHi = () => {
-  console.log("Hi");
-};
+// const user
 
-// sayHi();
+const defferedSayHi = defer(sum, 1000);
 
-const defferedSayHi = defer(sayHi, 1000);
-
-defferedSayHi();
+defferedSayHi(1, 4);
