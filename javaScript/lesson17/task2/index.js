@@ -1,4 +1,4 @@
-const callbackPrompt = {
+export const callbackPrompt = {
   message: "Tell me your number",
   showPrompt() {
     const phoneNumber = prompt(this.message);
@@ -9,4 +9,4 @@ const callbackPrompt = {
   },
 };
 
-callbackPrompt.showDeferredPrompt(1000);
+// callbackPrompt.showDeferredPrompt(1000);
