@@ -6,4 +6,4 @@ export const user = {
   },
 };
 
-user.getFullName();
+// user.getFullName();
