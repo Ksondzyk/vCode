@@ -3,7 +3,7 @@ const student = {
   name: "Tom",
 };
 
-function sayName() {
+export function sayName() {
   console.log(this.name);
 }
 const sayStudentName = sayName.bind(student);
@@ -25,7 +25,7 @@ const company = {
   companyName: "Microsoft",
 };
 
-function greeting(firstName, lastName) {
+export function greeting(firstName, lastName) {
   console.log(
     `Hello, ${firstName} ${lastName}. Welcome to the ${this.companyName}`
   );
@@ -46,7 +46,7 @@ const country = {
   capital: "Kyiv",
 };
 
-function getPopulation(population) {
+export function getPopulation(population) {
   console.log(`Population in ${this.countryName} is ${population}`);
 }
 
@@ -61,7 +61,7 @@ getUkrainePopulation();
  */
 
 /* ===> 4 <=== */
-const transaction = {
+export const transaction = {
   amount: 1200,
   operation: "sell",
   currency: "USD",
