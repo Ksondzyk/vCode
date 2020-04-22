@@ -1,3 +1,3 @@
-import { user } from "./index";
+import { user } from "index";
 
 user.getFullName();
