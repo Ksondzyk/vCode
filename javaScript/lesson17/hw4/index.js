@@ -4,7 +4,6 @@ export const user = {
   getFullName() {
     return `${this.firstName} ${this.lastName}`;
   },
-  setFullName() {},
 };
 
 setFullName("John Doe");
