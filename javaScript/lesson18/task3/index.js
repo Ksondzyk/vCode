@@ -4,4 +4,4 @@ export function sumOfSquares() {
     .reduce((acc, elem) => (acc += elem));
 }
 
-console.log(sumOfSquares(1, 2, 3, 4));
+console.log(sumOfSquares(1, 2, 3, 4)
