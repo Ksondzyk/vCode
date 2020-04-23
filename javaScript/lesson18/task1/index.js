@@ -14,7 +14,7 @@
 export const event = {
   guests: [
     { name: "Tom", age: 17, email: "a@gmail.com" },
-    { name: "John", age: 18, email: "a@gmail.com" },
+    { name: "Joh", age: 18, email: "a@gmail.com" },
   ],
   message: "Welcome to the party!",
   getInvitations() {
