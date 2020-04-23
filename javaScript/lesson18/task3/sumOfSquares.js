@@ -1,0 +1,1 @@
+import { sumOfSquares } from "./index";
