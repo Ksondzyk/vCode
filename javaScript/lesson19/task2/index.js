@@ -38,10 +38,7 @@ export function getOwnProps(obj) {
   console.log(obj);
   const arr = [];
   for (let prop in obj) {
-    if (obj[prop] instanceof Function) {
-      continue;
-    }
-    if (ship.hasOwnProperty(prop)) {
+    if (!(obj[prop] instanceof Function) && ship.hasOwnProperty(prop)) {
       arr.push(prop);
     }
   }
