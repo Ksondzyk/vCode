@@ -11,5 +11,5 @@ export const user = {
     return `${this.firstName} ${this.lastName}`;
   },
 };
-user.fullName = "Tom Hardy";
+user.fullName = "John Doe";
 console.log(user.fullName);
