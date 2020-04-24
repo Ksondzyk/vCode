@@ -1,0 +1,1 @@
+import { getOwnProps } from "./index";
