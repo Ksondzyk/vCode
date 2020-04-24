@@ -6,10 +6,10 @@ export default {
   },
   set fullName(value) {
     const [firstName, lastName] = value.split(" ");
-    this.fullName = firstName;
-    this.fullName = lastName;
+    this.firstName = firstName;
+    this.lastName = lastName;
     return `${this.firstName} ${this.lastName}`;
   },
 };
-// user.fullName = "John Doe";
-// console.log(user.fullName);
+user.fullName = "John Doe";
+console.log(user.fullName);
