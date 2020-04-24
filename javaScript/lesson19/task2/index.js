@@ -1,4 +1,4 @@
-// "use strict";
+"use strict";
 const vehicle = {
   isMoving: false,
   move() {
@@ -35,12 +35,13 @@ Object.setPrototypeOf(ship, vehicle);
 // }
 
 export function getOwnProps(obj) {
+  console.log(obj);
   const arr = [];
   for (let prop in obj) {
     if (obj[prop] instanceof Function) {
       continue;
     }
-    if (ship.hasOwnProperty(prop)) {
+    if (Object.getOwnPropertyNames(obj)) {
       arr.push(prop);
     }
   }
