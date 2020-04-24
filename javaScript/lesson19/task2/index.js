@@ -36,8 +36,10 @@ Object.setPrototypeOf(ship, vehicle);
 export function getOwnProps(obj) {
   const arr = [];
   for (let prop in obj) {
-    if (ship instanceof !Function) {
-      arr.push(rop);
+    if (obj[prop] instanceof Function) {
+      continue;
+    } else if (ship.hasOwnProperty(prop)) {
+      arr.push(prop);
     }
   }
   return arr;
