@@ -1,4 +1,4 @@
-const user = {
+export const user = {
   firstName: "John",
   lastName: "Doe",
   get fullName() {
@@ -11,5 +11,5 @@ const user = {
     return `${this.firstName} ${this.lastName}`;
   },
 };
-user.fullName = "John Doe";
-console.log(user.fullName);
+// user.fullName = "John Doe";
+// console.log(user.fullName);
