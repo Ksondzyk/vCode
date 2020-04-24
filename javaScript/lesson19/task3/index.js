@@ -18,11 +18,11 @@ User.prototype.setAge = function () {
   }
 };
 
-// // const user1 = new User("John", 25);
-// // const user2 = new User("John", 18);
-// // const user3 = new User("John", 25);
-// const user4 = new User("John", -1);
+const user1 = new User("John", 25);
+const user2 = new User("John", 18);
+const user3 = new User("John", 25);
+const user4 = new User("John", -1);
 
-// // user1.sayHi();
-// // user2.requestNewPhoto();
-// console.log(user4.setAge());
+user1.sayHi();
+user2.requestNewPhoto();
+user4.setAge();
