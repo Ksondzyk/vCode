@@ -13,7 +13,7 @@ export const vehicle = {
 
 export const ship = {
   name: "Argo",
-  hasWheels: false,
+  hasWheels: true,
   startMachine() {
     console.log(`${this.name} lifting anchor up`);
   },
