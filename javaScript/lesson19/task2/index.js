@@ -41,13 +41,13 @@ export function getOwnProps(obj) {
     if (obj[prop] instanceof Function) {
       continue;
     }
-    if (Object.getPrototypeOf(obj)) {
+    if (ship.hasOwnProperty(prop)) {
       arr.push(prop);
     }
   }
   return arr;
 }
-console.log(getOwnProps(ship));
+// console.log(getOwnProps(ship));
 
 // function getOwnProps(obj) {
 //   const arr = [];
