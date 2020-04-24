@@ -1,63 +1,12 @@
-// export const saveCalls = (...arg) => {
-//   let calls = [];
-//   function change(...arg) {
-//     this.calls.push(...arg);
-//   }
-//   return {
-//     withMemory: function (...arg) {
-//       change(...arg);
-//     },
-//     calls: function () {
-//       return this.calls;
-//     },
-//   };
-// };
+function saveCalls() {
+  const calls = [];
 
-// const testWithMemory = saveCalls;
-// testWithMemory(4, 2);
-// testWithMemory(9, 1);
-
-// testWithMemory.calls; // [ [4, 2], [9, 1] ]
-
-// /* Поддержка функций с контекстом */
-
-// const user = {
-//   name: "John",
-//   sayHi() {
-//     return this.name;
-//   },
-// };
-
-// const methodWithMemory = saveCalls(user.sayHi);
-
-// methodWithMemory.apply({ name: "Tom" }); // 'Tom'
-
-// methodWithMemory.calls; // [ [] ]
-// function saveCalls() {
-
-// }
-
-function test(a, b) {
-  return Math.sqrt(a * a + b * b);
+  function withMemory(...args) {
+    calls.push(...args);
+    return func.apply(this, args);
+  }
+  withMemory.calls = calls;
+  return withMemory;
 }
 
-const testWithMemory = saveCalls(test);
-testWithMemory(4, 2);
-testWithMemory(9, 1);
 
-testWithMemory.calls; // [ [4, 2], [9, 1] ]
-
-/* Поддержка функций с контекстом */
-
-const user = {
-  name: "John",
-  sayHi() {
-    return this.name;
-  },
-};
-
-const methodWithMemory = saveCalls(user.sayHi);
-
-methodWithMemory.apply({ name: "Tom" }); // 'Tom'
-
-methodWithMemory.calls; // [ [] ]
