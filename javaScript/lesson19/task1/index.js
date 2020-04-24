@@ -13,17 +13,19 @@ export const vehicle = {
 
 export const ship = {
   name: "Argo",
-  hasWheels: true,
+  hasWheels: false,
   startMachine() {
     console.log(`${this.name} lifting anchor up`);
+    this.move();
   },
   stopMachine() {
     console.log(`${this.name} lifting anchor down`);
+    this.stop();
   },
 };
-// Object.setPrototypeOf(ship, vehicle);
+Object.setPrototypeOf(ship, vehicle);
 
-// ship.startMachine();
+ship.startMachine();
 
 // ship.stop();
 
