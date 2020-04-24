@@ -11,5 +11,5 @@ export default {
     return `${this.firstName} ${this.lastName}`;
   },
 };
-user.fullName = "John Doe";
-console.log(user.fullName);
+// user.fullName = "John Doe";
+// console.log(user.fullName);
