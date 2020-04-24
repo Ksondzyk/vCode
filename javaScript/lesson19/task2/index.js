@@ -26,6 +26,7 @@ const ship = {
 };
 Object.setPrototypeOf(ship, vehicle);
 
+// console.log(typeof ship.stopMachine());
 // for (let prop in ship) {
 //   if (ship.hasOwnProperty(prop)) {
 //     console.log(prop);
@@ -35,8 +36,8 @@ Object.setPrototypeOf(ship, vehicle);
 export function getOwnProps(obj) {
   const arr = [];
   for (let prop in obj) {
-    if (ship.hasOwnProperty(prop)) {
-      arr.push(prop);
+    if (ship instanceof !Function) {
+      arr.push(rop);
     }
   }
   return arr;
