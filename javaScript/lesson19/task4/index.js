@@ -25,5 +25,5 @@ const user4 = new User("John", -1);
 
 user1.sayHi();
 user2.requestNewPhoto();
-user3.setAge();
-user4.setAge();
+user3.setAge(12);
+user4.setAge(25);
