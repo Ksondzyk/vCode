@@ -1,4 +1,4 @@
-export const user = {
+export default user = {
   firstName: "John",
   lastName: "Doe",
   get Getter() {
