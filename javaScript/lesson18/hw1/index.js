@@ -1,4 +1,4 @@
-function saveCalls() {
+export function saveCalls() {
   const calls = [];
 
   function withMemory(...args) {
