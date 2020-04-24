@@ -41,7 +41,7 @@ export function getOwnProps(obj) {
     if (obj[prop] instanceof Function) {
       continue;
     }
-    if (Object.getOwnPropertyNames(obj)) {
+    if (Object.getPrototypeOf(obj)) {
       arr.push(prop);
     }
   }
