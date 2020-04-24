@@ -1,13 +1,13 @@
 export default {
   firstName: "John",
   lastName: "Doe",
-  get Getter() {
+  get fullName() {
     return `${this.firstName} ${this.lastName}`;
   },
-  set Setter(value) {
+  set fullName(value) {
     const [firstName, lastName] = value.split(" ");
-    this.Setter = firstName;
-    this.Setter = lastName;
+    this.fullName = firstName;
+    this.fullName = lastName;
     return `${this.firstName} ${this.lastName}`;
   },
 };
