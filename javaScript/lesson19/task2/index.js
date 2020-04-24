@@ -47,7 +47,7 @@ export function getOwnProps(obj) {
   }
   return arr;
 }
-// console.log(getOwnProps(ship));
+console.log(getOwnProps(ship));
 
 // function getOwnProps(obj) {
 //   const arr = [];
