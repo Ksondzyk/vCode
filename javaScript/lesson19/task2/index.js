@@ -19,6 +19,7 @@ const ship = {
     console.log(`${this.name} lifting anchor up`);
     this.move();
   },
+  age: 12,
   stopMachine() {
     console.log(`${this.name} lifting anchor down`);
     this.stop();
@@ -38,12 +39,22 @@ export function getOwnProps(obj) {
   for (let prop in obj) {
     if (obj[prop] instanceof Function) {
       continue;
-    } else if (ship.hasOwnProperty(prop)) {
+    }
+    if (ship.hasOwnProperty(prop)) {
       arr.push(prop);
     }
   }
   return arr;
 }
-
 console.log(getOwnProps(ship));
-// console.log(Object.keys(ship));
+
+// function getOwnProps(obj) {
+//   const arr = [];
+//   for (let prop in obj) {
+//     if (ship.hasOwnProperty(obj[prop])) {
+//       arr.push(prop);
+//     }
+//   }
+//   return arr;
+// }
+// console.log(getOwnProps(ship));
