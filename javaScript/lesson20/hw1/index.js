@@ -1,3 +1,4 @@
+"use strict";
 export class Order {
   _id = "";
   _price = 0;
@@ -34,9 +35,10 @@ export class Order {
 }
 
 const order1 = new Order(1100, "Pekin", "Buy");
-console.log(order1.checkPrice());
+// console.log(order1.checkPrice());
+order1.checkPrice();
 order1.confirmOrder();
-console.log(order1._dateConfirmed);
-console.log(order1._isConfirmed);
+// console.log(order1._dateConfirmed);
+// console.log(order1._isConfirmed);
 order1.isValidType();
-console.log(order1.isValidType());
+// console.log(order1.isValidType());
