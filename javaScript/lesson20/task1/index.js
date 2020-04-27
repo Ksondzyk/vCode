@@ -26,7 +26,7 @@
 // user1.setAge(25);
 // console.log(user1);
 
-export class User {
+class User {
   constructor(name, age) {
     this.name = name;
     this.age = age;
@@ -48,12 +48,12 @@ export class User {
       return age;
     }
   }
-  createEmpty(emty, Null) {
-    this.name = emty;
-    this.age = Null;
-    return;
+
+  static createEmpty() {
+    // console.log(new User("", null));
+    return new User("", null);
   }
 }
 const user1 = new User("John", 25);
 user1.setAge(25);
-User.createEmpty("", null);
+User.createEmpty();
