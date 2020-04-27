@@ -22,7 +22,7 @@ export class User {
 }
 
 const user1 = new User("Tom", 25);
-
+user1.setAge(25);
 console.log(user1);
 
 // user1.sayHi();
