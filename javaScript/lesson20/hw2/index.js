@@ -18,7 +18,7 @@ export class User {
   }
 }
 
-class UserRepository {
+export class UserRepository {
   arrUser = [];
   constructor(users) {
     this.users = users;

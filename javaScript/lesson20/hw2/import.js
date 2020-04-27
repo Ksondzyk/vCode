@@ -1,1 +1,1 @@
-import { User } from "./index.js";
+import { User, UserRepository } from "./index.js";
