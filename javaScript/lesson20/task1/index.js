@@ -47,10 +47,12 @@ export class User {
       return age;
     }
   }
-  static createEmpty() {
-    this.age = "";
-    this.name = "";
+  static createEmpty(name, age) {
+    this.age = age;
+    this.name = name;
+    const user1 = new User(this.name, this.age);
+    return user1;
   }
 }
 const user1 = new User("Tom", 25);
-user1.setAge(25);
+user1.setAge("", "");
