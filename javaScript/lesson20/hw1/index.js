@@ -37,5 +37,5 @@ console.log(order1.checkPrice());
 order1.confirmOrder();
 console.log(order1._dateConfirmed);
 console.log(order1._isConfirmed);
-
+order1.isValidType();
 console.log(order1.isValidType());
