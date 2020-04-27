@@ -21,7 +21,7 @@ export class Order {
   }
   confirmOrder() {
     if (this.isConfirmed === false) {
-      this.isConfirmed === true;
+      this.isConfirmed = true;
       this.dateConfirmed = new Date();
       this.id = Math.random().toString();
     }
