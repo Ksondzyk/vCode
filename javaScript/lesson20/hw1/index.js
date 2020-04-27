@@ -1,33 +1,33 @@
 "use strict";
 export class Order {
-  _id = "";
-  _price = 0;
-  _dateCreated = new Date();
-  _isConfirmed;
-  _dateConfirmed = "";
-  _city = "";
-  _type = "";
+  id = "";
+  price = 0;
+  dateCreated = new Date();
+  isConfirmed;
+  dateConfirmed = "";
+  city = "";
+  type = "";
   constructor(price, city, type) {
-    this._isConfirmed = false;
-    this._price = price;
-    this._city = city.toString();
-    this._type = type.toString();
+    this.isConfirmed = false;
+    this.price = price;
+    this.city = city.toString();
+    this.type = type.toString();
   }
   checkPrice() {
-    if (this._price >= 1000) {
+    if (this.price >= 1000) {
       return true;
     }
     return false;
   }
   confirmOrder() {
-    if (this._isConfirmed === false) {
-      this._isConfirmed === true;
-      this._dateConfirmed = new Date();
-      this._id = Math.random().toString();
+    if (this.isConfirmed === false) {
+      this.isConfirmed === true;
+      this.dateConfirmed = new Date();
+      this.id = Math.random().toString();
     }
   }
   isValidType() {
-    if (this._type === "Buy" || this._type === "Sell") {
+    if (this.type === "Buy" || this.type === "Sell") {
       return true;
     }
     return false;
