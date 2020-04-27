@@ -48,8 +48,10 @@ export class User {
     }
   }
   static createEmpty() {
-    return (this.name = ""), (this.age = "");
+    return User((this.name = "")), (this.age = "");
   }
 }
-const user1 = new User("Tom", 25);
-user1.setAge("", "");
+const user1 = new User("John", 25);
+user1.setAge(25);
+const user2 = new User("John", 25);
+user2.createEmpty();
