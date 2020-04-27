@@ -1,6 +1,6 @@
 "use strict";
 
-class Vehicle {
+export class Vehicle {
   constructor(name, hasWheels) {
     (this.hasWheels = hasWheels), (this.name = name);
   }
@@ -12,7 +12,7 @@ class Vehicle {
   }
 }
 
-class Ship extends Vehicle {
+export class Ship extends Vehicle {
   constructor(name, speed) {
     super(name, false);
     this.speed = speed;
