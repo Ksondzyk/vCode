@@ -2,11 +2,12 @@ export class Order {
   _id = "";
   _price = 0;
   _dateCreated = new Date();
-  _isConfirmed = false;
+  _isConfirmed;
   _dateConfirmed = "";
   _city = "";
   _type = "";
   constructor(price, city, type) {
+    this._isConfirmed = false;
     this._price = price;
     this._city = city.toString();
     this._type = type.toString();
