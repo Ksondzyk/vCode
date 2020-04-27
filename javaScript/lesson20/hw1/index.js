@@ -1,5 +1,5 @@
 export class Order {
-  _id = Math.random();
+  _id = "";
   _price = 0;
   _dateCreated = new Date();
   _isConfirmed = false;
@@ -21,6 +21,7 @@ export class Order {
     if (this._isConfirmed === false) {
       this._isConfirmed === true;
       this._dateConfirmed = new Date();
+      this._id = Math.random().toString();
     }
   }
   isValidType() {
