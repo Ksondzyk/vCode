@@ -34,6 +34,6 @@ export class UserRepository {
     return this.users.map((user) => user.id);
   }
   getUserNameById(id) {
-    return this.users.find((id) => id === id).name;
+    return this.users.find((user) => id === user.id).name;
   }
 }
