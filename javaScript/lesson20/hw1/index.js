@@ -3,7 +3,7 @@ export class Order {
   _price = 0;
   _dateCreated = new Date();
   _isConfirmed = false;
-  _dateConfirmed = new Date();
+  _dateConfirmed = "";
   _city = "";
   _type = "";
   constructor(price, city, type) {
