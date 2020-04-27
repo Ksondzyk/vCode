@@ -1,6 +1,6 @@
 "use strict";
 
-export class Vehicle {
+class Vehicle {
   constructor(name, hasWheels) {
     (this.hasWheels = hasWheels), (this.name = name);
   }
