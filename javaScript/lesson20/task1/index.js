@@ -47,6 +47,9 @@ export class User {
       return age;
     }
   }
+  static createEmpty() {
+    const user = new User("", "");
+  }
 }
 const user1 = new User("Tom", 25);
 user1.setAge(25);
