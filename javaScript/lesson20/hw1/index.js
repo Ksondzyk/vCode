@@ -11,7 +11,6 @@ export class Order {
     this._price = price;
     this._city = city.toString();
     this._type = type.toString();
-    this._id = Math.random().toString();
   }
   checkPrice() {
     if (this._price >= 1000) {
@@ -23,6 +22,7 @@ export class Order {
     if (this._isConfirmed === false) {
       this._isConfirmed === true;
       this._dateConfirmed = new Date();
+      this._id = Math.random().toString();
     }
   }
   isValidType() {
