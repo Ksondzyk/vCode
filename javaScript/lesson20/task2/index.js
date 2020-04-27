@@ -17,17 +17,17 @@ class Ship extends Vehicle {
     super(name, false);
     this.speed = speed;
   }
-  startMachine() {
+  move() {
     console.log(`${this.name} lifting anchor up`);
-    this.move();
+    super.move();
   }
 
-  stopMachine() {
+  stop() {
     console.log(`${this.name} lifting anchor down`);
-    this.stop();
+    super.stop();
   }
 }
 
 const ship1 = new Ship("Aurora", 17);
-stopMachine.startMachine();
-console.log(ship1);
+ship1.stop();
+// console.log(ship1);
