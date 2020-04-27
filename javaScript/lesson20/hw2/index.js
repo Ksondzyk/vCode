@@ -28,12 +28,12 @@ export class UserRepository {
   }
 
   getUserNames() {
-    return this.users.map((user) => user.name());
+    return this.users.map((user) => user.name);
   }
   getUserIds() {
-    return this.users.map((user) => user.id());
+    return this.users.map((user) => user.id);
   }
   getUserNameById(id) {
-    return this.users.find((id) => id === id).name();
+    return this.users.find((id) => id === id).name;
   }
 }
