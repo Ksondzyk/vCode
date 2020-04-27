@@ -1,5 +1,5 @@
 export class Order {
-  _id = String(Math.random());
+  _id = Math.random();
   _price = 0;
   _dateCreated = new Date();
   _isConfirmed = false;
