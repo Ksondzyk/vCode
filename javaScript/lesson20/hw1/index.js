@@ -1,4 +1,4 @@
-class Order {
+export class Order {
   _id = String(Math.random());
   _price = 0;
   _dateCreated = new Date();
