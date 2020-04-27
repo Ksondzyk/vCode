@@ -1,3 +1,4 @@
+"use Strict";
 // export class User {
 //   constructor(name, age) {
 //     this.name = name;
@@ -47,11 +48,12 @@ export class User {
       return age;
     }
   }
-  static createEmpty() {
-    return User((this.name = "")), (this.age = "");
+  createEmpty(emty, Null) {
+    this.name = emty;
+    this.age = Null;
+    return;
   }
 }
-// const user1 = new User("John", 25);
-// user1.setAge(25);
-// const user2 = new User("John", 25);
-// user2.createEmpty();
+const user1 = new User("John", 25);
+user1.setAge(25);
+User.createEmpty("", null);
