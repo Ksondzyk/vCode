@@ -16,12 +16,11 @@ export class User {
   get sessionId() {
     return this.sessionId;
   }
-
 }
 
 export class UserRepository {
- arrUser = [];
-//   Object.freeze(arrUser);
+  arrUser = [];
+  //   Object.freeze(arrUser);
 
   constructor(users) {
     this.users = users;
@@ -29,9 +28,6 @@ export class UserRepository {
       Object.freeze(users[i]);
     }
   }
-    get users() {
-    return this.users;
-    }
   getUserNames() {
     return this.users.map((user) => user.name);
   }
