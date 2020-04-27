@@ -26,7 +26,7 @@
 // user1.setAge(25);
 // console.log(user1);
 
-class User {
+export class User {
   constructor(name, age) {
     this.name = name;
     this.age = age;
