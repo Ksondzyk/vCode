@@ -41,14 +41,15 @@ export class User {
     if (age < 0) {
       return false;
     } else if (age >= 25) {
-      console.log(`New photo request was sent for ${this.name}`);
+      this.requestNewPhoto();
       return age;
     } else if (age >= 0) {
       return age;
     }
   }
   static createEmpty() {
-    const user = new User("", "");
+    this.age = "";
+    this.name = "";
   }
 }
 const user1 = new User("Tom", 25);
