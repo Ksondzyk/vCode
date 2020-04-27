@@ -47,9 +47,9 @@ export class User {
       return age;
     }
   }
-  static createEmpty(name, age) {
-    this.age = age;
-    this.name = name;
+  static createEmpty() {
+    this.age = "";
+    this.name = "";
     const user1 = new User(this.name, this.age);
     return user1;
   }
