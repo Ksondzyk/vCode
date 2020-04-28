@@ -3,7 +3,7 @@ export class User {
   _name = "";
   _sessionId = "";
   constructor(id, name, sessionId) {
-    this_id = id;
+    this._id = id;
     this._name = name;
     this._sessionId = sessionId;
   }
