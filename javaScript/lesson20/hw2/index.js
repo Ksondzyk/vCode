@@ -20,16 +20,14 @@ export class User {
 
 export class UserRepository {
   users = [{}];
-
-  get users() {
-    return this.users;
-  }
-
   constructor(users) {
     this.users = users;
     for (let i = 0; i < users.length; i++) {
       Object.freeze(users[i]);
     }
+  }
+  get users() {
+    return this.users;
   }
   getUserNames() {
     return this.users.map((user) => user.name);
