@@ -18,7 +18,7 @@ export class User {
   }
 }
 
-export class UserRepository extends User {
+export class UserRepository {
   users = [{}];
   constructor(users) {
     this.users = users;
