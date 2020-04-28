@@ -19,8 +19,8 @@ export class User {
 }
 
 export class UserRepository {
-  arrUser = [];
-  //   Object.freeze(arrUser);
+  arrUser = [{}];
+  const res = Object.freeze(arrUser);
 
   constructor(users) {
     this.users = users;
