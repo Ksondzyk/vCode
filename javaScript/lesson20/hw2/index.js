@@ -19,7 +19,7 @@ export class User {
 }
 
 export class UserRepository {
-  users = [{}];
+  _users = [{}];
   constructor(users) {
     this.users = users;
     for (let i = 0; i < users.length; i++) {
@@ -27,7 +27,7 @@ export class UserRepository {
     }
   }
   get users() {
-    return this.users;
+    return this._users;
   }
   getUserNames() {
     return this.users.map((user) => user.name);
