@@ -1,20 +1,20 @@
 export class User {
-  id = "";
-  name = "";
-  sessionId = "";
+  _id = "";
+  _name = "";
+  _sessionId = "";
   constructor(id, name, sessionId) {
-    this.id = id;
-    this.name = name;
-    this.sessionId = sessionId;
+    this_id = id;
+    this._name = name;
+    this._sessionId = sessionId;
   }
   get id() {
-    return this.id;
+    return this._id;
   }
   get name() {
-    return this.name;
+    return this._name;
   }
   get sessionId() {
-    return this.sessionId;
+    return this._sessionId;
   }
 }
 
