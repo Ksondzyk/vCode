@@ -39,7 +39,4 @@ export class UserRepository {
     return this.users.find((user) => id === user.id).name;
   }
 }
-const user1 = new User(12, "roman", 12);
-
-// user1.id = 30;
-// console.log(user1.id);
+// const user1 = new User(12, "roman", 12);
