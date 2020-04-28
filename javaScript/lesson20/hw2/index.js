@@ -19,16 +19,15 @@ export class User {
 }
 
 export class UserRepository {
-  _users = [{}];
   constructor(users) {
-    this.users = users;
-    for (let i = 0; i < users.length; i++) {
+    this._users = users;
+    for (let i = 0; i < users; i++) {
       Object.freeze(users[i]);
     }
   }
-  get users() {
-    return this._users;
-  }
+  // get users() {
+  //   return this._users;
+  // }
   getUserNames() {
     return this.users.map((user) => user.name);
   }
@@ -40,3 +39,6 @@ export class UserRepository {
   }
 }
 // const user1 = new User(12, "roman", 12);
+
+// const user2 = new UserRepository(user1);
+// console.log(user2._users);
