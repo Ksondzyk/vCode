@@ -19,10 +19,10 @@ export class User {
 }
 
 export class UserRepository {
-  users = [{}];
+  users = Object.freeze([{}]);
 
   get users() {
-    return Object.freeze(this.users);
+    return this.users;
   }
 
   constructor(users) {
