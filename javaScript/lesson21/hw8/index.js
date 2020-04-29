@@ -1,4 +1,4 @@
-function finishList() {
+export function finishList() {
   const listElem = document.querySelector(".list");
   const listElemLi = document.querySelector(".special");
   const createElem = document.createElement("li");
