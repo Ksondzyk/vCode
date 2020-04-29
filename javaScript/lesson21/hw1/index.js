@@ -3,11 +3,10 @@ export function getTitleElement() {
   console.dir(titleElem);
   return titleElem;
 }
-// getTitleElement();
-
+getTitleElement();
 export function getInputElement() {
   const inputElem = document.querySelector("input[type=text]");
   console.dir(inputElem);
   return inputElem;
 }
-// getInputElement();
+getInputElement();
