@@ -4,7 +4,7 @@ export function finishForm() {
   const inputElem = document.createElement("input");
   input.setAttribute("name", "login");
   inputElem.setAttribute("type", "password");
-  inputElem.setAttribute("password", "password");
+  inputElem.setAttribute("name", "password");
   formElem.append(inputElem);
 }
-// finishForm();
+finishForm();
