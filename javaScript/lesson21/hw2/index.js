@@ -1,13 +1,14 @@
-const technology = document.querySelectorAll(".technology");
-export function getItemsList(elementsList) {
+export function getItemsList() {
+  const elementsList = document.querySelectorAll(".technology");
   console.dir(elementsList);
+  return elementsList;
 }
-getItemsList(technology);
+getItemsList();
 
-const ItemsArray = document.querySelectorAll(".tool");
-export function getItemsArray(ItemsArray) {
+export function getItemsArray() {
+  const ItemsArray = document.querySelectorAll(".tool");
   const elementsArray = Array.from(ItemsArray);
   console.dir(elementsArray);
   return elementsArray;
 }
-getItemsArray(ItemsArray);
+getItemsArray();
