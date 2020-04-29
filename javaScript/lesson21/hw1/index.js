@@ -9,4 +9,4 @@ export function getInputElement() {
   const typeText = inputElem.querySelector("value");
   console.dir(typeText);
 }
-getInputElement();
+// getInputElement();
