@@ -1,9 +1,9 @@
-export function getTitl() {
+export function getTitle() {
   const element = document.querySelector(".title");
   const textElement = element.textContent;
   return textElement;
 }
-getTitl();
+getTitle();
 
 export function getDescription() {
   const element = document.querySelector(".about");

@@ -1,1 +1,1 @@
-import { getTitl, getDescription, getPlans, getGoal } from "./index.js";
+import { getTitle, getDescription, getPlans, getGoal } from "./index.js";
