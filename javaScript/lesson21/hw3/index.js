@@ -22,7 +22,6 @@ getPlans();
 export function getGoal() {
   const element = document.querySelector(".goal");
   const textContent = element.outerHTML;
-
   return textContent;
 }
 getGoal();
