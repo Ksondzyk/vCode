@@ -4,7 +4,7 @@ function getTitleElement(titleElem) {
 }
 
 getTitleElement(titleElement);
-const inputElem = document.querySelector("input[value=Hello]").value;
+const inputElem = document.querySelector("input").value;
 export function getInputElement(inputElem) {
   console.dir(inputElem);
 }
