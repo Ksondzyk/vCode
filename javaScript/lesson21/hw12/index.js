@@ -1,4 +1,4 @@
-function getSection(num) {
+export function getSection(num) {
   const parent = document.querySelectorAll(".box");
   const element = document.querySelectorAll(`span[data-number="${num}"]`);
   for (let i = 0; i < parent.length; i++) {
@@ -8,4 +8,4 @@ function getSection(num) {
     }
   }
 }
-getSection(2);
+// getSection(2);
