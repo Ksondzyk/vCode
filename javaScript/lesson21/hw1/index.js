@@ -2,7 +2,7 @@ export function getTitleElement() {
   const titleElem = document.querySelector(".title");
   console.dir(titleElem);
 }
-getTitleElement();
+// getTitleElement();
 
 export function getInputElement() {
   const inputElem = document.querySelector("input");
