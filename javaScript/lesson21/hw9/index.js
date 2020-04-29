@@ -7,4 +7,4 @@ export function finishForm() {
   inputElem.setAttribute("name", "password");
   formElem.append(inputElem);
 }
-finishForm();
+// finishForm();
