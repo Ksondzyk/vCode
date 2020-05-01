@@ -54,8 +54,11 @@ function textCrete(text, done) {
 
   const listCheckbox = document.querySelectorAll(".list__item");
   listCheckbox.forEach((item) => {
-    console.log(item.querySelector(".list__item-checkbox"));
     item.addEventListener("change", (event) => {
+      // console.log(item.innerText);
+      tasks.find(
+        ({ text }) => text === item.innerText
+      ).done = item.querySelector(".list__item-checkbox").checked;
       if (item.querySelector(".list__item-checkbox").checked === true) {
         item.classList.add("list__item_done");
       } else {
