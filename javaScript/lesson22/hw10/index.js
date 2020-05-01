@@ -7,27 +7,11 @@ const tasks = [
 ];
 
 const renderListItem = (listItems) => {
-  // const listElem = document.querySelector(".list");
-
-  const listItemsElems = listItems
+  listItems
     .sort((a, b) => a.done - b.done)
     .map(({ text, done }) => {
-      // const listElementElem = document.createElement("li");
-      // listElementElem.classList.add("list__item");
-      // if (done) {
-      //   listElementElem.classList.add("list__item_done");
-      // }
-      // const checkboxElem = document.createElement("input");
-      // checkboxElem.setAttribute("type", "checkbox");
-      // checkboxElem.checked = done;
-
-      // checkboxElem.classList.add("list__item-checkbox");
-      // listElementElem.append(checkboxElem, text);
-
-      // return listElementElem;
       textCrete(text, done);
     });
-  // listElem.append(...listItemsElems);
 };
 renderListItem(tasks);
 
@@ -55,7 +39,6 @@ function textCrete(text, done) {
   const listCheckbox = document.querySelectorAll(".list__item");
   listCheckbox.forEach((item) => {
     item.addEventListener("change", (event) => {
-      // console.log(item.innerText);
       tasks.find(
         ({ text }) => text === item.innerText
       ).done = item.querySelector(".list__item-checkbox").checked;
@@ -73,15 +56,3 @@ document
     const input = document.querySelector(".task-input");
     textCrete(input.value, false);
   });
-
-// const listCheckbox = document.querySelectorAll(".list__item");
-// listCheckbox.forEach((item) => {
-//   console.log(item.querySelector(".list__item-checkbox"));
-//   item.addEventListener("change", (event) => {
-//     if (item.querySelector(".list__item-checkbox").checked === true) {
-//       item.classList.add("list__item_done");
-//     } else {
-//       item.classList.remove("list__item_done");
-//     }
-//   });
-// });
