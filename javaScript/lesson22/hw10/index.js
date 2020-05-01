@@ -31,6 +31,9 @@ const renderListItem = (listItems) => {
 renderListItem(tasks);
 
 function textCrete(text, done) {
+  if (text.length === 0) {
+    return;
+  }
   const listElementElem = document.createElement("li");
   listElementElem.classList.add("list__item");
   if (done) {
@@ -51,3 +54,15 @@ document
     const input = document.querySelector(".task-input");
     textCrete(input.value, false);
   });
+
+const listCheckbox = document.querySelectorAll(".list__item");
+listCheckbox.forEach((item) => {
+  console.log(item.querySelector(".list__item-checkbox"));
+  item.addEventListener("change", (event) => {
+    if (item.querySelector(".list__item-checkbox").checked === true) {
+      item.classList.add("list__item_done");
+    } else {
+      item.classList.remove("list__item_done");
+    }
+  });
+});
