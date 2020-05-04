@@ -89,23 +89,23 @@ const renderListItem = (listItems) => {
 };
 renderListItem(tasks);
 
-// const btnCreate = document.querySelector(".create-task-btn");
+const btnCreate = document.querySelector(".create-task-btn");
 
-// btnCreate.addEventListener("click", createTask);
+btnCreate.addEventListener("click", createTask);
 
-// function createTask() {
-//   const input = document.querySelector(".task-input");
-//   if (input.value.length === 0) {
-//     return;
-//   }
-//   const newTask = [{}].map((text, done) => ({
-//     text: input.value,
-//     done: false,
-//   }));
-//   renderListItem(newTask);
-//   input.value = null;
-//   console.log(newTask);
-//   return newTask;
-// }
-// console.log(newList);
-// console.log(tasks);
+function createTask() {
+  const input = document.querySelector(".task-input");
+  if (input.value.length === 0) {
+    return;
+  }
+  const newTask = [{}].map((text, done) => ({
+    text: input.value,
+    done: false,
+  }));
+  renderListItem(newTask);
+  input.value = null;
+  console.log(newTask);
+  return newTask;
+}
+console.log(newList);
+console.log(tasks);
