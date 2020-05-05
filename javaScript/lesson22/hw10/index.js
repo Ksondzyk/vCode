@@ -98,6 +98,7 @@ const tasks = [
   },
 ];
 const renderTasks = (tasksList) => {
+  const listElem = document.querySelector(".list");
   listElem.innerHTML = "";
   const tasksElems = tasksList
     .slice()
@@ -128,3 +129,16 @@ const onToggleTask = (e) => {
   Object.assign(taskData, { done: e.target.checked });
   renderTasks(tasks);
 };
+
+const btnCreate = document
+  .querySelector(".create-task-btn")
+  .addEventListener("click", createTask);
+
+function createTask() {
+  const input = document.querySelector(".task-input");
+  if (input.value.length === 0) {
+    return;
+  }
+  tasks.push({ text: input.value, done: false });
+}
+createTask();
