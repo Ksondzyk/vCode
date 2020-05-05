@@ -111,6 +111,7 @@ const renderTasks = (tasksList) => {
       checkbox.setAttribute("data-id", id);
       checkbox.checked = done;
       checkbox.classList.add("list__item-checkbox");
+
       if (done) {
         listItemElem.classList.add("list__item_done");
       }
@@ -118,9 +119,18 @@ const renderTasks = (tasksList) => {
       return listItemElem;
     });
   listElem.append(...tasksElems);
+  const checkBoxes = document.querySelectorAll(".list__item");
+
+  checkBoxes.forEach((el) => {
+    el.addEventListener("click", (e) => {
+      onToggleTask(e);
+      console.log("click");
+    });
+  });
 };
 renderTasks(tasks);
 const onToggleTask = (e) => {
+  console.log("onToggleTask");
   const isCheckbox = e.target.classList.contains("list__item-checkbox");
   if (!isCheckbox) {
     return;
@@ -129,12 +139,6 @@ const onToggleTask = (e) => {
   Object.assign(taskData, { done: e.target.checked });
   renderTasks(tasks);
 };
-
-const checkBoxes = document.querySelectorAll(".list__item");
-
-checkBoxes.forEach((el) => {
-  el.addEventListener("click", (e) => onToggleTask(e));
-});
 
 const btnCreate = document
   .querySelector(".create-task-btn")
@@ -154,6 +158,5 @@ function createTask() {
     id: count,
   });
   renderTasks(tasks);
-  document.querySelector(".task-input").value = "";
 }
 createTask();
