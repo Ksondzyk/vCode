@@ -1,114 +1,55 @@
-// // const tasks = [
-// //   { text: "Buy milk", done: false },
-// //   { text: "Pick up Tom from airport", done: false },
-// //   { text: "Visit party", done: false },
-// //   { text: "Visit doctor", done: true },
-// //   { text: "Buy meat", done: true },
-// // ];
+const tasks = [
+  { text: "Buy milk", done: false },
+  { text: "Pick up Tom from airport", done: false },
+  { text: "Visit party", done: false },
+  { text: "Visit doctor", done: true },
+  { text: "Buy meat", done: true },
+];
 
-// // const renderListItem = (listItems) => {
-// //   listItems
-// //     .sort((a, b) => a.done - b.done)
-// //     .map(({ text, done }) => {
-// //       textCrete(text, done);
-// //     });
-// // };
-// // renderListItem(tasks);
+const res = [];
+const renderListItem = (listItems) => {
+  const listElem = document.querySelector(".list");
 
-// // function textCrete(text, done) {
-// //   if (text.length === 0) {
-// //     return;
-// //   }
-// //   tasks.push({ text: text, done: done });
+  const listItemsElems = listItems
+    .sort((a, b) => a.done - b.done)
+    .map(({ text, done }) => {
+      const listElementElem = document.createElement("li");
+      listElementElem.classList.add("list__item");
+      if (done) {
+        listElementElem.classList.add("list__item_done");
+      }
+      const checkboxElem = document.createElement("input");
+      checkboxElem.setAttribute("type", "checkbox");
+      checkboxElem.checked = done;
 
-// //   const randomId = Math.floor(Math.random() * 10);
-// //   const listElementElem = document.createElement("li");
-// //   listElementElem.classList.add("list__item" + randomId);
+      checkboxElem.classList.add("list__item-checkbox");
+      listElementElem.append(checkboxElem, text);
 
-// //   if (done) {
-// //     listElementElem.classList.add("list__item_done");
-// //   }
-// //   const checkboxElem = document.createElement("input");
-// //   checkboxElem.setAttribute("type", "checkbox");
-// //   checkboxElem.checked = done;
+      const btnCreate = document
+        .querySelector(".create-task-btn")
+        .addEventListener("click", createTask);
 
-// //   checkboxElem.classList.add("list__item-checkbox");
-// //   listElementElem.append(checkboxElem, text);
-// //   const listElem = document.querySelector(".list");
-// //   listElem.append(listElementElem);
-// //   console.log(document.querySelector(".list__item" + randomId));
-// //   document
-// //     .querySelector(".list__item" + randomId)
-// //     .addEventListener("change", (event) => {
-// //       // tasks.find(
-// //       //   ({ text }) => text === item.inner
-// //       // ).done = item.querySelector(".list__item-checkbox").checked;
-// //       if (item.querySelector(".list__item-checkbox").checked === true) {
-// //         item.classList.add("list__item_done");
-// //       } else {
-// //         item.classList.remove("list__item_done");
-// //       }
-// //     });
-// // }
-// // document
-// //   .querySelector(".create-task-btn")
-// //   .addEventListener("click", (event) => {
-// //     const input = document.querySelector(".task-input");
-// //     textCrete(input.value, false);
-// //   });
+      function createTask() {
+        const input = document.querySelector(".task-input");
+        if (input.value.length === 0) {
+          return;
+        }
+        const newTask = [{}].map((text, done) => ({
+          text: input.value,
+          done: false,
+        }));
+        this.res = [...newTask, ...tasks].sort((a, b) => b.done - a.done);
 
-// const tasks = [
-//   { text: "Buy milk", done: false },
-//   { text: "Pick up Tom from airport", done: false },
-//   { text: "Visit party", done: false },
-//   { text: "Visit doctor", done: true },
-//   { text: "Buy meat", done: true },
-// ];
+        renderListItem(newTask);
+        input.value = "";
+      }
+      return listElementElem;
+    });
+  listElem.append(...listItemsElems);
+};
 
-// const res = [];
-// const renderListItem = (listItems) => {
-//   const listElem = document.querySelector(".list");
-
-//   const listItemsElems = listItems
-//     .sort((a, b) => a.done - b.done)
-//     .map(({ text, done }) => {
-//       const listElementElem = document.createElement("li");
-//       listElementElem.classList.add("list__item");
-//       if (done) {
-//         listElementElem.classList.add("list__item_done");
-//       }
-//       const checkboxElem = document.createElement("input");
-//       checkboxElem.setAttribute("type", "checkbox");
-//       checkboxElem.checked = done;
-
-//       checkboxElem.classList.add("list__item-checkbox");
-//       listElementElem.append(checkboxElem, text);
-
-//       const btnCreate = document
-//         .querySelector(".create-task-btn")
-//         .addEventListener("click", createTask);
-
-//       function createTask() {
-//         const input = document.querySelector(".task-input");
-//         if (input.value.length === 0) {
-//           return;
-//         }
-//         const newTask = [{}].map((text, done) => ({
-//           text: input.value,
-//           done: false,
-//         }));
-//         this.res = [...newTask, ...tasks].sort((a, b) => b.done - a.done);
-
-//         renderListItem(newTask);
-//         input.value = "";
-//       }
-//       return listElementElem;
-//     });
-//   listElem.append(...listItemsElems);
-// };
-
-// console.log(res);
-// renderListItem(tasks);
+console.log(res);
+renderListItem(tasks);
 
 // const listElem = document.querySelector(".list__item");
 // const checkBoxes = document.querySelectorAll("[type=checkbox]");
@@ -132,15 +73,10 @@ const tasks = [
 ];
 
 const listElem = document.querySelector(".list");
-
-tasks
-  .sort((a, b) => a.done - b.done)
-  .map(({ text, done }) => {
-    this.addTask(text, done);
-  });
+renderListItem(tasks);
 function addTask(text, checked) {
   tasks.push({ text: text, done: false });
-  addNewItem(text, checked);
+  renderListItem(tasks);
 }
 
 function addNewItem(text, checked) {
@@ -170,3 +106,11 @@ document.querySelector(".create-task-btn").addEventListener("click", () => {
   addTask(inputValue, false);
   document.querySelector(".task-input").value = "";
 });
+
+function renderListItem(listItems) {
+  document.querySelector(".list").classList.remove("list-item");
+  listItems = listItems.sort((a, b) => b.done - a.done);
+  listItems.forEach((item) => {
+    addNewItem(item.text, item.done);
+  });
+}
