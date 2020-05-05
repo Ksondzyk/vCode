@@ -6,7 +6,6 @@ const tasks = [
   { text: "Buy meat", done: true },
 ];
 
-const res = [];
 const renderListItem = (listItems) => {
   const listElem = document.querySelector(".list");
 
@@ -25,6 +24,9 @@ const renderListItem = (listItems) => {
       checkboxElem.classList.add("list__item-checkbox");
       listElementElem.append(checkboxElem, text);
 
+      const listElem = document.querySelector(".list__item");
+      // const checkBoxes = document.querySelectorAll(".list__item-checkbox");
+
       const btnCreate = document
         .querySelector(".create-task-btn")
         .addEventListener("click", createTask);
@@ -34,19 +36,53 @@ const renderListItem = (listItems) => {
         if (input.value.length === 0) {
           return;
         }
-        const newTask = [{}].map((text, done) => ({
-          text: input.value,
-          done: false,
-        }));
-        this.res = [...newTask, ...tasks].sort((a, b) => b.done - a.done);
+        tasks.push({ text: input.value, done: false });
 
-        renderListItem(newTask);
+        const listElem = document.querySelector(".list__item");
+        function updateCheck() {
+          const checkBoxes = document.querySelectorAll(".list__item");
+          for (let i = 0; i < checkBoxes.length; i++) {
+            checkBoxes[i].addEventListener("click", function () {
+              console.log("sdcsdc");
+              if (
+                checkBoxes[i].querySelector("[type=checkbox]").checked === true
+              ) {
+                checkBoxes[i].classList.add("list__item_done");
+              } else {
+                checkBoxes[i].classList.remove("list__item_done");
+              }
+            });
+          }
+        }
+
+        updateCheck();
+
+        tasks.sort((a, b) => b.done - a.done);
+
+        renderListItem(tasks);
         input.value = "";
       }
       return listElementElem;
     });
+  listElem.innerHTML = "";
   listElem.append(...listItemsElems);
 };
 
-console.log(res);
 renderListItem(tasks);
+
+// const listElem = document.querySelector(".list__item");
+// function updateCheck() {
+//   const checkBoxes = document.querySelectorAll(".list__item");
+//   for (let i = 0; i < checkBoxes.length; i++) {
+//     checkBoxes[i].addEventListener("click", function () {
+//       console.log("sdcsdc");
+//       if (checkBoxes[i].querySelector("[type=checkbox]").checked === true) {
+//         checkBoxes[i].classList.add("list__item_done");
+//       } else {
+//         checkBoxes[i].classList.remove("list__item_done");
+//       }
+//     });
+//   }
+// }
+
+// updateCheck();
