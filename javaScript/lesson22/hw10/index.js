@@ -130,6 +130,12 @@ const onToggleTask = (e) => {
   renderTasks(tasks);
 };
 
+const checkBoxes = document.querySelectorAll(".list__item");
+
+checkBoxes.forEach((el) => {
+  el.addEventListener("click", (e) => onToggleTask(e));
+});
+
 const btnCreate = document
   .querySelector(".create-task-btn")
   .addEventListener("click", createTask);
@@ -139,6 +145,15 @@ function createTask() {
   if (input.value.length === 0) {
     return;
   }
-  tasks.push({ text: input.value, done: false });
+  const count = tasks.length + 1;
+
+  tasks.push({
+    text: input.value,
+    done: false,
+    createDate: new Date(),
+    id: count,
+  });
+  renderTasks(tasks);
+  document.querySelector(".task-input").value = "";
 }
 createTask();
