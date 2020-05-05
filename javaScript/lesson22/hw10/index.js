@@ -123,22 +123,22 @@ const renderTasks = (tasksList) => {
 
   checkBoxes.forEach((el) => {
     el.addEventListener("click", (e) => {
-      onToggleTask(e);
+      onToggleTask(e, tasks);
       console.log("click");
     });
   });
 };
 renderTasks(tasks);
-const onToggleTask = (e) => {
+function onToggleTask(e, tasks) {
   console.log("onToggleTask");
   const isCheckbox = e.target.classList.contains("list__item-checkbox");
   if (!isCheckbox) {
     return;
   }
-  const taskData = tasks.find((task) => task.id === e.target.dataset.id);
+  const taskData = tasks.find((task) => task.id == e.target.dataset.id);
   Object.assign(taskData, { done: e.target.checked });
   renderTasks(tasks);
-};
+}
 
 const btnCreate = document
   .querySelector(".create-task-btn")
@@ -154,9 +154,10 @@ function createTask() {
   tasks.push({
     text: input.value,
     done: false,
-    createDate: new Date(),
-    id: count,
+    createDate: new Date().toString(),
+    id: count.toString(),
   });
   renderTasks(tasks);
+  document.querySelector(".task-input").value = "";
 }
 createTask();
