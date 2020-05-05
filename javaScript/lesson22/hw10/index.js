@@ -69,20 +69,3 @@ const renderListItem = (listItems) => {
 };
 
 renderListItem(tasks);
-
-// const listElem = document.querySelector(".list__item");
-// function updateCheck() {
-//   const checkBoxes = document.querySelectorAll(".list__item");
-//   for (let i = 0; i < checkBoxes.length; i++) {
-//     checkBoxes[i].addEventListener("click", function () {
-//       console.log("sdcsdc");
-//       if (checkBoxes[i].querySelector("[type=checkbox]").checked === true) {
-//         checkBoxes[i].classList.add("list__item_done");
-//       } else {
-//         checkBoxes[i].classList.remove("list__item_done");
-//       }
-//     });
-//   }
-// }
-
-// updateCheck();
