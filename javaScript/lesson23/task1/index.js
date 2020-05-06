@@ -50,3 +50,15 @@ const onPasswordChange = (event) => {
 
 emailInputElem.addEventListener("input", onEmailChange);
 passwordInputElem.addEventListener("input", onPasswordChange);
+
+const formElem = document.querySelector(".login-form");
+
+const onFormSubmit = (event) => {
+  event.preventDefault();
+  const formDate = [
+    ...new FormData(formElem),
+  ].reduce((acc, [field, value]) => ({ ...acc, [field]: value }));
+  alert(formDate);
+};
+
+formElem.addEventListener("submit", onFormSubmit);
