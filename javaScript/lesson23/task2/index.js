@@ -1,7 +1,7 @@
 const generateNumbersRange = (from, to) => {
   const result = [];
 
-  for (let i = 0; i <= to; i++) {
+  for (let i = 1; i <= to; i++) {
     result.push(i);
   }
 
@@ -35,7 +35,7 @@ const arenaElem = document.querySelector(".arena");
 
 const renderArena = () => {
   const lineString = getSectorLines();
-  const sectorsString = generateNumbersRange(1, 2)
+  const sectorsString = generateNumbersRange(1, 3)
     .map(
       (sectorNumber) =>
         `<div 
