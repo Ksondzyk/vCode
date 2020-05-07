@@ -6,11 +6,11 @@
 // const weekDay = ["Sun", "Mon", "Tue", "Wed", "Fri", "Set"];
 
 export const dayOfWeek = (date, days) => {
-  const weekDay = ["Mo", "Tu", "We", "Th", "Fr", "St", "Su"];
+  const weekDay = ["Su", "Mo", "Tu", "We", "Th", "Fr", "St"];
   const day = new Date(date).getDate();
   const dateInFuture = new Date(date).setDate(day + days);
   return weekDay[new Date(dateInFuture).getDay()];
 };
-const result = dayOfWeek(new Date(2020, 0, 1), 14);
+// const result = dayOfWeek(new Date(2020, 0, 1), 14);
 
-console.log(result);
+// console.log(result);
