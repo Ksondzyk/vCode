@@ -102,7 +102,7 @@ const renderTasks = (tasksList) => {
   listElem.innerHTML = "";
   const tasksElems = tasksList
     .slice()
-    .sort((a, b) => a.done - b.done)
+    .sort((a, b) => b.done - a.done)
     .map(({ text, done, id }) => {
       const listItemElem = document.createElement("li");
       listItemElem.classList.add("list__item");
