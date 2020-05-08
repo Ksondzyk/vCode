@@ -100,26 +100,21 @@ const tasks = [
 const renderTasks = (tasksList) => {
   const listElem = document.querySelector(".list");
   listElem.innerHTML = "";
-  const tasksElems = tasksList
-    .slice()
-    .sort((a, b) =>
-      a.createDate < b.createDate ? -1 : a.createDate > b.createDate ? 1 : 0
-    )
-    .map(({ text, done, id }) => {
-      const listItemElem = document.createElement("li");
-      listItemElem.classList.add("list__item");
-      const checkbox = document.createElement("input");
-      checkbox.setAttribute("type", "checkbox");
-      checkbox.setAttribute("data-id", id);
-      checkbox.checked = done;
-      checkbox.classList.add("list__item-checkbox");
+  const tasksElems = tasksList.slice().map(({ text, done, id }) => {
+    const listItemElem = document.createElement("li");
+    listItemElem.classList.add("list__item");
+    const checkbox = document.createElement("input");
+    checkbox.setAttribute("type", "checkbox");
+    checkbox.setAttribute("data-id", id);
+    checkbox.checked = done;
+    checkbox.classList.add("list__item-checkbox");
 
-      if (done) {
-        listItemElem.classList.add("list__item_done");
-      }
-      listItemElem.append(checkbox, text);
-      return listItemElem;
-    });
+    if (done) {
+      listItemElem.classList.add("list__item_done");
+    }
+    listItemElem.append(checkbox, text);
+    return listItemElem;
+  });
   listElem.append(...tasksElems);
   const checkBoxes = document.querySelectorAll(".list__item");
 
@@ -137,8 +132,11 @@ function onToggleTask(e, tasks) {
   if (!isCheckbox) {
     return;
   }
+
   const taskData = tasks.find((task) => task.id == e.target.dataset.id);
   Object.assign(taskData, { done: e.target.checked });
+  tasks = tasks.sort((a, b) => a.done - b.done);
+  console.log(tasks);
   renderTasks(tasks);
 }
 
@@ -159,6 +157,9 @@ function createTask() {
     createDate: new Date().toISOString(),
     id: count.toString(),
   });
+  tasks.sort((a, b) =>
+    a.createDate < b.createDate ? -1 : a.createDate > b.createDate ? 1 : 0
+  );
   renderTasks(tasks);
   document.querySelector(".task-input").value = "";
   console.log(tasks);
