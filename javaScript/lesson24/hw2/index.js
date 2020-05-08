@@ -75,7 +75,6 @@ export const studentsBirthDays = (students) => {
   const sortedStudents = studentsNumberOfDay.sort((a, b) => {
     return a.date - b.date;
   });
-
   for (let i = 0; i < sortedStudents.length; i++) {
     sortedStudents[i].birthDate = month[sortedStudents[i].birthDate];
   }
