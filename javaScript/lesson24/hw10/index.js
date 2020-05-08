@@ -69,31 +69,31 @@ const tasks = [
   {
     text: "Buy milk",
     done: false,
-    createDate: "2019-11-24T15:51:32.222Z",
+    createDate: "2021-11-24T15:51:32.222Z",
     id: "1",
   },
   {
     text: "Pick up Tom from airport",
     done: false,
-    createDate: "2019-11-25T15:51:32.222Z",
+    createDate: "2021-11-25T15:51:32.222Z",
     id: "2",
   },
   {
     text: "Visit party",
     done: false,
-    createDate: "2019-11-26T15:51:32.222Z",
+    createDate: "2021-11-26T15:51:32.222Z",
     id: "3",
   },
   {
     text: "Visit doctor",
     done: true,
-    createDate: "2019-11-27T15:51:32.222Z",
+    createDate: "2021-11-27T15:51:32.222Z",
     id: "4",
   },
   {
     text: "Buy meat",
     done: true,
-    createDate: "2019-11-28T15:51:32.222Z",
+    createDate: "2021-11-28T15:51:32.222Z",
     id: "5",
   },
 ];
@@ -102,7 +102,9 @@ const renderTasks = (tasksList) => {
   listElem.innerHTML = "";
   const tasksElems = tasksList
     .slice()
-    .sort((a, b) => b.done - a.done)
+    .sort((a, b) =>
+      a.createDate < b.createDate ? -1 : a.createDate > b.createDate ? 1 : 0
+    )
     .map(({ text, done, id }) => {
       const listItemElem = document.createElement("li");
       listItemElem.classList.add("list__item");
@@ -154,10 +156,11 @@ function createTask() {
   tasks.push({
     text: input.value,
     done: false,
-    createDate: new Date().toString(),
+    createDate: new Date().toISOString(),
     id: count.toString(),
   });
   renderTasks(tasks);
   document.querySelector(".task-input").value = "";
+  console.log(tasks);
 }
 createTask();
