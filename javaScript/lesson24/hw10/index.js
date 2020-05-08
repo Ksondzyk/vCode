@@ -100,7 +100,7 @@ const tasks = [
 const renderTasks = (tasksList) => {
   const listElem = document.querySelector(".list");
   listElem.innerHTML = "";
-  const tasksElems = tasksList.slice().map(({ text, done, id }) => {
+  const tasksElems = tasksList.map(({ text, done, id }) => {
     const listItemElem = document.createElement("li");
     listItemElem.classList.add("list__item");
     const checkbox = document.createElement("input");
