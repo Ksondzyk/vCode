@@ -160,10 +160,9 @@ function createTask() {
   tasks.sort((a, b) =>
     a.createDate < b.createDate ? -1 : a.createDate > b.createDate ? 1 : 0
   );
-  console.log(tasks);
 
   tasks.sort((a, b) => a.done - b.done);
-  console.log(tasks);
+
   renderTasks(tasks);
   document.querySelector(".task-input").value = "";
 }
