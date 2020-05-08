@@ -135,7 +135,7 @@ function onToggleTask(e, tasks) {
 
   const taskData = tasks.find((task) => task.id == e.target.dataset.id);
   Object.assign(taskData, { done: e.target.checked });
-  tasks = tasks.sort((a, b) => a.done - b.done);
+  tasks.sort((a, b) => a.done - b.done);
   console.log(tasks);
   renderTasks(tasks);
 }
@@ -160,8 +160,11 @@ function createTask() {
   tasks.sort((a, b) =>
     a.createDate < b.createDate ? -1 : a.createDate > b.createDate ? 1 : 0
   );
+  console.log(tasks);
+
+  tasks.sort((a, b) => a.done - b.done);
+  console.log(tasks);
   renderTasks(tasks);
   document.querySelector(".task-input").value = "";
-  console.log(tasks);
 }
 createTask();
