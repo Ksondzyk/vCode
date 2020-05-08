@@ -70,10 +70,12 @@ export const studentsBirthDays = (students) => {
   const studentsNumberOfDay = students.map(({ name, birthDate }) => ({
     name,
     birthDate: new Date(birthDate).getMonth(),
+    date: new Date(birthDate).getDate(),
   }));
   const sortedStudents = studentsNumberOfDay.sort((a, b) => {
-    return a.birthDate - b.birthDate;
+    return a.date - b.date;
   });
+
   for (let i = 0; i < sortedStudents.length; i++) {
     sortedStudents[i].birthDate = month[sortedStudents[i].birthDate];
   }
@@ -87,8 +89,17 @@ console.log(
   studentsBirthDays([
     { name: "Tom", birthDate: "01/15/2010" },
     { name: "Ben", birthDate: "02/17/2008" },
-    { name: "Ocsana", birthDate: "02/17/2008" },
+    { name: "Ocsana", birthDate: "02/02/2005" },
     { name: "Vasil", birthDate: "12/15/2010" },
     { name: "Roman", birthDate: "08/15/2010" },
+    { name: "Roman", birthDate: "02/01/2010" },
   ])
 );
+
+// Из массива `students` создать объект, где ключами будут названия месяцев, а значениями - массивы студентов, у которых день рождения в этом месяце (год не имеет значения, важен только месяц рождения)
+// Получится что-то в виде:
+// ```
+// {
+//   Jan: [{ name: 'Tom', birthDate: '01/15/2010' }, { name: 'Ben', birthDate: '01/17/2008' }],
+//   Mar: [{ name: 'Sam', birthDate: '03/07/2012' }],
+// }
