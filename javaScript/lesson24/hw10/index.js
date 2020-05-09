@@ -142,7 +142,6 @@ function onToggleTask(e, tasks) {
 
   const taskData = tasks.find((task) => task.id == e.target.dataset.id);
   Object.assign(taskData, { done: e.target.checked });
-  tasks.sort((a, b) => a.done - b.done);
   console.log(tasks);
   renderTasks(tasks);
 }
