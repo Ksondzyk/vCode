@@ -39,15 +39,14 @@ const renderTasks = (tasksList) => {
   const listElem = document.querySelector(".list");
   listElem.innerHTML = "";
   const tasksElems = tasksList
-    // .slice()
-    // .sort((a, b) =>
-    //   a.createDate < b.createDate ? -1 : a.createDate > b.createDate ? 1 : 0
-    // )
     .slice()
     .sort((a, b) =>
-      b.finishDate < a.finishDate ? -1 : b.finishDate < a.finishDate ? 1 : 0
+      a.createDate > b.createDate ? -1 : a.createDate > b.createDate ? 1 : 0
     )
     .sort((a, b) => a.done - b.done)
+    .sort((a, b) =>
+      a.finishDate > b.finishDate ? -1 : a.finishDate > b.finishDate ? 1 : 0
+    )
     .map(({ text, done, id }) => {
       const listItemElem = document.createElement("li");
       listItemElem.classList.add("list__item");
