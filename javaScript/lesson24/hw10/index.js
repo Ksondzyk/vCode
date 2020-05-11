@@ -2,37 +2,37 @@ const tasks = [
   {
     text: "Buy milk",
     done: false,
-    createDate: "2021-11-24T15:51:32.222Z",
+    createDate: "2019-10-24T15:51:32.222Z",
+    finishDate: null,
     id: "1",
-    dateExpired: new Date(),
   },
   {
     text: "Pick up Tom from airport",
     done: false,
-    createDate: "2021-11-25T15:51:32.222Z",
+    createDate: "2019-10-25T15:51:32.222Z",
+    finishDate: null,
     id: "2",
-    dateExpired: new Date(),
   },
   {
     text: "Visit party",
     done: false,
-    createDate: "2021-11-26T15:51:32.222Z",
+    createDate: "2019-10-26T15:51:32.222Z",
+    finishDate: null,
     id: "3",
-    dateExpired: new Date(),
   },
   {
     text: "Visit doctor",
     done: true,
-    createDate: "2021-11-27T15:51:32.222Z",
+    createDate: "2019-10-27T15:51:32.222Z",
+    finishDate: "2019-11-27T15:51:32.222Z",
     id: "4",
-    dateExpired: new Date(),
   },
   {
     text: "Buy meat",
     done: true,
-    createDate: "2021-11-28T15:51:32.222Z",
+    createDate: "2019-10-28T15:51:32.222Z",
+    finishDate: "2019-11-28T15:51:32.222Z",
     id: "5",
-    dateExpired: new Date(),
   },
 ];
 const renderTasks = (tasksList) => {
@@ -45,7 +45,7 @@ const renderTasks = (tasksList) => {
     )
     .slice()
     .sort((a, b) =>
-      a.dateExpired > b.dateExpired ? -1 : a.dateExpired > b.dateExpired ? 1 : 0
+      a.finishDate > b.finishDate ? -1 : a.finishDate > b.finishDate ? 1 : 0
     )
     .sort((a, b) => b.done - a.done)
     .map(({ text, done, id }) => {
@@ -103,7 +103,7 @@ function createTask() {
     done: false,
     createDate: new Date().toISOString(),
     id: count.toString(),
-    dateExpired: new Date(),
+    finishDate: new Date().toISOString(),
   });
   renderTasks(tasks);
   document.querySelector(".task-input").value = "";
