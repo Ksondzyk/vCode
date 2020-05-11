@@ -44,9 +44,7 @@ const renderTasks = (tasksList) => {
       a.createDate > b.createDate ? -1 : a.createDate > b.createDate ? 1 : 0
     )
     .sort((a, b) => a.done - b.done)
-    .sort((a, b) =>
-      a.finishDate > b.finishDate ? -1 : a.finishDate > b.finishDate ? 1 : 0
-    )
+    .sort((a, b) => a.finishDate > b.finishDate)
     .map(({ text, done, id }) => {
       const listItemElem = document.createElement("li");
       listItemElem.classList.add("list__item");
@@ -81,7 +79,7 @@ function onToggleTask(e, tasks) {
   }
 
   const taskData = tasks.find((task) => task.id == e.target.dataset.id);
-  Object.assign(taskData, { done: e.target.checked, dateExpired: new Date() });
+  Object.assign(taskData, { done: e.target.checked });
   console.log(tasks);
   renderTasks(tasks);
 }
