@@ -4,30 +4,35 @@ const tasks = [
     done: false,
     createDate: "2021-11-24T15:51:32.222Z",
     id: "1",
+    dateExpired: new Date(),
   },
   {
     text: "Pick up Tom from airport",
     done: false,
     createDate: "2021-11-25T15:51:32.222Z",
     id: "2",
+    dateExpired: new Date(),
   },
   {
     text: "Visit party",
     done: false,
     createDate: "2021-11-26T15:51:32.222Z",
     id: "3",
+    dateExpired: new Date(),
   },
   {
     text: "Visit doctor",
     done: true,
     createDate: "2021-11-27T15:51:32.222Z",
     id: "4",
+    dateExpired: new Date(),
   },
   {
     text: "Buy meat",
     done: true,
     createDate: "2021-11-28T15:51:32.222Z",
     id: "5",
+    dateExpired: new Date(),
   },
 ];
 const renderTasks = (tasksList) => {
@@ -36,9 +41,12 @@ const renderTasks = (tasksList) => {
   const tasksElems = tasksList
     .slice()
     .sort((a, b) =>
-      a.dateExpired < b.dateExpired ? -1 : a.dateExpired > b.dateExpired ? 1 : 0
+      a.createDate < b.createDate ? -1 : a.createDate > b.createDate ? 1 : 0
     )
     .slice()
+    .sort((a, b) =>
+      a.dateExpired < b.dateExpired ? -1 : a.dateExpired > b.dateExpired ? 1 : 0
+    )
     .sort((a, b) => a.done - b.done)
     .map(({ text, done, id }) => {
       const listItemElem = document.createElement("li");
@@ -74,7 +82,7 @@ function onToggleTask(e, tasks) {
   }
 
   const taskData = tasks.find((task) => task.id == e.target.dataset.id);
-  Object.assign(taskData, { done: e.target.checked });
+  Object.assign(taskData, { done: e.target.checked, dateExpired: new Date() });
   console.log(tasks);
   renderTasks(tasks);
 }
@@ -95,7 +103,7 @@ function createTask() {
     done: false,
     createDate: new Date().toISOString(),
     id: count.toString(),
-    dateExpired: new Date().toISOString(),
+    dateExpired: new Date(),
   });
   renderTasks(tasks);
   document.querySelector(".task-input").value = "";
