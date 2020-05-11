@@ -47,7 +47,7 @@ const renderTasks = (tasksList) => {
     .sort((a, b) =>
       a.dateExpired > b.dateExpired ? -1 : a.dateExpired < b.dateExpired ? 1 : 0
     )
-    .sort((a, b) => a.done - b.done)
+    // .sort((a, b) => a.done - b.done)
     .map(({ text, done, id }) => {
       const listItemElem = document.createElement("li");
       listItemElem.classList.add("list__item");
