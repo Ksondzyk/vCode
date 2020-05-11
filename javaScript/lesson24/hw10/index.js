@@ -45,7 +45,7 @@ const renderTasks = (tasksList) => {
     )
     .slice()
     .sort((a, b) =>
-      a.dateExpired < b.dateExpired ? -1 : a.dateExpired > b.dateExpired ? 1 : 0
+      a.dateExpired > b.dateExpired ? -1 : a.dateExpired < b.dateExpired ? 1 : 0
     )
     .sort((a, b) => a.done - b.done)
     .map(({ text, done, id }) => {
