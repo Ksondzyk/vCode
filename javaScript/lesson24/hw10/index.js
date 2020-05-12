@@ -40,11 +40,7 @@ const renderTasks = (tasksList) => {
   listElem.innerHTML = "";
   const tasksElems = tasksList
     .slice()
-    .sort((a, b) =>
-      a.createDate > b.createDate ? -1 : a.createDate > b.createDate ? 1 : 0
-    )
     .sort((a, b) => a.done - b.done)
-    .sort((a, b) => a.finishDate > b.finishDate)
     .map(({ text, done, id }) => {
       const listItemElem = document.createElement("li");
       listItemElem.classList.add("list__item");
@@ -79,7 +75,10 @@ function onToggleTask(e, tasks) {
   }
 
   const taskData = tasks.find((task) => task.id == e.target.dataset.id);
-  Object.assign(taskData, { done: e.target.checked });
+  Object.assign(taskData, {
+    done: e.target.checked,
+    finishDate: new Date(),
+  });
   console.log(tasks);
   renderTasks(tasks);
 }
@@ -98,10 +97,14 @@ function createTask() {
   tasks.push({
     text: input.value,
     done: false,
-    createDate: new Date().toISOString(),
+    createDate: new Date().toUTCString(),
     id: count.toString(),
-    finishDate: new Date().toISOString(),
+    finishDate: new Date().toUTCString(),
   });
+  console.log(tasks);
+  tasks.sort((a, b) =>
+    b.createDate < a.createDate ? -1 : b.createDate > a.createDate ? 1 : 0
+  );
   renderTasks(tasks);
   document.querySelector(".task-input").value = "";
 }
