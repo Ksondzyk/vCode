@@ -1,7 +1,7 @@
-localStorage.clear();
-localStorage.setItem("hobbies", JSON.stringify({ name: "Tom" }));
-localStorage.setItem("name", "Tom");
-localStorage.setItem("name", JSON.stringify(17));
+// localStorage.clear();
+// localStorage.setItem("hobbies", JSON.stringify({ name: "Tom" }));
+// localStorage.setItem("name", "Tom");
+// localStorage.setItem("name", JSON.stringify(17));
 
 // console.log(JSON.parse(localStorage.getItem("hobbies")));
 
@@ -19,4 +19,4 @@ export const getLocalStorageData = () => {
     };
   }, {});
 };
-// console.log(getLocalStorageData());
+console.log(typeof getLocalStorageData());
