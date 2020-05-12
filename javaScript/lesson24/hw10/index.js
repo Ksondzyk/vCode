@@ -40,7 +40,15 @@ const renderTasks = (tasksList) => {
   listElem.innerHTML = "";
   const tasksElems = tasksList
     .slice()
-    .sort((a, b) => a.done - b.done)
+    .sort((a, b) => {
+      if (a.done - b.done !== 0) {
+        return a.done - b.done;
+      }
+      if (a.done) {
+        return new Date(b.finishDate) - new Date(a.finishDate);
+      }
+      return new Date(b.createDate) - new Date(a.createDate);
+    })
     .map(({ text, done, id }) => {
       const listItemElem = document.createElement("li");
       listItemElem.classList.add("list__item");
@@ -77,7 +85,7 @@ function onToggleTask(e, tasks) {
   const taskData = tasks.find((task) => task.id == e.target.dataset.id);
   Object.assign(taskData, {
     done: e.target.checked,
-    finishDate: new Date(),
+    finishDate: new Date().toISOString(),
   });
   console.log(tasks);
   renderTasks(tasks);
@@ -97,14 +105,18 @@ function createTask() {
   tasks.push({
     text: input.value,
     done: false,
-    createDate: new Date().toUTCString(),
+    createDate: new Date().toISOString(),
     id: count.toString(),
-    finishDate: new Date().toUTCString(),
+    finishDate: new Date().toISOString(),
   });
   console.log(tasks);
-  tasks.sort((a, b) =>
-    b.createDate < a.createDate ? -1 : b.createDate > a.createDate ? 1 : 0
-  );
+  // tasks.sort((a, b) =>
+  //   a.createDate > b.createDate ? -1 : a.createDate > b.createDate ? 1 : 0
+  // );
+  // tasks.sort((a, b) =>
+  //   b.finishDate < a.finishDate ? -1 : b.finishDate > a.finishDate ? 1 : 0
+  // );
+
   renderTasks(tasks);
   document.querySelector(".task-input").value = "";
 }
