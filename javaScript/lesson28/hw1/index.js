@@ -6,46 +6,52 @@ export const shmoment = (objDate) => {
   const calculate = {
     add(data, value) {
       switch (data) {
+        case "years":
+          result.setFullYear(value + result.getFullYear());
+          break;
         case "months":
-          result.setMinutes(value + result.getMonth());
+          result.setMonth(value + result.getMonth());
           break;
         case "days":
-          result.setMinutes(value + result.getDay());
+          result.setDate(value + result.getDate());
           break;
         case "hours":
-          result.setMinutes(value + result.getHours());
+          result.setHours(value + result.getHours());
           break;
         case "minutes":
           result.setMinutes(value + result.getMinutes());
           break;
         case "seconds":
-          result.setMinutes(value + result.getSeconds());
+          result.setSeconds(value + result.getSeconds());
           break;
         case "miliseconds":
-          result.setMinutes(value + result.getMilliseconds());
+          result.setMilliseconds(value + result.getMilliseconds());
           break;
       }
       return this;
     },
     subtract(data, value) {
       switch (data) {
+        case "years":
+          result.setFullYear(result.getFullYear() - value);
+          break;
         case "months":
-          result.setMinutes(result.getMonth() - value);
+          result = new Date(result.setMinutes(result.getMonth() - value));
           break;
         case "days":
-          result.setMinutes(result.getDay() - value);
+          result.setDate(result.getDate() - value);
           break;
         case "hours":
-          result.setMinutes(result.getHours() - value);
+          result.setHours(result.getHours() - value);
           break;
         case "minutes":
           result.setMinutes(result.getMinutes() - value);
           break;
         case "seconds":
-          result.setMinutes(result.getSeconds() - value);
+          result.setSeconds(result.getSeconds() - value);
           break;
         case "miliseconds":
-          result.setMinutes(result.getMilliseconds() - value);
+          result.setMilliseconds(result.getMilliseconds() - value);
           break;
       }
       return this;
