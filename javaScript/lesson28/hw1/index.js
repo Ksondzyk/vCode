@@ -36,7 +36,7 @@ export const shmoment = (objDate) => {
           result.setFullYear(result.getFullYear() - value);
           break;
         case "months":
-          result = new Date(result.setMinutes(result.getMonth() - value));
+          result = new Date(result.setMonth(result.getMonth() - value));
           break;
         case "days":
           result.setDate(result.getDate() - value);
