@@ -30,22 +30,22 @@ const shmoment = (objDate) => {
     subtract(data, value) {
       switch (data) {
         case "months":
-          result.setMinutes(value - result.getMonth());
+          result.setMinutes(result.getMonth() - value);
           break;
         case "days":
-          result.setMinutes(value - result.getDay());
+          result.setMinutes(result.getDay() - value);
           break;
         case "hours":
-          result.setMinutes(value - result.getHours());
+          result.setMinutes(result.getHours() - value);
           break;
         case "minutes":
-          result.setMinutes(value - result.getMinutes());
+          result.setMinutes(result.getMinutes() - value);
           break;
         case "seconds":
-          result.setMinutes(value - result.getSeconds());
+          result.setMinutes(result.getSeconds() - value);
           break;
         case "miliseconds":
-          result.setMinutes(value - result.getMilliseconds());
+          result.setMinutes(result.getMilliseconds() - value);
           break;
       }
       return this;
