@@ -24,8 +24,8 @@ export const shmoment = (objDate) => {
         case "seconds":
           result.setSeconds(value + result.getSeconds());
           break;
-        case "miliseconds":
-          result.setTime(value + result.getTime());
+        case "milliseconds":
+          result.setMilliseconds(value + result.getMilliseconds());
           break;
       }
       return this;
@@ -50,8 +50,8 @@ export const shmoment = (objDate) => {
         case "seconds":
           result.setSeconds(result.getSeconds() - value);
           break;
-        case "miliseconds":
-          result.setTime(result.getTime() - value);
+        case "milliseconds":
+          result.setMilliseconds(result.getMilliseconds() - value);
           break;
       }
       return this;
@@ -62,10 +62,9 @@ export const shmoment = (objDate) => {
   };
   return calculate;
 };
-const result = shmoment(new Date(2020, 0, 7, 17, 17, 17, 12))
+const result = shmoment(new Date(2020, 0, 7, 17, 17, 17))
   .add("minutes", 2)
   .add("days", 8)
-  .add("miliseconds", 12)
   .subtract("years", 1)
   .result(); // ... Jan 15 2019 17:19:17 ...
 
