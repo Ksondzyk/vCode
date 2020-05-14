@@ -18,7 +18,7 @@ export const calc = (initialValue) => {
       return this;
     },
     result() {
-      return value;
+      return result;
     },
   };
 
