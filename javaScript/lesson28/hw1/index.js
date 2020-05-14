@@ -1,7 +1,7 @@
 //input
 //output obj in metods
 
-const shmoment = (objDate) => {
+export const shmoment = (objDate) => {
   let result = new Date(objDate);
   const calculate = {
     add(data, value) {
