@@ -5,12 +5,12 @@ export const calc = (initValue) => {
       result += value;
       return this;
     },
-    mult(value) {
-      result *= value;
+    subtract(value) {
+      result -= value;
       return this;
     },
-    substract(value) {
-      result -= value;
+    mult(value) {
+      result *= value;
       return this;
     },
     div(value) {
