@@ -1,8 +1,15 @@
-const pinger = (num, period) => {
+export const pinger = (num, period) => {
+  let i = num;
+  console.log("Ping");
   const interval = setInterval(() => {
-    console.log("Ping");
+    if (--i > 0) {
+      console.log("Ping");
+    } else {
+      clearInterval(interval);
+    }
   }, period);
-  setTimeout(() => {}, timeout);
-  clearInterval(interval);
+  // setTimeout(() => {
+  //   clearInterval(interval);
+  // }, num * period);
 };
 pinger(5, 1000);
