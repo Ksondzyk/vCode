@@ -1,8 +1,15 @@
-const callback = setInterval(() => {
+const min = 1000;
+const max = 3000;
+let random = parseInt(Math.random() * (+max - +min) + +min);
+
+const callback = setInterval((random) => {
   const obj = { userId: "userid777", email: "userid777@example.com" };
-}, 2000);
-export function requestUserData(userId, callback) {
-  if (userId === typeof "broken") {
+}, random);
+
+setInterval(random);
+
+function requestUserData(userId, callback) {
+  if (userId === "broken") {
   }
 }
 requestUserData("broken", callback);
