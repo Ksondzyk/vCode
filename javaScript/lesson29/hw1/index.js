@@ -8,7 +8,7 @@ const callback = setInterval((random) => {
 
 setInterval(random);
 
-function requestUserData(userId, callback) {
+export function requestUserData(userId, callback) {
   if (userId === "broken") {
   }
 }
