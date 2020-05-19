@@ -2,7 +2,10 @@ export const addImageV2 = (imageSrc) => {
   const elemPage = document.querySelector(".page");
   elemPage.setAttribute("src", imageSrc);
   return new Promise((resolve, reject) => {
-    return addImage(imageSrc, func);
+    return addImage(imageSrc, function (error, src) {
+      if (error) return reject(error);
+      if (src) return resolve(src);
+    });
   });
 
   // // .then((onImageLoaded) => onImageLoaded.onImageLoaded())
@@ -22,7 +25,7 @@ export const addImage = (url, callback) => {
   const onImageLoaded = () => {
     const { width, height } = img;
     callback(null, { width, height });
-    return img;
+    // return img;
   };
 
   const onImageLoadError = () => callback("Image load failed");
@@ -34,4 +37,4 @@ export const addImage = (url, callback) => {
 const imgSrc =
   "https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson+13/task2/sprites.png";
 
-addImageV2(imgSrc).then((onImageLoaded) => console.log(onImageLoaded));
+addImageV2(imgSrc).then((size) => console.log(size));
