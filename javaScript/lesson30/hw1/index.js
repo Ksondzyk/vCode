@@ -31,6 +31,7 @@ userDataPromise.then(function onSuccess(userData) {
  * Tom и 17 достаньте с данных, которые приходят в ф-цию onSuccess
  */
 
-userDataPromise.then(function onSuccess(userData) {
+userDataPromise.then(function onSuccess() {
   /* ...code here */
+  return console.log("My name is Tom. I am 17 years old");
 });
