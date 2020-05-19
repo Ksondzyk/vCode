@@ -11,4 +11,4 @@ export function requestUserData(userId, callback) {
     const obj = { userId: `${userId}`, email: `${userId}@example.com` };
   }, callback);
 }
-requestUserData("broken", random);
+// requestUserData("broken", random);
