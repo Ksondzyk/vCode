@@ -1,3 +1,5 @@
+import { addImage } from "./addImage.js";
+
 export const addImageV2 = (imageSrc) => {
   const elemPage = document.querySelector(".page");
   elemPage.setAttribute("src", imageSrc);
@@ -8,3 +10,6 @@ export const addImageV2 = (imageSrc) => {
     });
   });
 };
+const imgSrc =
+  "https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson+13/task2/sprites.png";
+addImageV2(imgSrc).then((size) => console.log(size));

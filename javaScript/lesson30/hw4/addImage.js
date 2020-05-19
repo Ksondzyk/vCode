@@ -1,4 +1,4 @@
-import { addImageV2 } from "./index.js";
+
 
 export const addImage = (url, callback) => {
   const img = document.createElement("img");
@@ -21,7 +21,4 @@ export const addImage = (url, callback) => {
   img.addEventListener("error", onImageLoadError);
 };
 
-const imgSrc =
-  "https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson+13/task2/sprites.png";
 
-addImageV2(imgSrc).then((size) => console.log(size));
