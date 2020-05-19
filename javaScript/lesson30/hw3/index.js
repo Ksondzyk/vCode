@@ -4,9 +4,9 @@
  */
 
 const failedPromise = new Promise((resolve, reject) => {
-  setTimeout(() => {
+//   setTimeout(() => {
     reject(new Error("Oops, error!"));
-  }, 2000);
+//   }, 2000);
   /* ...code here */
 });
 
