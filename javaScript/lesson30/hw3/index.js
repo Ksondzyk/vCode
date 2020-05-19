@@ -5,8 +5,8 @@
 
 const failedPromise = new Promise((resolve, reject) => {
   setTimeout(() => {
-    console.log(new Error("Oops, error!"));
-  }, 1000);
+    reject(new Error("Oops, error!"));
+  }, 2000);
   /* ...code here */
 });
 
