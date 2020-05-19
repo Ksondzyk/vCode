@@ -21,8 +21,10 @@ export const addImage = (imgSrc) => {
 const imgSrc =
   "https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson+13/task2/sprites.png";
 
-const result = addImage(imgSrc);
-console.log(result);
+const resultPromice = addImage(imgSrc);
+
+resultPromice.catch((error) => console.log(error));
+// console.log(result);
 
 // export const addImage = (imgSrc, callback) => {
 //   const imgElem = document.createElement("img");
