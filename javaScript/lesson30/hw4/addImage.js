@@ -27,8 +27,6 @@ export const addImage = (url, callback) => {
 const imgSrc =
   "https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson+13/task2/sprites.png";
 
-const res = addImageV2(imgSrc);
-
-// res.then((onImageLoaded) => {
-//   console.log(onImageLoaded);
-// });
+const res = addImageV2(imgSrc).then((onImageLoaded) => {
+  return addImage;
+});
