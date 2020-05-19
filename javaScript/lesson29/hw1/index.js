@@ -8,4 +8,4 @@ export function requestUserData(userId, callback) {
   const obj = { userId: `${userId}`, email: `${userId}@example.com` };
   setInterval(() => callback(obj), random);
 }
-requestUserData("broken", random);
+// requestUserData("broken", random);
