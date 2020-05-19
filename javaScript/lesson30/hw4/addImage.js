@@ -1,7 +1,11 @@
-export const addImageV2 = (src) => {
+export const addImageV2 = (imageSrc) => {
+  const elemPage = document.querySelector(".page");
+  elemPage.setAttribute("src", imageSrc);
   return new Promise((resolve, reject) => {
     return addImage;
-  });
+  })
+    .then((onImageLoaded) => onImageLoaded.onImageLoaded())
+    .then((img) => console.log(img));
 };
 
 export const addImage = (url, callback) => {
