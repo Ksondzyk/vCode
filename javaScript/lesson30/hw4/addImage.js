@@ -32,4 +32,4 @@ const imgSrc =
   "https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson+13/task2/sprites.png";
 
 const res = addImageV2(imgSrc).then((onImageLoaded) => addImage(onImageLoaded));
-console.log(res);
+// console.log(res);
