@@ -23,7 +23,7 @@ const imgSrc =
 
 const resultPromice = addImage(imgSrc);
 
-resultPromice.catch((error) => console.log(error));
+resultPromice.then((data) => console.log(data));
 // console.log(result);
 
 // export const addImage = (imgSrc, callback) => {
