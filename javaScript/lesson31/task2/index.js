@@ -20,4 +20,5 @@ export const asyncCalculator = (num) =>
       console.log(`'Doubled value: ${result}`);
       return result;
     });
-asyncCalculator(4).then((value) => console.log(value));
+asyncCalculator(5);
+//.then((value) => console.log(value));
