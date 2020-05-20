@@ -1,5 +1,3 @@
-
-
 export const addImage = (url, callback) => {
   const img = document.createElement("img");
   img.setAttribute("alt", "User avatar");
@@ -11,6 +9,7 @@ export const addImage = (url, callback) => {
   const onImageLoaded = () => {
     const { width, height } = img;
     callback(null, { width, height });
+
     // return img;
   };
 
@@ -20,5 +19,3 @@ export const addImage = (url, callback) => {
 
   img.addEventListener("error", onImageLoadError);
 };
-
-

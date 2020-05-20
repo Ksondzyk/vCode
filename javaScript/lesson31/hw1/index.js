@@ -1,6 +1,12 @@
 const successPromise = new Promise((resolve) => {
   resolve(32);
-})
+});
+
+/*
+ * исправьте цепочку промисов, чтобы в последнем обработчике вывелось нужное число
+ */
+
+successPromise
   .then((number) => {
     const halfNumber = number / 2;
     return halfNumber;
@@ -8,15 +14,19 @@ const successPromise = new Promise((resolve) => {
   .then((number) => {
     /* fix this handler */
     const squaredNumber = number * number;
-    console.log(squaredNumber);
     return squaredNumber;
   })
   .then((result) => {
-    console.log(result);
-    return result; // 256
-  })
+    console.log(result); // 256
+  });
+
+// /*
+//  * исправьте цепочку промисов, чтобы в последнем обработчике вывелось нужное число
+//  */
+successPromise
   .then((number) => {
-    return number;
+    const numberPlus = number * 10;
+    return numberPlus;
   })
   .then((result) => {
     console.log(result); // 320
