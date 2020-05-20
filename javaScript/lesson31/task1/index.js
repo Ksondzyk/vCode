@@ -9,8 +9,8 @@ export const requestUserData = (userId) => {
         resolve({
           name: "John",
           age: 17,
-          userId: `${userid777}`,
-          email: `${userid777}@example.com`,
+          userId: `${userId}`,
+          email: `${userId}@example.com`,
         });
       }, 1000);
     }
@@ -18,6 +18,6 @@ export const requestUserData = (userId) => {
 
   return request;
 };
-requestUserData("broken")
+requestUserData("user777")
   .then((data) => console.log(data))
   .catch((error) => console.log(error));
