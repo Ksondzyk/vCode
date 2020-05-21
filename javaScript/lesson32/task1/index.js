@@ -18,10 +18,13 @@ export const asyncSum = (value, delay) =>
   });
 
 const asyncNumber1 = asyncSum(56, 1000);
-const asyncNumber2 = asyncSum(4, 2000);
-const asyncNumber3 = asyncSum(10, 2000);
+const asyncNumber2 = asyncSum(undefined, 2000);
+const asyncNumber3 = asyncSum("10", 2000);
 
-const getSum = (numbers) => numbers.reduce((acc, num) => acc + num, 0);
+const getSum = (numbers) =>
+  numbers
+    .filter((value) => !isNaN(value))
+    .reduce((acc, num) => acc + Number(num), 0);
 const asyncSumNumber = (...asyncNumbers) =>
   Promise.all(asyncNumbers).then((numbers) => getSum(numbers));
 
