@@ -12,5 +12,6 @@ export const getTaskById = (taskId) => {
     .then((response) => response.json())
     .then((result) => result.filter(({ id }) => id === taskId))
     .then((result) => result.reduce((acc, el) => (acc = el)), {});
+  return objPromice;
 };
 // console.log(getTaskById("2"));
