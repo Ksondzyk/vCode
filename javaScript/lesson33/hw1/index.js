@@ -15,6 +15,4 @@ export const getTasksList = (baseUrl) => {
   return fetch(baseUrl).then((response) => response.json());
 };
 
-getTasksList().then((taskList) => console.log(taskList));
-
 //
