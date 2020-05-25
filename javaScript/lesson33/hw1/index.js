@@ -10,7 +10,7 @@ export const getTaskById = (taskId) => {
     .then((result) => result.reduce((acc, el) => (acc = el)), {});
   return objPromice;
 };
-getTaskById("2").then((result) => console.log(result));
+// getTaskById("2").then((result) => console.log(result));
 
 export const getTasksList = () => {
   return fetch(baseUrl).then((response) => response.json());
