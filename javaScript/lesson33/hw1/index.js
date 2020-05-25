@@ -14,4 +14,7 @@ export const getTaskById = (taskId) => {
 export const getTasksList = (baseUrl) => {
   return fetch(baseUrl).then((response) => response.json());
 };
-// console.log(getTaskById("2"));
+
+getTasksList().then((taskList) => console.log(taskList));
+
+//
