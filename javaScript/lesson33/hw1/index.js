@@ -7,13 +7,10 @@ export const getTasksList = (baseUrl) => {
 // const result = getTasksList(baseUrl);
 // console.log(result);
 
-// const getTaskById = (taskId) => {
-//   const objPromice = fetch(`${baseUrl}`).then((response) => response.json());
-//   const result = Promise.all(
-//     [objPromice].filter((el) => {
-//       return el.id === taskId;
-//     })
-//   );
-//   console.log(result);
-// };
-// console.log(getTaskById("1"));
+export const getTaskById = (taskId) => {
+  const objPromice = fetch(baseUrl)
+    .then((response) => response.json())
+    .then((result) => result.filter(({ id }) => id === taskId))
+    .then((result) => result.reduce((acc, el) => (acc = el)), {});
+};
+// console.log(getTaskById("2"));
