@@ -10,9 +10,10 @@ export const getTaskById = (taskId) => {
     .then((result) => result.reduce((acc, el) => (acc = el)), {});
   return objPromice;
 };
+getTaskById("2").then((result) => console.log(result));
 
-export const getTasksList = (baseUrl) => {
+export const getTasksList = () => {
   return fetch(baseUrl).then((response) => response.json());
 };
-
+// getTasksList().then((result) => console.log(result));
 //
