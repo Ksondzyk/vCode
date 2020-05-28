@@ -45,7 +45,7 @@ export const updateUser = (userId, userObject) => {
 // });
 
 export const deleteUser = (userId) => {
-  fetch(`${baseUrl}/${userId}`, { method: "DELETE" }).then((response) =>
+  return fetch(`${baseUrl}/${userId}`, { method: "DELETE" }).then((response) =>
     response.json()
   );
 };
