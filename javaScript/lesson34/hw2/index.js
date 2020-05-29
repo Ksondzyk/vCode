@@ -48,11 +48,11 @@ const handleform = () => {
     const inputField = document.querySelectorAll(".form-input");
     const valueInputField = Array.from(inputField).map((el) => el.value);
     const [emailValue, nameValue, passwordValue] = valueInputField;
-    const formInformation = {
+    const formInformation = JSON.stringify({
       email: emailValue,
       UserName: nameValue,
       password: passwordValue,
-    };
+    });
     return formInformation;
   };
   dataInput();
@@ -68,7 +68,7 @@ const handleform = () => {
       },
       redirect: "follow",
       referrerPolicy: "no-referrer",
-      body: JSON.stringify(dateObj),
+      body: dateObj,
     })
       .then((response) => response.json())
       .then((data) => console.log(data));
