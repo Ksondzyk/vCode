@@ -34,14 +34,26 @@ const baseUrl = "https://5ece5f5561c8480016701459.mockapi.io/api/v1/users";
 // 6. используйте reportValidity для проверки формы
 
 const elementForm = document.querySelector(".login-form");
+
+const btnElement = document.querySelector(".submit-button");
+console.log(btnElement);
+function onValidForm() {
+  if (elementForm.reportValidity() === true) {
+    btnElement.disabled = false;
+  }
+}
+
+elementForm.addEventListener("mousemove", onValidForm);
+
+const validate = elementForm.reportValidity();
+console.log(validate);
+
 elementForm.addEventListener("submit", runAfterSending);
 function runAfterSending(event) {
   event.preventDefault();
   const inputField = document.querySelector(".login-form");
   const formData = [...new FormData(inputField)];
   const objectForm = Object.fromEntries(formData);
-  // console.log(objectForm);
-
   fetch(baseUrl, {
     method: "POST",
     headers: {
@@ -62,5 +74,4 @@ function runAfterSending(event) {
       const errorElem = document.querySelector(".error-text");
       errorElem.textContent = "Failed to create user";
     });
-  // inputField.reset();
 }
