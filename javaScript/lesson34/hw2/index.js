@@ -50,19 +50,17 @@ function runAfterSending(event) {
     body: JSON.stringify(objectForm),
   })
     .then((response) => response.json())
-    .then((data) => alert(JSON.stringify(data)))
+    .then((data) => {
+      const result = JSON.stringify(data);
+      alert(result);
+      if (result.length !== undefined) {
+        elementForm.reset();
+      }
+      return result;
+    })
     .catch(() => {
       const errorElem = document.querySelector(".error-text");
       errorElem.textContent = "Failed to create user";
     });
-  inputField.reset();
+  // inputField.reset();
 }
-
-// const buttonElement = document.querySelector(".submit-button");
-
-// function clearFormFields(event) {
-//   const clearFieldInput = document.querySelector(".login-form");
-//   clearFieldInput.reset();
-// }
-
-// buttonElement.addEventListener("sumbit", clearFormFields);
