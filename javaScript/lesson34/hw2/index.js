@@ -7,24 +7,8 @@ const baseUrl = "https://5ece5f5561c8480016701459.mockapi.io/api/v1/users";
 // 5. создать функцию-обработчик B, которая будет срабатывать после изменения входов
 // 6. используйте reportValidity для проверки формы
 
-// const inputField = document.querySelectorAll(".form-input");
-// const valueInputField = Array.from(inputField).map((el) => el.value);
-// const allElementsPlaceholder = valueInputField.every((el) => el.length > 0);
 
-// const form = document.querySelector(".login-form").reportValidity();
 
-// (function () {
-//   const form = document.querySelector(".login-form").reportValidity();
-//   if (form === true) {
-//     const btnElem = document.querySelector(".submit-button");
-//     btnElem.disabled = false;
-//   }
-//   return true;
-// })();
-
-// const btnElem = document.querySelector(".submit-button");
-
-// const buttonElem = document.querySelector(".submit-button");
 
 // 1. получить элементы из DOM
 // 2. создать функцию-обработчик, которая будет запущена после отправки
@@ -33,20 +17,6 @@ const baseUrl = "https://5ece5f5561c8480016701459.mockapi.io/api/v1/users";
 // 5. создать функцию-обработчик B, которая будет срабатывать после изменения входов
 // 6. используйте reportValidity для проверки формы
 
-// const elementForm = document.querySelector(".login-form");
-
-// const btnElement = document.querySelector(".submit-button");
-// console.log(btnElement);
-// function onValidForm() {
-//   if (elementForm.reportValidity() === true) {
-//     btnElement.disabled = false;
-//   }
-// }
-
-// elementForm.addEventListener("mousemove", onValidForm);
-
-// const validate = elementForm.reportValidity();
-// console.log(validate);
 const elementForm = document.querySelector(".login-form");
 const emailInput = document.querySelector(".form-input[type=email]");
 emailInput.value;
@@ -56,9 +26,6 @@ passwordInput.value;
 const nameInput = document.querySelector(".form-input[type=text]");
 nameInput.value;
 
-// console.log(emailInput.value);
-// console.log(passwordInput.value);
-// console.log(nameInput.value);
 const submitBtnElem = document.querySelector(".submit-button");
 const errorElem = document.querySelector(".error-text");
 
