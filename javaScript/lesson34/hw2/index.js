@@ -33,20 +33,42 @@ const baseUrl = "https://5ece5f5561c8480016701459.mockapi.io/api/v1/users";
 // 5. создать функцию-обработчик B, которая будет срабатывать после изменения входов
 // 6. используйте reportValidity для проверки формы
 
+// const elementForm = document.querySelector(".login-form");
+
+// const btnElement = document.querySelector(".submit-button");
+// console.log(btnElement);
+// function onValidForm() {
+//   if (elementForm.reportValidity() === true) {
+//     btnElement.disabled = false;
+//   }
+// }
+
+// elementForm.addEventListener("mousemove", onValidForm);
+
+// const validate = elementForm.reportValidity();
+// console.log(validate);
 const elementForm = document.querySelector(".login-form");
+const emailInput = document.querySelector("input");
+const passwordInput = document.querySelector("input");
+const nameInput = document.querySelector("input");
 
-const btnElement = document.querySelector(".submit-button");
-console.log(btnElement);
-function onValidForm() {
-  if (elementForm.reportValidity() === true) {
-    btnElement.disabled = false;
+const submitBtnElem = document.querySelector(".submit-button");
+const errorElem = document.querySelector(".error-text");
+
+const onInputChange = () => {
+  const isValidForm = elementForm.reportValidity();
+  if (isValidForm) {
+    submitBtnElem.removeAttribute("disabled");
+    errorElem.textContent = "";
+  } else {
+    submitBtnElem.setAttribute("disabled", true);
+    errorElem.textContent = "";
   }
-}
+};
 
-elementForm.addEventListener("mousemove", onValidForm);
-
-const validate = elementForm.reportValidity();
-console.log(validate);
+emailInput.addEventListener("input", onInputChange);
+passwordInput.addEventListener("input", onInputChange);
+nameInput.addEventListener("input", onInputChange);
 
 elementForm.addEventListener("submit", runAfterSending);
 function runAfterSending(event) {
