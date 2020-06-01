@@ -48,10 +48,17 @@ const baseUrl = "https://5ece5f5561c8480016701459.mockapi.io/api/v1/users";
 // const validate = elementForm.reportValidity();
 // console.log(validate);
 const elementForm = document.querySelector(".login-form");
-const emailInput = document.querySelector("input");
-const passwordInput = document.querySelector("input");
-const nameInput = document.querySelector("input");
+const emailInput = document.querySelector(".form-input[type=email]");
+emailInput.value;
+const passwordInput = document.querySelector(".form-input[type=password]");
+passwordInput.value;
 
+const nameInput = document.querySelector(".form-input[type=text]");
+nameInput.value;
+
+// console.log(emailInput.value);
+// console.log(passwordInput.value);
+// console.log(nameInput.value);
 const submitBtnElem = document.querySelector(".submit-button");
 const errorElem = document.querySelector(".error-text");
 
