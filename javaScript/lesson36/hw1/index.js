@@ -1,7 +1,6 @@
 // input string
 //output promice
 export const getUsersBlogs = async (usersId) => {
-  console.log(usersId);
   // usersId.forEach((userId) => {
   //   const googleBlogs = fetch(`https://api.github.com/users/${userId}`)
   //     .then((response) => response.json())
@@ -11,14 +10,14 @@ export const getUsersBlogs = async (usersId) => {
   // });
 
   let requests = usersId.map((url) =>
-    fetch(`https://api.github.com/users/${url}`).then((response) =>
-      response.json()
-    )
+    fetch(`https://api.github.com/users/${url}`)
   );
 
   // Promise.all будет ожидать выполнения всех промисов
   return Promise.all(requests).then((responses) =>
-    responses.forEach((response) => response)
+    responses
+      .forEach((response) => response)
+      .then((response) => response.json())
   );
 
   // const googleBlogs = fetch(`https://api.github.com/users/${google}`)
@@ -38,4 +37,4 @@ export const getUsersBlogs = async (usersId) => {
 };
 const result = getUsersBlogs(["google", "facebook", "gaearon"]);
 
-// console.log(result);
+console.log(result);
