@@ -15,6 +15,6 @@ export const getUsersBlogs = async (userId) => {
     .then((users) => users.blog);
   console.log(gaearonBlogs);
   const result = await Promise.all([googleBlogs, facebookBlogs, gaearonBlogs]);
-  console.log(result);
+  return result;
 };
 const result = getUsersBlogs(["google", "facebook", "gaearon"]);
