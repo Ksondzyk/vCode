@@ -11,7 +11,9 @@ export const getUsersBlogs = async (usersId) => {
   // });
 
   let requests = usersId.map((url) =>
-    fetch(`https://api.github.com/users/${url}`)
+    fetch(`https://api.github.com/users/${url}`).then((response) =>
+      response.json()
+    )
   );
 
   // Promise.all будет ожидать выполнения всех промисов
