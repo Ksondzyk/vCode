@@ -1,6 +1,6 @@
 // input string
 //output promice
-const getUsersBlogs = async (userId) => {
+export const getUsersBlogs = async (userId) => {
   const [google, facebook, gaearon] = userId;
   const googleBlogs = fetch(`https://api.github.com/users/${google}`)
     .then((response) => response.json())
