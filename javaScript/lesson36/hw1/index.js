@@ -2,13 +2,12 @@
 //output promice
 export const getUsersBlogs = async (usersId) => {
   let requests = usersId.map((url) =>
-    fetch(`https://api.github.com/users/${url}`)
-      .then((response) => response.json())
-      .then((user) => user.blog)
+    fetch(`https://api.github.com/users/${url}`).then((response) =>
+      response.json()
+    )
   );
-  return Promise.all(requests).then((responses) =>
-    responses.forEach((response) => response)
-  );
+  const result = Promise.all(requests);
+  return result.map((user) => user.blog);
 };
 const result = getUsersBlogs(["google", "facebook", "gaearon"]);
 
