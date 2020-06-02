@@ -12,7 +12,7 @@ export const getUsersBlogs = async (usersId) => {
   let requests = usersId.map((url) =>
     fetch(`https://api.github.com/users/${url}`)
       .then((response) => response.json())
-      .then((users) => user.blog)
+      .then((user) => user.blog)
   );
 
   // Promise.all будет ожидать выполнения всех промисов
@@ -35,8 +35,8 @@ export const getUsersBlogs = async (usersId) => {
   // const promiseArr = await [googleBlogs, facebookBlogs, gaearonBlogs];
   // return promiseArr.map((user) => user.json());
 };
-const result = getUsersBlogs(["google", "facebook", "gaearon"])
-  // .then((response) => response.json())
-  // .then((users) => user.blog);
+const result = getUsersBlogs(["google", "facebook", "gaearon"]);
+// .then((response) => response.json())
+// .then((users) => user.blog);
 
 console.log(result);
