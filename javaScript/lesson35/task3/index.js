@@ -4,7 +4,7 @@ import { renderRepos, cleanReposList } from "./repos.js";
 import { showSpinner, hideSpinner } from "./spinner.js";
 
 const defaltUser = {
-  avatar_url: "https://avatars.githubusercontent.com/u10001",
+  avatar_url: "https://avatars1.githubusercontent.com/u/9919?v=4",
   name: "",
   location: "",
 };
