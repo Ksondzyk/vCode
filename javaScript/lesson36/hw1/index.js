@@ -6,7 +6,7 @@ export const getUsersBlogs = async (usersId) => {
       response.json()
     )
   );
-  const result = Promise.all(requests);
+  const result = await Promise.all(requests);
   return result.map((user) => user.blog);
 };
 const result = getUsersBlogs(["google", "facebook", "gaearon"]);
