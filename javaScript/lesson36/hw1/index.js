@@ -11,4 +11,4 @@ export const getUsersBlogs = async (usersId) => {
 };
 const result = getUsersBlogs(["google", "facebook", "gaearon"]);
 
-console.log(result);
+// console.log(result);
