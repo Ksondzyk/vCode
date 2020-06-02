@@ -10,12 +10,14 @@ export const getUsersBlogs = async (usersId) => {
   //     .then((response) => console.log(response));
   // });
 
-  let requests = usersId.map((url) => fetch(url.blog));
+  let requests = usersId.map((url) =>
+    fetch(`https://api.github.com/users/${url}`)
+  );
 
   // Promise.all будет ожидать выполнения всех промисов
-  return Promise.all(requests).then((responses) =>
-    responses.forEach((response) => response)
-  );
+  return Promise.all(requests)
+    .then((responses) => responses.forEach((response) => response))
+    .catch((err) => new Error(err));
   // const googleBlogs = fetch(`https://api.github.com/users/${google}`)
   //   .then((response) => response.json())
   //   .then((users) => users.blog);
