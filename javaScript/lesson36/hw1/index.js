@@ -13,8 +13,9 @@ export const getUsersBlogs = async (usersId) => {
   let requests = usersId.map((url) => fetch(url.blog));
 
   // Promise.all будет ожидать выполнения всех промисов
-  Promise.all(requests).then((responses) =>
+  return Promise.all(requests).then((responses) =>
     responses.forEach((response) => response)
+  );
   // const googleBlogs = fetch(`https://api.github.com/users/${google}`)
   //   .then((response) => response.json())
   //   .then((users) => users.blog);
