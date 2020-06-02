@@ -2,7 +2,7 @@
 //output promice
 export const getUsersBlogs = async (usersId) => {
   console.log(usersId);
-  usersId.forEach((userId) => {
+  return usersId.forEach((userId) => {
     const googleBlogs = fetch(`https://api.github.com/users/${userId}`)
       .then((response) => response.json())
       .then((users) => users.blog)
