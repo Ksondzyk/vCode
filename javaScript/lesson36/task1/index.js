@@ -26,6 +26,8 @@ export const fetchUser = async (userId) => {
   }
 };
 
-fetchUser("facebook")
-  .then((userData) => console.log(userData))
-  .catch((err) => alert(err.message));
+// fetchUser("facebook")
+//   .then((userData) => console.log(userData))
+//   .catch((err) => alert(err.message));
+
+
