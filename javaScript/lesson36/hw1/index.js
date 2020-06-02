@@ -17,5 +17,7 @@ export const getUsersBlogs = async (userId) => {
   const promiseArr = Promise.all([googleBlogs, facebookBlogs, gaearonBlogs]);
   return promiseArr;
 };
-const result = getUsersBlogs(["google", "facebook", "gaearon"]);
-console.log(result);
+const result = getUsersBlogs(["google", "facebook", "gaearon"]).then((data) =>
+  console.log(data)
+);
+// console.log(result);
